@@ -1,0 +1,161 @@
+/* RESET BÁSICO */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Calibri", sans-serif;
+  color: #465eff;
+  background: #f9f9f9;
+  line-height: 1.5;
+  padding: 20px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+nav a {
+  font-family: Calibri, sans-serif;
+  text-decoration: none;
+  color: #465eff;
+  font-weight: 900;
+  font-size: 24px;
+}
+.itemacessar {
+  font-weight: bold;
+  background-color: #fcfc30;
+  padding: 5px 10px;
+  border-radius: 15px;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+header h4 {
+  font-size: 1.4rem;
+  color: #535353;
+  margin-bottom: 30px;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+main img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  flex: 1 1 300px;
+  object-fit: contain;
+}
+
+footer {
+  text-align: center;
+  color: #465eff;
+  font-size: 0.9rem;
+  border-top: 1px solid #ddd;
+  padding-top: 20px;
+}
+.logo-topo {
+  position: relative;
+  max-width: 100px;
+  margin-top: 0px;
+  right: 1200px;
+  width: 10px;
+
+
+}
+/* BOTÃO DE CADASTRO */
+.botao-topo {
+  font-size: 1.5rem;
+  border-radius: 20px;
+  padding: 10px 85px;
+  background-color: #fcfc30;
+  color: #465eff;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+  position: center;
+  text-align: center;
+  display: grid;
+}
+
+.botao-topo:hover {
+  background-color: #f0f000;
+}
+
+/* ELIPSE */
+.elipse {
+  width: 242px;
+  height: 240px;
+  background-color: #fcfc30;
+  border-radius: 50%;
+  margin: 50px auto;
+  bottom: 20px;
+}
+
+.text-busca {
+  text-align: top;
+  margin: 50px;
+  color: #465eff;
+  position: relative;
+  left: 800px;
+  top: -180px;
+}
+
+main h1 {
+  font-size: 1.1rem;
+  text-align: left;
+  width: 100%;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: grid;
+    padding: 15px;
+    margin: auto;
+    width: 400px;
+    height: 100%;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+  .logo-topo {
+    position: relative;
+    top: 12px;
+  }
+  main {
+    flex-direction: column;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  header h4 {
+    font-size: 1rem;
+  }
+
+  .elipse {
+    width: 80px;
+    height: 85px;
+  }
+}
