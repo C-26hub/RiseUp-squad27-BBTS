@@ -5,11 +5,36 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>BBTS Portal</title>
+
+  <!-- CSS principal -->
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Ícone da aba -->
   <link rel="shortcut icon" href="bbts/bbtslogo.png" type="image/x-icon">
 </head>
 
+<!-- VLibras Plugin (Acessibilidade em Libras) -->
+<div vw class="enabled">
+  <div vw-access-button class="active"></div>
+  <div vw-plugin-wrapper>
+    <div class="vw-plugin-top-wrapper"></div>
+  </div>
+</div>
+
+<!-- Script VLibras -->
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>
+  new window.VLibras.Widget("https://vlibras.gov.br/app");
+</script>
+
 <body>
+
+  <li><button id="botao-idioma" onclick="trocarIdioma()">PT/EN</button></li>
+
+  <!-- Retângulo azul no topo -->
+  <div id="retangulo-azul"></div>
+
+  <!-- Menu de navegação -->
   <nav>
     <ul>
       <li><a href="index.html">Início</a></li>
@@ -17,44 +42,56 @@
       <li><a href="contatos.html">Contatos</a></li>
       <li><a href="pf.html">Perguntas Frequentes</a></li>
       <li><a href="acessar.html" id="itemacessar">Acessar</a></li>
-      <div id="logo-topo">
-        <img src="./bbts/bbts.png" alt="Logo BBTS" />
-      </div>
-      <div id="linhatopo"></div>
     </ul>
   </nav>
 
+  <!-- Campo de busca com ícone de lupa -->
+  <div class="campo-busca">
+    <input type="text" placeholder="Buscar startup ou soluções" />
+    <button type="submit" class="botao-lupa">
+      &#128269; <!-- 🔍 -->
+    </button>
+  </div>
+
+  <!-- Cabeçalho com título, logo e botão -->
   <header>
-    <div id="titulo">
-      <h1>
-        Conecte sua startup<br />
-        ao futuro da inovação
-      </h1>
+    <h1>
+      Conecte sua startup<br />
+      ao futuro da inovação
+    </h1>
+
+    <!-- Logo no topo -->
+    <div id="logo-topo" alt="logo topo - bbts">
+      <img src="./bbts/bbts.png" alt="Logo BBTS" />
     </div>
-    <div id="subtitulo">
-      <h4>
-        Mostre suas soluções e aumente suas chances de gerar conexões estratégicas
-      </h4>
-    </div>
-    <div id="buscar">
-      <h2> Buscar startup ou soluções </h2>
-    </div>
+
+    <h4>
+      Mostre suas soluções e aumente suas chances de gerar conexões estratégicas
+    </h4>
+
+    <!-- Botão principal -->
     <button id="botao-topo" type="button">Cadastre sua startup</button>
   </header>
 
+  <!-- Conteúdo principal -->
   <main>
-    <img src="./img/startup.png" alt="Imagem de uma startup" />
-    <img src="./img/apontar-bbts.png" alt="Imagem de pessoa apontando" />
+    <img src="./img/startup.png" id="startup" alt="Imagem de uma startup" />
+    <img src="./img/apontar-bbts.png" id="apontar" alt="Imagem de pessoa apontando" />
+
     <div>
       <h1>Por que cadastrar sua startup?</h1>
+
+      <!-- Elipse decorativa -->
       <div id="elipse"></div>
     </div>
   </main>
 
+  <!-- Rodapé com logo e direitos -->
   <footer>
     <img src="./bbts/bbts2.png" alt="Logo BBTS Rodapé" style="max-width:400px; margin-bottom:10px;" />
     <div>BBTS - BB Tecnologia e Serviços &copy; 2025. Todos os direitos reservados.</div>
   </footer>
+
 </body>
 
 </html>
