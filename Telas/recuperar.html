@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recuperar Senha - BBTS</title>
+  <link rel="shortcut icon" href="/bbts/Favbbts.png" type="image/x-icon">
+  <link rel="stylesheet" href="/css/recuperar.css">
+</head>
+<body>
+
+  <!-- ====== VLibras (no início do body) ====== -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+
+  <!-- ====== CABECALHO ====== -->
+  <header class="header">
+    <img src="/bbts/BBTStart logo.png" alt="BB Tecnologia e Serviços">
+  </header>
+
+  <!-- ====== CONTEÚDO PRINCIPAL ====== -->
+  <main class="main-content">
+    <div class="recuperar-container">
+      <h1>Recuperar senha</h1>
+      <p class="descricao">Informe um e-mail e enviaremos um link para redefinição de senha</p>
+
+      <form class="recuperar-form">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+        <button type="submit" class="recuperar-btn">Enviar link de recuperação</button>
+      </form>
+    </div>
+  </main>
+
+  <!-- ====== RODAPÉ ====== -->
+  <footer class="footer">
+    <span>2025 BBTS. Todos os direitos reservados.</span>
+    <a href="#">Política de Privacidade</a> |
+    <a href="#">Central de Ajuda</a> |
+    <a href="#">Termos de Uso</a>
+  </footer>
+
+</body>
+</html>

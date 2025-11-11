@@ -1,0 +1,145 @@
+body {
+  font-family: Calibri, Arial, sans-serif;
+  background-color: #ffffff;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ====== HEADER E FOOTER ====== */
+.header,
+.footer {
+  background-color: #ffffff;
+  color: #535353;
+  padding: 15px;
+  text-align: center;
+}
+
+.header img {
+  height: 60px;
+  position: relative;
+  right: 30%;
+}
+
+.footer {
+  font-size: 14px;
+  position: relative;
+  right: 30%;
+}
+
+.footer a {
+  color: #535353;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* ====== MAIN ====== */
+.main-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 80px;
+  padding-bottom: 40px;
+}
+
+.nova-senha-container {
+  text-align: center;
+  width: 100%;
+  max-width: 420px;
+}
+
+/* ====== TÍTULO ====== */
+.nova-senha-container h1 {
+  color: #465eff;
+  font-weight: bold;
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+
+/* ====== FORM ====== */
+.nova-senha-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.nova-senha-form label {
+  color: #535353;
+  font-weight: bold;
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+
+.nova-senha-form input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 5px;
+  border: 2px solid #465eff;
+  font-size: 15px;
+  margin-bottom: 25px;
+  outline: none;
+}
+
+.nova-senha-form input:focus {
+  border-color: #fcfc30;
+  box-shadow: 0 0 5px rgba(70,94,255,0.6);
+}
+
+/* ====== REQUISITOS DE SENHA ====== */
+.requisitos-senha {
+  text-align: left;
+  color: #535353;
+  font-size: 15px;
+  margin-bottom: 25px;
+  width: 100%;
+}
+
+.requisitos-senha ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-top: 8px;
+  line-height: 1.6;
+}
+
+/* ====== BOTÃO ====== */
+.nova-senha-btn {
+  background-color: #465eff;
+  border: 2px solid #465eff;
+  color: #fcfc30;
+  font-weight: bold;
+  border-radius: 30px;
+  padding: 12px 25px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.nova-senha-btn:hover {
+  background-color: #f3f324;
+}
+
+/* ====== RESPONSIVIDADE ====== */
+@media (max-width: 600px) {
+  .nova-senha-container {
+    max-width: 90%;
+  }
+
+  .nova-senha-container h1 {
+    font-size: 32px;
+  }
+
+  .header img {
+    right: 0;
+  }
+
+  .footer {
+    right: 0;
+  }
+}

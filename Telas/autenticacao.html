@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Autenticação de Login</title>
+  <link rel="shortcut icon" href="bbts/Favbbts.png" type="image/x-icon">
+  <link rel="stylesheet" href="/css/autenticacao.css">
+</head>
+<body>
+
+  <div class="header">
+    <img src="/bbts/BBTStart logo.png" alt="BB Tecnologia e Serviços">
+  </div>
+
+  <main class="main-content">
+    <div class="auth-card">
+      <h1>Autenticação de login</h1>
+      <p>Enviamos um código de 6 dígitos para o seu e-mail:</p>
+
+      <div class="code-inputs">
+        <input type="text" maxlength="1">
+        <input type="text" maxlength="1">
+        <input type="text" maxlength="1">
+        <input type="text" maxlength="1">
+        <input type="text" maxlength="1">
+        <input type="text" maxlength="1">
+      </div>
+
+      <div class="links">
+        Não recebeu o código?
+        <a href="#">Reenviar</a>
+      </div>
+
+      <a class="change-method" href="#">Trocar método de autenticação</a>
+
+      <button class="confirm-btn">Confirmar código</button>
+    </div>
+  </main>
+
+  <div class="footer">
+    <span>2023 BBTS. Todos os direitos reservados.</span>
+    <a href="#">Política de Privacidade</a> |
+    <a href="#">Central de Ajuda</a> |
+    <a href="#">Termos de Uso</a>
+  </div>
+
+  <!-- VLibras -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+
+</body>
+</html>
