@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastrar Startup</title>
+  <link rel="shortcut icon" href="bbts/Favbbts.png" type="image/x-icon">
+  <link rel="stylesheet" href="/css/cadastrar.css">
+</head>
+<body>
+    <!-- VLibras -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+  
+    <div class="logo-cabecalho">
+        <a href="index.html" class="logo-cabecalho">
+        <img src="/bbts/BBTStart logo.png" alt="BB Tecnologia e Serviços" class="logo-cabecalho">
+        </a>
+    </div>
+    <div class="main-content">
+        <h1>Bem vindo ao Portal de Startups</h1>
+        <div class="card">
+            <div class="social-section">
+                <p>Fazer login com:</p>
+                <div class="social-icons-group">
+                    <a href="#"><img src="https://img.icons8.com/color/48/000000/google-logo.png" alt="Google"></a>
+                    <a href="#"><img src="https://img.icons8.com/color/48/000000/microsoft.png" alt="Microsoft"></a>
+                    <a href="#"><img src="https://img.icons8.com/color/48/000000/linkedin.png" alt="LinkedIn"></a>
+                </div>
+            </div>
+            <form>
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Insira seu email">
+                </div>
+                <div class="input-group">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" placeholder="Insira sua senha">
+                </div>
+                <div class="options">
+                    <div class="captcha-group">
+                        <input type="checkbox" id="not-robot">
+                        <label for="not-robot">Não sou um robô</label>
+                    </div>
+                    <a href="novasenha.html">Esqueci minha senha</a>
+                </div>
+                <button class="btn">Acessar</button>
+            </form>
+            <div class="register-section">
+                Ainda não tem conta? <a href="cadastro.html">Cadastre-se</a>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <span>2023 BBTS. Todos os direitos reservados.</span>
+        <a href="#">Política de Privacidade</a> | <a href="#">Central de Ajuda</a> | <a href="#">Termos de Uso</a>
+    </div>
+</body>
+</html>

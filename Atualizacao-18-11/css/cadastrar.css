@@ -1,0 +1,231 @@
+/* ---------- Reset básico ---------- */
+body {
+    margin: 0;
+    background-color: #465Eff;
+    font-family: "Calibri", sans-serif;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* ---------- Cabeçalho ---------- */
+.logo-cabecalho {
+    padding: 20px 40px;
+    width: 80;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-cabecalho img {
+    max-width: 100%;
+    height: auto;
+    position: right;
+}
+
+/* ---------- Conteúdo principal ---------- */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    width: 100%;
+    padding: 20px;
+}
+
+h1 {
+    color: white;
+    margin-bottom: 25px;
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* ---------- Card ---------- */
+.card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* ---------- Login social ---------- */
+.social-section {
+    margin-bottom: 25px;
+}
+
+.social-section p {
+    margin: 0 0 15px 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.social-icons-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icons-group a {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.social-icons-group a:hover {
+    background-color: #f0f0f0;
+}
+
+.social-icons-group img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+}
+
+/* ---------- Campos de entrada ---------- */
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.input-group input::placeholder {
+    color: #aaa;
+}
+
+/* ---------- Opções ---------- */
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.options .captcha-group {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #666;
+}
+
+.options .captcha-group input {
+    margin-right: 8px;
+}
+
+.options a {
+    color: #465EFF;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.options a:hover {
+    text-decoration: underline;
+}
+
+/* ---------- Botão ---------- */
+.btn {
+    width: 100%;
+    background-color: #fcfc30;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    color: #465eff;
+    border-color: #465eff
+}
+
+.btn:hover {
+    background-color: #e6c200;
+}
+
+/* ---------- Seção de cadastro ---------- */
+.register-section {
+    margin-top: 25px;
+    font-size: 14px;
+    color: #666;
+}
+
+.register-section a {
+    color: #465EFF;
+    text-decoration: none;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.register-section a:hover {
+    text-decoration: underline;
+}
+
+/* ---------- Rodapé ---------- */
+.footer {
+    width: 100%;
+    padding: 10px 0;
+    background-color: #465EFF;
+    text-align: center;
+    color: white;
+    font-size: 12px;
+    margin-top: auto;
+    position: relative;
+    right: 34%;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* ---------- Responsividade ---------- */
+@media (max-width: 480px) {
+    .card {
+        padding: 25px 20px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 10px;
+    }
+}

@@ -1,0 +1,338 @@
+/* ========================================================
+   1️⃣ GERAIS E RESET
+======================================================== */
+html,
+body {
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Calibri", sans-serif;
+  color: #465eff;
+  background: #f9f9f9;
+  line-height: 1.5;
+}
+
+/* ========================================================
+   2️⃣ CABEÇALHO / MENU
+======================================================== */
+#retangulo-azul {
+  width: 100%;
+  height: 9vh;
+  background-color: #465eff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+#logo-topo img {
+  width: 50%;
+  max-width: 240px;
+  position: absolute;
+  top: 3%;
+  left: 4%;
+  z-index: 2;
+}
+
+.container-menu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 50px;
+  position: relative;
+  height: 9vh;
+  z-index: 5;
+}
+
+/* ====== Navegação padrão ====== */
+.menu-navegacao ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.menu-navegacao a {
+  text-decoration: none;
+  color: white;
+  font-weight: 900;
+  font-size: 1.25rem;
+}
+
+#itemacessar {
+  background-color: #fcfc30;
+  padding: 10px 20px;
+  border-radius: 60px;
+  color: #465eff;
+  font-weight: bold;
+}
+
+/* ====== Botão idioma ====== */
+#botao-idioma {
+  background-color: #465eff;
+  color: white;
+  font-weight: bold;
+  font-size: 0.8rem;
+  border: none;
+  padding: 2px 1px;
+  border-radius: 20px;
+  margin-right: 5px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  position: relative;
+  z-index: 10;
+}
+
+/* ====== Botão hambúrguer ====== */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  margin-left: 20px;
+  user-select: none;
+}
+
+/* ========================================================
+   3️⃣ CONTEÚDO PRINCIPAL (FAQ)
+======================================================== */
+.titulo-faq {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #465eff;
+  margin: 40px auto;
+  position: relative;
+  right: 13%;
+}
+
+.caixa-pesquisa {
+  display: flex;
+  justify-content: center;
+  margin: 20px auto 40px;
+  position: relative;
+  width: 60%;
+}
+
+.caixa-pesquisa input {
+  width: 100%;
+  padding: 12px 40px 12px 15px;
+  font-size: 16px;
+  border: 1px solid #465eff;
+  border-radius: 8px;
+  outline: none;
+}
+
+.icone-pesquisa {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+}
+
+.lista-faq {
+  width: 70%;
+  margin: 0 auto 60px;
+  position: relative;
+  left: 5%;
+}
+
+.faq-item {
+  margin-bottom: 25px;
+}
+
+.faq-pergunta {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 8px;
+}
+
+.faq-resposta {
+  font-size: 1.2rem;
+  color: #535353;
+}
+
+/* ========================================================
+   4️⃣ RODAPÉ
+======================================================== */
+#rodape {
+  width: 100%;
+  background-color: #465eff;
+  color: #ffffff;
+  margin-top: 40px;
+}
+
+.linha-amarela {
+  width: 100%;
+  height: 4px;
+  background-color: #fcfc30;
+}
+
+.rodape-conteudo {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  padding: 40px 20px;
+  flex-wrap: wrap;
+}
+
+.logo-coluna {
+  display: flex;
+  align-items: flex-start;
+  justify-content: left;
+}
+
+.logo-rodape {
+  width: 40%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.coluna h3 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: #ffffff;
+}
+
+.coluna a {
+  display: block;
+  color: #ffffff;
+  font-size: 1rem;
+  text-decoration: none;
+  margin-bottom: 8px;
+}
+
+.coluna a:hover {
+  text-decoration: underline;
+}
+
+.social-icons img:nth-child(1) {
+  width: 40px;
+  height: 40px;
+}
+
+.social-icons img:nth-child(2) {
+  width: 40px;
+  height: 40px;
+}
+
+.social-icons img:nth-child(3) {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  align-self: center; 
+}
+
+.direitos {
+  text-align: center;
+  font-size: 0.9rem;
+  padding: 15px 0;
+  background-color: #465eff;
+}
+
+/* ========================================================
+   5️⃣ RESPONSIVIDADE
+======================================================== */
+
+/* ------ MÉDIAS GRANDES ------ */
+@media (max-width: 1200px) {
+  #logo-topo img {
+    width: 26%;
+  }
+}
+
+/* ------ TABLET ------ */
+@media (max-width: 900px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu-navegacao {
+    display: none;
+    position: absolute;
+    top: 9vh;
+    right: 0;
+    width: 100%;
+    background-color: #465eff;
+    text-align: center;
+    padding: 20px 0;
+    z-index: 99;
+  }
+
+  .menu-navegacao.ativo {
+    display: block;
+  }
+
+  .menu-navegacao ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  #botao-idioma {
+    position: absolute;
+    top: 10px;
+    right: 60px;
+  }
+
+  #logo-topo img {
+    width: 38%;
+    top: 5px;
+    left: 20px;
+  }
+
+  .titulo-faq {
+    font-size: 2.4rem;
+    position: center;
+  }
+
+  .lista-faq {
+    width: 90%;
+  }
+}
+
+/* ------ MOBILE ------ */
+@media (max-width: 600px) {
+  nav a {
+    font-size: 1rem;
+  }
+
+  .caixa-pesquisa {
+    width: 85%;
+  }
+
+  .faq-pergunta {
+    font-size: 1.3rem;
+  }
+
+  .faq-resposta {
+    font-size: 1rem;
+  }
+
+  .logo-rodape {
+    width: 80%;
+    margin: 0 auto 20px;
+  }
+
+  .rodape-conteudo {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .titulo-faq {
+    font-size: 2rem;
+    position: center;
+  }
+}

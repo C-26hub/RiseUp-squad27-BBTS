@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BBTStart</title>
+
+  <!-- CSS principal -->
+  <link rel="stylesheet" href="/css/style.css" />
+
+  <!-- Ícone da aba -->
+  <link rel="shortcut icon" href="/bbts/Favbbts.png" type="image/x-icon">
+</head>
+
+<body>
+
+  <!-- ====================== ACESSIBILIDADE ====================== -->
+  <div id="acessibilidade">
+    <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget("https://vlibras.gov.br/app");
+    </script>
+  </div>
+
+  <!-- ====================== HEADER / TOPO ====================== -->
+  <header id="topo">
+
+    <div id="retangulo-azul"></div>
+
+    <div class="container-menu">
+      <button id="botao-idioma" onclick="trocarIdioma()">EN/PT</button>
+
+      <nav class="menu-navegacao">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="cadastro.html">Cadastrar</a></li>
+          <li><a href="contatos.html">Contatos</a></li>
+          <li><a href="perguntasfreq.html">Perguntas Frequentes</a></li>
+          <li><a href="cadastrar.html" id="itemacessar">Acessar</a></li>
+        </ul>
+      </nav>
+
+      <div class="campo-busca">
+        <input type="text" placeholder="Buscar startup ou soluções" />
+        <button type="submit" class="botao-lupa">&#128269;</button>
+      </div>
+    </div>
+
+    <div class="container-header">
+      <h1>
+        Conecte sua startup<br />
+        ao futuro da inovação
+      </h1>
+
+      <a href="index.html" class="logo-topo">
+        <img src="/bbts/bbts.png" alt="Logo BBTS" />
+      </a>
+
+      <h4>
+        Mostre suas soluções e aumente suas chances de gerar conexões estratégicas
+      </h4>
+    </div>
+
+    <div class="botao-topo">
+      <button id="botao-topo">Cadastrar agora</button>
+    </div>
+
+    <div class="container-cadastro">
+      <img src="/index_imagens/startup.png" id="startup" alt="Imagem de uma startup" />
+    </div>
+
+    <div id="texto-cadastrar">
+      <h1>Por que cadastrar sua startup?</h1>
+    <img src="/index_imagens/apontar-bbts.png" id="apontar" alt="Imagem de pessoa apontando" />
+    </div>
+
+  </header>
+
+  
+  <!-- ====================== CONTEÚDO PRINCIPAL ====================== -->
+  <main>
+
+    <section id="secao-apresentacao" class="container-conteudo">
+
+      <!-- ====================== COMO CADASTRAR ====================== -->
+      <section id="como-cadastrar">
+        <div class="container-como-cadastrar">
+          <h2>Como cadastrar sua startup</h2>
+
+          <p class="texto-processo">
+            Processo simples e rápido em apenas 4 passos
+          </p>
+
+          <div class="cards-passos">
+            <div class="card-container">
+              <div class="etapa-elipse">1</div>
+              <div class="card-passo">
+                <h3>Crie seu perfil</h3>
+                <p>Preencha as informações essenciais da sua startup para começar a jornada de conexão e inovação.</p>
+              </div>
+            </div>
+
+            <div class="card-container">
+              <div class="etapa-elipse">2</div>
+              <div class="card-passo">
+                <h3>Preencha os detalhes</h3>
+                <p>Adicione informações sobre tecnologias utilizadas, segmento de atuação e modelo de negócio.</p>
+              </div>
+            </div>
+
+            <div class="card-container">
+              <div class="etapa-elipse">3</div>
+              <div class="card-passo">
+                <h3>Confirme as informações</h3>
+                <p>Revise cuidadosamente os dados antes da confirmação final do cadastro.</p>
+              </div>
+            </div>
+
+            <div class="card-container">
+              <div class="etapa-elipse">4</div>
+              <div class="card-passo">
+                <h3>Expanda seu alcance</h3>
+                <p>Após aprovação, tenha acesso completo à plataforma e todos os benefícios exclusivos.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="botao-comecar-container">
+            <button id="botao-comecar">Começar cadastro agora</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================== BENEFÍCIOS ====================== -->
+      <section id="beneficios">
+        <h2>Benefícios exclusivos para a sua startup</h2>
+        <p class="subtitulo">Descubra todas as vantagens de fazer parte do nosso ecossistema</p>
+
+        <div class="cards-container">
+
+          <div class="card">
+            <i data-lucide="eye"></i>
+            <div class="texto-card">
+              <h3>👓 Visibilidade Máxima</h3>
+              <p>Sua startup será vista por investidores, parceiros e clientes em potencial em nossa plataforma.</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <i data-lucide="users"></i>
+            <div class="texto-card">
+              <h3>🫱🏻‍🫲🏿 Conexões Estratégicas</h3>
+              <p>Conecte-se com outras startups, empresas estabelecidas e profissionais do seu segmento.</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <i data-lucide="trending-up"></i>
+            <div class="texto-card">
+              <h3>🎯 Oportunidade de Negócios</h3>
+              <p>Acesse oportunidades exclusivas de parceiras, investimentos e colaborações.</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <i data-lucide="target"></i>
+            <div class="texto-card">
+              <h3>📈 Crescimento Acelerado</h3>
+              <p>Participe de eventos, mentorias e programas de aceleração exclusivo para membros.</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <i data-lucide="briefcase"></i>
+            <div class="texto-card">
+              <h3>💡 Ecossistema de Inovação</h3>
+              <p>Faça parte do maior ecossistema de inovação e tecnologia do Brasil.</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <i data-lucide="award"></i>
+            <div class="texto-card">
+              <h3>🥇 Reconhecimento</h3>
+              <p>Ganhe destaque e reconhecimento no mercado através da nossa plataforma.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="botao-container">
+          <button id="botao-cadastro">Cadastre sua startup</button>
+        </div>
+
+      </section>
+
+    </section>
+
+    <!-- ====================== DEPOIMENTOS ====================== -->
+    <section id="depoimentos">
+      <h2>Depoimentos de startups cadastradas</h2>
+      <p class="subtitulo-depoimentos">
+        Veja o que outras startups estão dizendo sobre nossa plataforma
+      </p>
+
+      <div class="cards-depoimentos">
+
+        <div class="card-depoimento">
+          <div class="foto-texto">
+            <img src="/index_imagens/CEO Maria.png" alt="Foto de Maria Silva" class="foto-pessoa" />
+            <div class="info-pessoa">
+              <h3 class="nome-startup">TechFlow Solution</h3>
+              <p class="cargo">CEO - Maria Silva</p>
+            </div>
+          </div>
+
+          <p class="citacao">
+            “Através da plataforma conseguimos conectar com investidores que realmente entendiam nossa proposta.
+            Em 6 meses fechamos nossa primeira rodada de investimento.”
+          </p>
+
+          <div class="habilidades">
+            <span>IA</span>
+            <span>Machine Learning</span>
+            <span>SaaS</span>
+          </div>
+        </div>
+
+        <div class="card-depoimento">
+          <div class="foto-texto">
+            <img src="/index_imagens/Fundador Joao.png" alt="Foto de João Santos" class="foto-pessoa" />
+            <div class="info-pessoa">
+              <h3 class="nome-startup">EcoStart</h3>
+              <p class="cargo">Fundador - João Pereira</p>
+            </div>
+          </div>
+
+          <p class="citacao">
+            “A visibilidade que conquistamos foi incrível! Conseguimos novas parcerias estratégicas e aumentamos nossa base de clientes.”
+          </p>
+
+          <div class="habilidades">
+            <span>Sustentabilidade</span>
+            <span>IoT</span>
+            <span>GreenTech</span>
+          </div>
+        </div>
+
+        <div class="card-depoimento">
+          <div class="foto-texto">
+            <img src="/index_imagens/CTO Ana.png" alt="Foto de Ana Costa" class="foto-pessoa" />
+            <div class="info-pessoa">
+              <h3 class="nome-startup">FinanceAI</h3>
+              <p class="cargo">CTO - Ana Costa</p>
+            </div>
+          </div>
+
+          <p class="citacao">
+            “Graças à plataforma, participamos de eventos e mentorias que transformaram completamente nosso modelo de negócio.”
+          </p>
+
+          <div class="habilidades">
+            <span>Big Data</span>
+            <span>Analytics</span>
+            <span>Startups</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="botao-depoimentos">
+        <button id="botao-depoimentos">Junte-se a elas agora</button>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- ====================== RODAPÉ ====================== -->
+  <footer id="rodape">
+
+    <div class="linha-amarela"></div>
+
+    <div class="rodape-conteudo">
+
+      <a href="index.html" class="logo-rodape">
+        <img src="/bbts/bbts2.png" alt="Logo BBTS" class="logo-rodape">
+      </a>
+
+      <div class="coluna">
+        <h3>Links úteis</h3>
+        <a href="cadastrar.html">Cadastrar</a>
+        <a href="contatos.html">Contato</a>
+      </div>
+
+      <div class="coluna">
+        <h3>Suporte</h3>
+        <a href="#">Central de Ajuda</a>
+        <a href="perguntasfreq.html">Perguntas Frequentes</a>
+        <a href="#">Política de Privacidade</a>
+      </div>
+
+      <div class="coluna">
+        <h3>Contato</h3>
+        <p>contato@brtecnologia.com.br</p>
+      </div>
+
+      <div>
+        <h4>Redes Sociais</h4>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/bancodobrasil/"><img src="/tela_usuario01_img/uil_facebook.png" alt="Ícone 1" /></a>
+          <a href="https://www.instagram.com/bancodobrasil/"><img src="/tela_usuario01_img/ri_instagram-line.png" alt="Ícone 2" /></a>
+          <a href=" https://www.linkedin.com/company/bancodobrasil/"><img src="/tela_usuario01_img/LINKEDIN.png" alt="Ícone 3" /></a>
+        </div>
+      </div>
+
+    </div>
+
+  </footer>
+
+  <script src="/Javascript/index.js"></script>
+</body>
+
+</html>

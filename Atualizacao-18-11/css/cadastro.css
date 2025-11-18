@@ -1,0 +1,173 @@
+body {
+  font-family: Calibri, Arial, sans-serif;
+  background-color: #465eff;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ====== HEADER E FOOTER ====== */
+.header,
+.footer {
+  background-color: #465eff;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+.header img {
+  height: 60px;
+  position: relative;
+  right: 40%;
+}
+
+.footer {
+  font-size: 14px;
+  color: white;
+  position: relative;
+  right: 30%;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* ====== MAIN ====== */
+.main-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.cadastro-container {
+  text-align: center;
+  max-width: 1100px;
+  width: 100%;
+}
+
+.cadastro-container h1 {
+  color: white;
+  font-weight: bold;
+  margin-bottom: 40px;
+  font-size: 60px;
+}
+
+/* ====== CONTAINER DE CARDS ====== */
+.cards-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+/* ====== CARD ====== */
+.card {
+  background-color: white;
+  border-radius: 15px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  width: 420px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card .icon img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+.card h2 {
+  color: #465eff;
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.card .descricao {
+  color: #535353;
+  font-size: 20px;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+.beneficios {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+  color: #535353;
+  margin-bottom: 25px;
+  font-size: 15px;
+}
+
+.beneficios li {
+  margin-bottom: 8px;
+}
+
+/* ====== BOTÃO ====== */
+.cadastro-btn {
+  background-color: #fcfc30;
+  color: #465eff;
+  border: 15%;
+  border-color: #465eff;
+  border-radius: 30px;
+  padding: 8px 60px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cadastro-btn:hover {
+  background-color: #f4f418;
+}
+
+/* ====== LINK DE LOGIN ====== */
+.login-text {
+  color: white;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.login-link {
+  color: white;
+  font-weight: bold;
+  text-decoration: underline;
+  font-size: 20px;
+}
+
+.login-link:hover {
+  color: #fcfc30;
+}
+
+/* ====== RESPONSIVIDADE ====== */
+@media (max-width: 900px) {
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .card {
+    width: 90%;
+  }
+
+  .header img {
+    right: 0;
+  }
+
+  .footer {
+    right: 0;
+  }
+}
