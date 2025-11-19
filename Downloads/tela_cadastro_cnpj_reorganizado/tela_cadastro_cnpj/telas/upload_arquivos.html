@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BBTS Start - Upload de Arquivos</title>
+    <link rel="stylesheet" href="../css/upload_arquivos.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="logo-container">
+            <img src="../imgs/bbts-logo.png" alt="Logo BBTS Start" class="logo-image">
+        </div>
+    </header>
+
+    <main class="page-container">
+        
+        <button class="back-button" aria-label="Voltar para a tela anterior">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20.0002 36.6667C29.2049 36.6667 36.6668 29.2048 36.6668 20C36.6668 10.7953 29.2049 3.33337 20.0002 3.33337C10.7954 3.33337 3.3335 10.7953 3.3335 20C3.3335 29.2048 10.7954 36.6667 20.0002 36.6667Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M20.0002 13.3334L13.3335 20L20.0002 26.6667" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M26.6668 20H13.3335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+
+        <div class="progress-bar">
+            <div class="step current-step">
+                <div class="icon-circle active">
+                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 12.5C15.5745 12.5 16.1434 12.3868 16.6742 12.167C17.205 11.9471 17.6873 11.6248 18.0936 11.2186C18.4998 10.8123 18.8221 10.33 19.042 9.79924C19.2618 9.26844 19.375 8.69953 19.375 8.125C19.375 7.55047 19.2618 6.98156 19.042 6.45076C18.8221 5.91996 18.4998 5.43766 18.0936 5.03141C17.6873 4.62515 17.205 4.30289 16.6742 4.08303C16.1434 3.86316 15.5745 3.75 15 3.75C13.8397 3.75 12.7269 4.21094 11.9064 5.03141C11.0859 5.85188 10.625 6.96468 10.625 8.125C10.625 9.28532 11.0859 10.3981 11.9064 11.2186C12.7269 12.0391 13.8397 12.5 15 12.5ZM3.75 25.5V26.25H26.25V25.5C26.25 22.7 26.25 21.3 25.705 20.23C25.2256 19.2892 24.4608 18.5244 23.52 18.045C22.45 17.5 21.05 17.5 18.25 17.5H11.75C8.95 17.5 7.55 17.5 6.48 18.045C5.53923 18.5244 4.77436 19.2892 4.295 20.23C3.75 21.3 3.75 22.7 3.75 25.5Z" fill="currentColor" stroke="currentColor" stroke-width="0"/>
+                    </svg>
+                </div>
+                <span class="step-label">Cadastro</span>
+            </div>
+            <div class="step-line active"></div> 
+            <div class="step">
+                <div class="icon-circle">
+                    <svg width="32" height="28" viewBox="0 0 32 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.32227 7.1875H20.9377M6.32227 12.1875H16.3223M26.8275 23.223C25.6735 24.1607 24.1082 24.6875 22.4761 24.6875C20.844 24.6875 19.2788 24.1607 18.1247 23.223C16.9706 22.2854 16.3223 21.0136 16.3223 19.6875C16.3223 18.3614 16.9706 17.0896 18.1247 16.152C19.2788 15.2143 20.844 14.6875 22.4761 14.6875C24.1082 14.6875 25.6735 15.2143 26.8275 16.152C27.9816 17.0896 28.63 18.3614 28.63 19.6875C28.63 21.0136 27.9816 22.2854 26.8275 23.223ZM26.8275 23.223L30.9377 26.5625" stroke="currentColor" stroke-width="1.875"/>
+                        <path d="M28.6298 12.9912V0.9375H0.9375V25.9375H14.5913" stroke="currentColor" stroke-width="1.875"/>
+                    </svg>
+                </div>
+                <span class="step-label">Revisão</span>
+            </div>
+            <div class="step-line"></div>
+            <div class="step">
+                <div class="icon-circle">
+                    <svg width="30" height="20" viewBox="0 0 30 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.84672 20L0 12.0077L4.48732 8.36551L9.84672 12.7284L25.5127 0L30 3.64221L9.84672 20Z" fill="currentColor"/>
+                    </svg>
+                </div>
+                <span class="step-label">Confirmação</span>
+            </div>
+        </div>
+
+        <h1 class="section-title">Upload dos arquivos</h1>
+
+        <form class="access-form">
+            
+            <div class="form-grid upload-grid">
+                
+                <div class="upload-container">
+                    <label for="upload-logo" class="upload-box">
+                        <span class="upload-title">Logo</span>
+                        <span class="upload-subtitle">(formato PNG em fundo transparente)</span>
+                        <svg class="upload-icon" width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" stroke="#535353" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M17 8l-5-5-5 5" stroke="#535353" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 3v15" stroke="#535353" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <input type="file" id="upload-logo" name="upload-logo" accept=".png" required>
+                    </label>
+                </div>
+
+                <div class="upload-container">
+                    <label for="upload-cnpj" class="upload-box optional">
+                        <span class="upload-title">Cartão CNPJ (opcional)</span>
+                        <span class="upload-subtitle">(formato PDF)</span>
+                        <svg class="upload-icon" width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" stroke="#535353" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M17 8l-5-5-5 5" stroke="#535353" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 3v15" stroke="#535353" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <input type="file" id="upload-cnpj" name="upload-cnpj" accept=".pdf">
+                    </label>
+                </div>
+
+                <div class="upload-container">
+                    <label for="upload-pitch" class="upload-box">
+                        <span class="upload-title">Pitch Desk</span>
+                        <span class="upload-subtitle">(formato PDF com até 10mb)</span>
+                        <svg class="upload-icon" width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" stroke="#535353" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M17 8l-5-5-5 5" stroke="#535353" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 3v15" stroke="#535353" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <input type="file" id="upload-pitch" name="upload-pitch" accept=".pdf" required>
+                    </label>
+                </div>
+
+            </div>
+
+            <button type="submit" class="continue-button">Continuar</button>
+        </form>
+    </main>
+
+    <footer class="main-footer">
+        <p>2025 BBTS: Todos os direitos reservados. </p>
+        <nav class="footer-nav">
+            <a href="#">Política de Privacidade |</a>
+            <a href="#">Central de Ajuda |</a>
+            <a href="#">Termos de Uso</a>
+        </nav>
+    </footer>
+<!-- VLibras -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+   </div>
+   <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+<script src="../scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,528 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.back-button svg { width: 100%;
+    height: 100%;
+    display: block; }
+
+.card-benefits li { text-align: center; }
+
+.card-opcao h2 { color: var(--color-bbts-blue);
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 15px; }
+
+.confirmation-container .back-button { align-self: flex-start; 
+    margin-left: 10%; 
+    margin-bottom: 20px; }
+
+.confirmation-content-grid { display: grid;
+    grid-template-columns: 55% 45%; 
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto; 
+    padding: 0 10%; 
+    min-height: 70vh; }
+
+.confirmation-image-area { display: flex;
+    justify-content: flex-start; 
+    align-items: center;
+    padding-right: 50px; }
+
+.confirmation-main-image { width: 100%;
+    height: auto;
+    max-width: 100%; 
+    border-top-right-radius: 50px; 
+    object-fit: cover;
+    opacity: 0.9; }
+
+.confirmation-message .message-highlight { font-weight: 700;
+    margin-top: 15px; }
+
+.confirmation-message p { font-size: 24px;
+    line-height: 1.5; }
+
+.confirmation-message { margin-bottom: 40px; }
+
+.confirmation-text-area { padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; }
+
+.confirmation-title { font-size: 40px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 20px; }
+
+.continue-button { margin-top: 60px; 
+    width: 400px; 
+    padding: 15px 0;
+    background: white;
+    border-radius: 30px;
+    border: 3px solid var(--color-bbts-blue);
+    color: var(--color-bbts-blue);
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; }
+
+.continue-button.confirmation-button { background: var(--color-bbts-yellow);
+    border: none; 
+    color: var(--color-bbts-blue);
+    width: 250px;
+    font-size: 20px;
+    font-weight: 500; }
+
+.continue-button.primary-button:hover { background-color: #384FD9;}
+
+.continue-button.secondary-button:hover { background-color: var(--color-bbts-blue);
+    color: white; }
+
+.continue-button:hover { background-color: var(--color-bbts-blue);
+    color: white; }
+
+.footer-nav a { color: var(--color-text-dark);
+    text-decoration: none;
+    margin-right: 5px; }
+
+.form-group input { height: 60px;
+    padding: 12px 20px;
+    border-radius: 30px;
+    border: 1px solid var(--color-text-dark);
+    font-size: 18px;
+    outline: none;
+    transition: border-color 0.2s; }
+
+.form-group input:focus { border-color: var(--color-bbts-blue);
+    box-shadow: 0 0 5px rgba(70, 94, 255, 0.3); }
+
+.form-group label { color: var(--color-text-dark);
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 8px; }
+
+.form-group textarea:focus, 
+.form-group select:focus { border-color: var(--color-bbts-blue);
+    box-shadow: 0 0 5px rgba(70, 94, 255, 0.3); }
+
+.form-group.error label { color: red !important; }
+
+.icon-circle svg { width: 100%;
+    height: 100%; }
+
+.icon-circle { width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(70, 94, 255, 0.5);
+    color: white;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px; }
+
+.icon-circle.active { background-color: var(--color-bbts-blue);
+    color: var(--color-bbts-yellow); }
+
+.logo-image-amarelo { height: 70px; 
+    width: auto;
+    display: block; }
+
+.main-footer { width: 100%;
+    padding: 20px 45px;
+    background-color: var(--color-background);
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 12px;
+    color: var(--color-text-dark);
+    flex-wrap: wrap;
+    gap: 10px; }
+
+.main-footer.transparent-on-blue .footer-nav a { color: white; }
+
+.main-header { width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 10%; }
+
+.progress-bar.white-on-blue .step-line,
+.progress-bar.white-on-blue .icon-circle { color: var(--color-bbts-blue); }
+
+.progress-bar.white-on-blue .step-line.active,
+.progress-bar.white-on-blue .icon-circle.active { background-color: var(--color-bbts-yellow); 
+    color: var(--color-bbts-blue); }
+
+.review-alert p { font-size: 14px;
+    line-height: 1.4;
+    color: black; }
+
+.review-section h2 { font-size: 20px;
+    font-weight: 600;
+    color: var(--color-text-dark);
+    margin-bottom: 10px; }
+
+.review-section p { font-size: 16px;
+    color: #535353;
+    line-height: 1.6; }
+
+.select-options input[type="checkbox"] { margin-right: 10px; }
+
+.select-options label:hover { background-color: #f0f0f0; }
+
+.step { display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 100px; }
+
+.step-label { font-size: 20px;
+    font-weight: 600;
+    color: var(--color-bbts-blue);
+    margin-top: 6px; }
+
+.step-line { height: 4px;
+    width: 150px;
+    background-color: rgba(70, 94, 255, 0.5); 
+    margin: 0 -10px;
+    position: relative; 
+    overflow: hidden; }
+
+.step-line.active { background-color: var(--color-bbts-blue);
+}
+
+.term-group input[type="checkbox"] { margin-top: 5px;
+    flex-shrink: 0; }
+
+.term-group label { font-size: 16px;
+    color: #535353;
+    cursor: pointer; }
+
+.toggle-password svg { width: 24px;
+    height: 24px; }
+
+.upload-box input[type="file"] { position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0; }
+
+/* --- AJUSTE DO BOTÃO VOLTAR NA TELA DE CONFIRMAÇÃO (FUNDO AZUL) --- */
+    body.bg-bbts-blue .back-button { color: white; 
+    border: none; }
+
+/* --- Ajustes para Endereço: Input com Ícone (LUPA) --- */
+
+.form-group.input-with-icon { position: relative; }
+
+/* --- Botão Voltar e Título--- */
+
+.back-button { background: none;
+    border: none; 
+    border-radius: 0; 
+    width: 40px; 
+    height: 40px; 
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-text-dark); 
+    margin-bottom: 50px; }
+
+/* --- CORES INVERTIDAS PARA TELA DE CONFIRMAÇÃO --- */
+
+/* Fundo da Página Azul */
+body.bg-bbts-blue { background-color: var(--color-bbts-blue);
+    color: white; 
+    align-items: flex-start;
+    position: relative; }
+
+/* --- ESTILO DE ERRO (FEEDBACK VISUAL) --- */
+.form-group.error input,
+.form-group.error textarea,
+.form-group.error select { border-color: red !important; }
+
+/* --- ESTILOS PARA TELA DE OPÇÕES DE CADASTRO --- */
+
+.opcoes-cadastro-main { flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    width: 100%;
+    padding: 50px 20px; }
+
+/* --- ESTILOS PARA TELA DE REVISÃO (Passo 2) --- */
+
+.review-data-container { width: 100%;
+    max-width: 980px; 
+    background: white;
+    border: 1px solid #BFBFBF;
+    border-radius: 15px;
+    padding: 30px 40px;
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px; }
+
+/* --- ESTILOS PARA TELA DE UPLOAD (6ª Subetapa) --- */
+
+.form-grid.upload-grid { grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    margin-top: 20px; }
+
+/* --- ESTILOS PARA VISIBILIDADE DE SENHA (TOGGLE) --- */
+
+/* Contêiner da Senha: Necessário para posicionamento do botão */
+.form-group.password-container { position: relative; }
+
+/* --- Estilos do Multi-Select Customizado (NOVO) --- */
+
+.custom-select { position: relative;
+    width: 100%;
+    height: 60px;
+    border-radius: 30px;
+    border: 1px solid var(--color-text-dark);
+    font-size: 18px;
+    background-color: white;
+    cursor: pointer;
+    outline: none;
+    transition: border-color 0.2s;
+    display: flex;
+    align-items: center;
+    padding: 0 20px; }
+
+/* --- Indicador de Progresso (Wizard) --- */
+.progress-bar { display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 80px; }
+
+/* --- LAYOUT DA TELA DE CONFIRMAÇÃO (CONTENT GRID) --- */
+
+.confirmation-container { width: 500%;
+    max-width: 1400px;
+    padding: 0;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    margin-left: auto; 
+    margin-right: auto; }
+
+/* --- RODAPÉ TRANSPARENTE E BRANCO (Fundo Azul) --- */
+
+.main-footer.transparent-on-blue { width: 100%;
+    position: absolute; 
+    bottom: 20px; 
+    left: 0;
+    justify-content: flex-end; 
+    padding: 0 10%; 
+    background-color: transparent;
+    border-top: none;
+    color: white;
+    font-size: 12px;
+    z-index: 99;}
+
+/* --- Requisitos de Senha --- */
+
+.password-requirements { grid-column: 1 / 2;
+    padding: 10px 0;
+    align-self: flex-start; 
+    margin-top: 10px; }
+
+/* Alerta de Atenção */
+.review-alert { width: 100%;
+    max-width: 980px;
+    padding: 15px 20px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 15px; }
+
+/* Botões de Ação na Revisão */
+.review-buttons { display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 40px; }
+
+/* Container das opções: Escondido por padrão */
+.select-options { position: absolute;
+    top: 100%; 
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    max-height: 200px; 
+    overflow-y: auto;
+    background: white;
+    border: 1px solid var(--color-bbts-blue);
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: none; 
+    padding: 10px 0; }
+
+/* Estado Ativo (controlado pelo JS) */
+.custom-select.active .select-options { display: block;}
+
+/* Estilo para Botão Primário (Confirmar cadastro) */
+.continue-button.primary-button { background: var(--color-bbts-blue);
+    border: 3px solid var(--color-bbts-blue);
+    color: var(--color-bbts-yellow);
+    width: 300px; 
+ }
+
+/* Estilo para Botão Secundário (Voltar e editar) */
+.continue-button.secondary-button { background: white;
+    border: 3px solid var(--color-bbts-blue);
+    color: var(--color-bbts-blue);
+    width: 300px;}
+
+/* Estilo para as opções (labels com checkbox) */
+.select-options label { display: flex;
+    align-items: center;
+    padding: 8px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    color: var(--color-text-dark);
+    transition: background-color 0.1s; }
+
+/* Exibe o Olho Riscado e Oculta o Olho Visível quando a senha é mostrada (JS adicionará a classe 'show') */
+.toggle-password.show .icon-visible { display: none; }
+
+/* Garante que o input RUA ocupe a maior parte e o NÚMERO seja fixo no grid */
+.form-grid > .form-group[style*="width: 150px"] { width: 150px; 
+    flex-grow: 0; }
+
+/* O select precisa ter a mesma altura do input */
+.form-group select { height: 60px;
+    appearance: none; 
+    background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M6 8L10 12L14 8" stroke="%23535353" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 20px center;
+    padding-right: 40px; }
+
+/* Oculta o Olho Riscado por padrão */
+.toggle-password .icon-hidden { display: none; }
+
+/* RESPONSIVIDADE para que os cards quebrem */
+.card-opcao { width: 90%;
+        max-width: 480px; }
+
+/* Reset Básico */
+* { box-sizing: border-box;
+    margin: 0;
+    padding: 0; }
+
+/* Stepper Invertido (white-on-blue) */
+.progress-bar.white-on-blue .step-label { color: white; }
+
+/* Termos de Aceite (Checkboxes) */
+.review-terms { width: 100%;
+    max-width: 980px;
+    margin-bottom: 50px; }
+
+:root { --color-bbts-blue: #465EFF; 
+    --color-bbts-yellow: #FCFC30; 
+    --color-text-dark: #535353;
+    --color-background: #ffffff;
+    --font-primary: 'Poppins', sans-serif; }
+
+a {
+    color: var(--color-text-dark);
+    text-decoration: none;
+    margin-right: 5px;
+}
+
+body { font-family: var(--font-primary);
+    background-color: var(--color-background);
+    color: black;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+
+button {
+    background: none;
+    border: none; 
+    border-radius: 0; 
+    width: 40px; 
+    height: 40px; 
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-text-dark); 
+    margin-bottom: 50px;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--color-text-dark);
+    margin-bottom: 10px;
+}
+
+input {
+    height: 60px;
+    padding: 12px 20px;
+    border-radius: 30px;
+    border: 1px solid var(--color-text-dark);
+    font-size: 18px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+label {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--color-bbts-blue);
+    margin-top: 6px;
+}
+
+li {
+    text-align: center;
+}
+
+p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 100px;
+}
+
+select {
+    border-color: red !important; 
+}
+
+svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* --- Estilos Adicionais para Select e Textarea --- */
+
+.form-group textarea, 
+.form-group select { padding: 12px 20px;
+    border-radius: 30px;
+    border: 1px solid var(--color-text-dark);
+    font-size: 18px;
+    outline: none;
+    transition: border-color 0.2s;
+    width: 100%; 
+    font-family: var(--font-primary); 
+    min-height: 60px; 
+    resize: vertical; }
