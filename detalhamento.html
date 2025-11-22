@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles/header-footer.css" />
+    <link rel="stylesheet" href="/styles/main-pesquisa.css" />
+    <link rel="stylesheet" href="styles/detalhamento.css" />
+
+    <title>Header e Footer - BBTS</title>
+    <style>
+      /* Esconder o botão nativo do VLibras — usamos apenas o botão customizado */
+      [vw-access-button] {
+        display: none !important;
+        width: 0 !important;
+        height: 0 !important;
+        overflow: hidden !important;
+        pointer-events: none !important;
+      }
+    </style>
+  </head>
+  <body style="margin: 0; font-family: Poppins, Arial, sans-serif">
+    <div id="botoes-acessibilidade-extra">
+      <button class="btn-acess">
+        <img src="/imagens/icone-pessoa.png" alt="Acessibilidade" />
+      </button>
+      <button class="btn-vlibras">
+        <img src="/imagens/libras.png" alt="VLibras" />
+      </button>
+      <button class="btn-audio">
+        <img src="/imagens/icone-comando-voz.png" alt="Comando de voz" />
+      </button>
+    </div>
+
+    <header class="site-header">
+      <img src="/imagens/logo-bbts.png" alt="Logo BBTS" />
+      <button class="hamburger" aria-label="Abrir menu" aria-expanded="false">
+        <img src="/imagens/menu-hamburguer.png" alt="Menu" />
+      </button>
+      <nav class="site-nav">
+        <a href="#">Início</a>
+        <a href="#">Cadastrar</a>
+        <a href="#">Contato</a>
+        <a href="#">Perguntas frequentes</a>
+        <div class="login-area">
+          <a class="idioma" href="#">EN | PT</a>
+          <button class="access-btn">Acessar</button>
+        </div>
+      </nav>
+      <div class="mobile-menu" aria-hidden="true">
+        <a href="#">Início</a>
+        <a href="#">Cadastrar</a>
+        <a href="#">Contato</a>
+        <a href="#">Perguntas frequentes</a>
+        <div style="margin-top: 8px">
+          <a class="idioma" href="#">EN | PT</a>
+        </div>
+        <button class="access-btn" style="margin-top: 8px">Acessar</button>
+      </div>
+    </header>
+
+    <main id="conteudo-detalhe">
+      <div class="detalhe-img-descricao">
+        <!-- A imagem e a descrição serão inseridas dinamicamente pelo JS -->
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <img
+          src="/imagens/logo-bb-tecnologia-servicos.png"
+          alt="Logo BB Tecnologia e Serviços"
+          class="logo-bb-tecnologia-servicos"
+        />
+
+        <div style="min-width: 160px">
+          <h5>Links Úteis</h5>
+          <a href="#">Cadastrar</a>
+          <a href="#">Contato</a>
+        </div>
+
+        <div>
+          <h5>Suporte</h5>
+          <a href="#">Central de Ajuda</a>
+          <a href="#">Perguntas Frequentes</a>
+          <a href="#">Políticas de Privacidade</a>
+        </div>
+
+        <div>
+          <h5>Contato</h5>
+          <span class="contact">contato@brtecnologia.com.br</span>
+        </div>
+
+        <div>
+          <h5>Redes Sociais</h5>
+          <div class="social-icons">
+            <img
+              src="/imagens/icone-facebook.png"
+              alt="Facebook"
+              class="facebook"
+            />
+            <img
+              src="/imagens/icone-instagram.png"
+              alt="Instagram"
+              class="instagram"
+            />
+            <img
+              src="/imagens/icone-linkedin.png"
+              alt="LinkedIn"
+              class="linkedin"
+            />
+          </div>
+        </div>
+      </div>
+
+      <span class="footer-copy"
+        >BBTS - BB Tecnologia e Serviços © 2025. Todos os direitos
+        reservados.</span
+      >
+    </footer>
+
+    <script src="pesquisa-detalhamento.js"></script>
+    <!-- VLibras (plugin gov.br) -->
+    <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+
+    <script>
+      (function initVlibras() {
+        if (window.VLibras) {
+          try {
+            new window.VLibras.Widget('https://vlibras.gov.br/app');
+          } catch (e) {
+            console.warn('Erro ao inicializar VLibras', e);
+          }
+        } else {
+          setTimeout(initVlibras, 100);
+        }
+      })();
+    </script>
+
+    <script>
+      (function () {
+        const hamburger = document.querySelector('.hamburger');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        function toggleMenu() {
+          const isOpen = mobileMenu.classList.toggle('open');
+          hamburger.setAttribute('aria-expanded', String(isOpen));
+          mobileMenu.setAttribute('aria-hidden', String(!isOpen));
+        }
+        hamburger.addEventListener('click', function (e) {
+          e.stopPropagation();
+          toggleMenu();
+        });
+        // fechar ao clicar fora
+        document.addEventListener('click', function (e) {
+          if (!mobileMenu.classList.contains('open')) return;
+          if (!mobileMenu.contains(e.target) && !hamburger.contains(e.target)) {
+            mobileMenu.classList.remove('open');
+            hamburger.setAttribute('aria-expanded', 'false');
+            mobileMenu.setAttribute('aria-hidden', 'true');
+          }
+        });
+        // fechar com ESC
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
+            mobileMenu.classList.remove('open');
+            hamburger.setAttribute('aria-expanded', 'false');
+            mobileMenu.setAttribute('aria-hidden', 'true');
+            hamburger.focus();
+          }
+        });
+      })();
+    </script>
+  </body>
+</html>

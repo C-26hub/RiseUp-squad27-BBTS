@@ -1,0 +1,374 @@
+/* index2.css — estilos usados apenas dentro do <main> de index2.html */
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+main > h1 {
+  color: #465eff;
+  font-size: 48px;
+  font-weight: 600;
+  width: 100%;
+  max-width: 1113px;
+  text-align: left;
+  margin-bottom: 8px;
+}
+
+.search-input {
+  width: 100%;
+  max-width: 1113px;
+  height: 70px;
+  padding: 0 48px 0 16px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  background-image: url('/imagens/icone-pesquisa.png');
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  background-size: 30px;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.search-input::placeholder {
+  color: #bfbfbf;
+}
+
+.container-principal {
+  display: flex;
+  flex-direction: row;
+  gap: 140px;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 30px auto 0 auto;
+}
+
+aside {
+  min-width: 317px;
+  display: flex;
+  flex-direction: column;
+  width: 317px;
+  margin-top: 0;
+}
+
+#resultados {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* Filtros avançados */
+.filtros-avancados {
+  display: flex;
+  flex-direction: column;
+}
+
+.filtros-avancados h3 {
+  color: #465eff;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.filtros-avancados strong {
+  text-transform: uppercase;
+  color: #000;
+  font-size: 12px;
+  margin: 10px 0 6px 0;
+  letter-spacing: 0.6px;
+}
+
+.filtros-avancados label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 0;
+  color: #333;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.filtros-avancados input[type='checkbox'] {
+  width: 18px;
+  height: 18px;
+  accent-color: #465eff;
+}
+
+.categorias {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.categorias button {
+  background: transparent;
+  border: none;
+  padding: 14px 6px;
+  text-align: left;
+  font-weight: 600;
+  color: #333;
+  border-bottom: 1px solid #e6e6e6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.categorias .plus {
+  color: #999;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.botao-filtro {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.botao-filtro button {
+  background: #fff;
+  color: #465eff;
+  border: 2px solid #465eff;
+  padding: 10px 18px;
+  border-radius: 28px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 20px;
+  width: 254px;
+  height: 44px;
+}
+
+.botao-filtro button:nth-child(2) {
+  background: transparent;
+}
+
+/* Card de resultado */
+.card-resultado {
+  width: 634px;
+  min-height: 316px;
+  background: #fff;
+  border-radius: 20px;
+  border: 1px solid #bfbfbf;
+  margin-bottom: 32px;
+  padding: 28px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-resultado-topo {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.card-resultado-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+.card-resultado-info {
+  width: 348px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card-resultado-nome {
+  color: #465eff;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.card-resultado-segmento,
+.card-resultado-descricao {
+  color: #535353;
+  font-size: 18px;
+}
+
+.card-resultado-tecnologias {
+  display: flex;
+  gap: 13px;
+}
+
+.card-resultado-tec {
+  min-width: 68px;
+  height: 35px;
+  padding: 3px 19px;
+  background: #fefefe;
+  border-radius: 10px;
+  outline: 1px solid #535353;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #535353;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.card-resultado-link {
+  width: 100%;
+  height: 27px;
+  text-align: right;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: #535353;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.card-resultado-link a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/* ===== Responsividade ===== */
+@media (max-width: 768px) {
+  main {
+    padding: 18px;
+  }
+
+  main > h1 {
+    font-size: 36px;
+    max-width: 100%;
+  }
+
+  .search-input {
+    height: 56px;
+    max-width: 100%;
+    padding: 0 36px 0 12px;
+    font-size: 16px;
+    background-size: 26px;
+  }
+
+  .container-principal {
+    flex-direction: column;
+    gap: 18px;
+    margin: 20px auto 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 12px;
+  }
+
+  aside {
+    width: 100%;
+    min-width: unset;
+    margin-top: 0;
+  }
+
+  .botao-filtro {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .botao-filtro button {
+    width: 100%;
+    font-size: 18px;
+    height: 46px;
+  }
+
+  #resultados {
+    width: 100%;
+    gap: 20px;
+  }
+
+  .card-resultado {
+    width: 100%;
+    min-height: auto;
+    padding: 20px;
+  }
+
+  .card-resultado-topo {
+    gap: 18px;
+  }
+
+  .card-resultado-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 12px;
+  }
+
+  .card-resultado-info {
+    width: calc(100% - 140px);
+  }
+
+  .card-resultado-nome {
+    font-size: 20px;
+  }
+
+  .card-resultado-segmento,
+  .card-resultado-descricao {
+    font-size: 16px;
+  }
+
+  .card-resultado-tecnologias {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .card-resultado-tec {
+    font-size: 14px;
+    min-width: unset;
+  }
+}
+
+@media (max-width: 480px) {
+  main > h1 {
+    font-size: 28px;
+  }
+
+  .search-input {
+    height: 50px;
+    font-size: 15px;
+    padding: 0 32px 0 10px;
+    background-position: right 12px center;
+    background-size: 22px;
+  }
+
+  .card-resultado-topo {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .card-resultado-img {
+    width: 100%;
+    height: 160px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+
+  .card-resultado-info {
+    width: 100%;
+  }
+
+  .card-resultado-nome {
+    font-size: 18px;
+  }
+
+  .card-resultado-segmento,
+  .card-resultado-descricao {
+    font-size: 15px;
+  }
+
+  .botao-filtro {
+    gap: 8px;
+  }
+
+  .botao-filtro button {
+    font-size: 16px;
+    height: 44px;
+  }
+}
