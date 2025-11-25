@@ -1,0 +1,264 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Calibri', sans-serif;
+}
+
+/* Layout geral */
+body {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "sidebar top-bar"
+    "sidebar content"
+    "sidebar footer";
+  min-height: 100vh;
+  background: #fff;
+}
+
+/* Barra superior */
+.top-bar {
+  grid-area: top-bar;
+  background: #465EFF;
+  color: white;
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-icon {
+  width: 35px;
+  height: 35px;
+  background: white;
+  border-radius: 6px;
+}
+
+.company-name {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+/* Sidebar */
+.sidebar {
+  grid-area: sidebar;
+  background: #465EFF;
+  color: white;
+  width: 260px;
+  padding: 40px 20px;
+  flex-shrink: 0;
+  border-bottom: 5px solid #FCFC30;
+}
+
+.sidebar-logo {
+  width: 140px;
+  margin-bottom: 40px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.menu-item {
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.menu-item:hover,
+.submenu-item:hover {
+  background: #FCFC30;
+  color: #465EFF
+}
+
+/* Submenu */
+.submenu {
+  display: none;
+  flex-direction: column;
+  margin-left: 15px;
+  margin-top: 10px;
+  gap: 10px;
+}
+
+.submenu-item {
+  font-size: 18px;
+  cursor: pointer;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.menu-item.dropdown.open .submenu {
+  display: flex;
+}
+
+/* Destaques */
+.menu-item.active, .submenu-item.active {
+  border: 2px solid #fcfc30;
+  background: rgba(252,252,48,0.1);
+  color: #fcfc30;
+}
+
+/* Conteúdo */
+.content {
+  grid-area: content;
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f8f8f8;
+}
+
+.content h2 {
+  color: #465EFF;
+  margin-bottom: 20px;
+}
+
+/* Card das telas */
+.page-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #272727;
+  width: 100%;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.section-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.card-info {
+  width: 100%;
+  background: #f4f4f4;
+  padding: 25px;
+  border-radius: 12px;
+  margin-top: 10px;
+}
+
+.card-info p {
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: #333
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px 40px
+}
+
+.info-grid p {
+  margin: 0;
+}
+
+.tag {
+  padding: 4px 12px;
+  background: #EDEDED;
+  display: inline-block;
+  border-radius: 8px;
+  margin-right: 6px;
+  font-size: 13px;
+}
+
+/* Bptão de Edição */
+.btn-edit {
+  padding: 8px 18px;
+  background: white;
+  border: 2px solid #465EFF;
+  color:#465EFF;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-edit:hover {
+  background: #465EFF;
+  color: white;
+}
+
+/* Rodapé */
+.footer {
+  grid-area: footer;
+  background: #465EFF;
+  border-top: 5px solid #FCFC30;
+  color: white;
+  padding: 40px 20px 20px 20px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.footer-col h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.footer-col p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+  body {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "top-bar"
+      "content"
+      "footer";
+  }
+
+  .sidebar {
+    display: none;
+  }
+}
+
+/* Ajuste dos Ícones do Menu */
+.menu-item, .submenu-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) invert(1);
+}
+
+.menu-item.active .icon,
+.submenu-item.active .icon {
+  filter: brightness(0), saturate(100%), invert(29%), sepia(79%), saturate(2474%), hue-rotate(223deg), brightness(94%), contrast(102%);
+}
