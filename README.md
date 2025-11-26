@@ -68,16 +68,18 @@ Como o projeto é construído apenas com **HTML, CSS e JavaScript** (client-side
 
 ### 📂 Estrutura do Projeto
 
-📁RiseUp-squad27-BBTS/  
-├── 📄 index.html             # Página principal da plataforma  
-├── 📄 README.md              # Este arquivo  
-├── 📁 assets/                # Pasta para imagens, ícones, etc.  
-│    └── ...  
-├── 📁 css/  
-│   └── 📄 style.css       # Folha de estilos principal  
-├── 📁 js/  
-│   └── 📄 script.js       # Lógica JavaScript (validações, interações, APIs)  
+```
+📁 RiseUp-squad27-BBTS/
+├── 📄 README.md                  → Documentação geral do projeto
+├── 📄 index.html                 → Página principal da plataforma
+├── 📁 assets/                    → Pasta para imagens, ícones, etc.
+│   ├── ...
+├── 📁 css/
+│   └── 📄 style.css              → Folha de estilos principal 
+└── 📁 js/                         
+│   └── 📄 script.js              → Lógica JavaScript
 └── ...                    # Outros arquivos HTML (ex: cadastro-pf.html, sucesso.html)
+```
 
 ---
 
