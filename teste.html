@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portal BBTS — Painel</title>
+  <link rel="stylesheet" href="teste.css" />
+</head>
+<body>
+  <div class="layout">
+
+    <!-- SIDEBAR (única) -->
+    <aside class="sidebar">
+      <img src="assets/bbts_start_logo.svg" alt="Logo" class="logo" />
+
+      <nav class="menu">
+        <div class="menu-dots">
+          <img src="assets/menu_icon.svg" class="dots-icon" />
+        </div>
+
+        <a href="#" class="menu-item" data-target="tela-dashboard">
+          <img src="assets/menu_inicio.svg" class="menu-icon" />
+          <span>Início</span>
+        </a>
+
+        <div class="menu-group">
+          <div class="menu-item dropdown-btn">
+            <img src="assets/proicons_document.svg" class="menu-icon" />
+            <span>Gestão de Cadastro</span>
+            <img src="assets/seta para baixo_write.svg" class="arrow-icon" />
+          </div>
+
+          <div class="submenu">
+            <a href="#" class="submenu-item" data-target="tela-startups">Startups</a>
+            <a href="#" class="submenu-item" data-target="tela-usuarios">Usuários</a>
+          </div>
+        </div>
+
+        <div class="menu-group">
+          <div class="menu-item dropdown-btn">
+            <img src="assets/proicons_document.svg" class="menu-icon" />
+            <span>Gestão de Aprovações</span>
+            <img src="assets/seta para baixo_write.svg" class="arrow-icon" />
+          </div>
+
+          <div class="submenu">
+            <a href="#" class="submenu-item" data-target="tela-aprovacoes">Aprovações de cadastro</a>
+            <a href="#" class="submenu-item" data-target="tela-solicitacoes">Solicitações de edição</a>
+          </div>
+        </div>
+
+        <div class="menu-group">
+          <div class="menu-item dropdown-btn">
+            <img src="assets/config.svg" class="menu-icon" />
+            <span>Configurações</span>
+            <img src="assets/seta para baixo_write.svg" class="arrow-icon" />
+          </div>
+
+          <div class="submenu">
+            <a href="#" class="submenu-item" data-target="tela-personalizacao">Personalização White Label</a>
+            <a href="#" class="submenu-item" data-target="tela-senha">Alterar senha</a>
+          </div>
+        </div>
+
+        <a href="#" class="menu-item">
+          <img src="assets/sair_menu.svg" class="menu-icon" />
+          <span>Sair</span>
+        </a>
+      </nav>
+    </aside>
+
+    <!-- MAIN (conteúdo dinâmico: várias seções) -->
+    <main class="main-content">
+
+      <header class="topbar">
+        <div class="topbar-right">
+          <div class="topbar-icon">
+            <img src="assets/sino_lopbar.svg" alt="Notificações" />
+          </div>
+          <div class="user-info">
+            <img src="assets/user.svg" class="user-photo" />
+          </div>
+        </div>
+      </header>
+
+      <!-- ========= CONTEÚDO: cada section = uma "tela" ========= -->
+
+      <!-- 1) DASHBOARD -->
+      <section id="tela-dashboard" class="page visible">
+        <h1 class="page-title">Painel</h1>
+
+        <section class="dashboard-cards">
+          <div class="card-moderador">
+            <div class="card-title">Solicitações de<br>Cadastro</div>
+            <div class="card-number">8</div>
+          </div>
+
+          <div class="card-moderador">
+            <div class="card-title">Startups<br>Aprovadas</div>
+            <div class="card-number">48</div>
+          </div>
+
+          <div class="card-moderador">
+            <div class="card-title">Startups<br>Rejeitadas</div>
+            <div class="card-number">7</div>
+          </div>
+        </section>
+
+        <section class="moderador-table-section">
+          <h2>Solicitações recentes</h2>
+
+          <div class="filters-row">
+            <div class="filter-select-box">
+              <select id="dash-sortType">
+                <option value="empresa">Ordenar por: Empresa</option>
+                <option value="data">Data</option>
+                <option value="status">Status</option>
+              </select>
+            </div>
+
+            <div class="filter-select-box">
+              <select id="dash-sortOrder">
+                <option value="asc">Mais antigas</option>
+                <option value="desc">Mais recentes</option>
+              </select>
+            </div>
+
+            <div class="search-box">
+              <input type="text" id="dash-search" placeholder="Pesquisar..." />
+              <img src="assets/cil_lupa_busca.svg" alt="Buscar" />
+            </div>
+          </div>
+
+          <div class="table-wrapper">
+            <table class="styled-table" id="dash-table">
+              <thead>
+                <tr>
+                  <th>Empresa</th>
+                  <th>Data de Cadastro</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>TechNova Solutions</td>
+                  <td data-date="2025-10-05">05/10/2025</td>
+                  <td><span class="tag yellow">Pendente</span></td>
+                </tr>
+                <tr>
+                  <td>DataDrive</td>
+                  <td data-date="2025-10-05">05/10/2025</td>
+                  <td><span class="tag green">Aprovado</span></td>
+                </tr>
+                <tr>
+                  <td>Agrotec</td>
+                  <td data-date="2025-10-05">05/10/2025</td>
+                  <td><span class="tag red">Rejeitado</span></td>
+                </tr>
+                <tr>
+                  <td>EdFuture</td>
+                  <td data-date="2025-10-05">05/10/2025</td>
+                  <td><span class="tag green">Aprovado</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </section>
+
+      <!-- 2) STARTUPS -->
+      <section id="tela-startups" class="page">
+        <h1 class="page-title">Startups</h1>
+
+        <section class="filters-row">
+          <label>Status</label>
+          <div class="filter-select-box">
+            <select id="startups-status">
+              <option>Todos</option>
+              <option>Ativa</option>
+              <option>Inativa</option>
+              <option>Pendente</option>
+            </select>
+          </div>
+
+          <label>Período</label>
+          <input type="date" class="date-input" id="startups-from">
+          <input type="date" class="date-input" id="startups-to">
+
+          <button class="btn-filter" id="startups-filter">Filtrar</button>
+        </section>
+
+        <section class="table-wrapper">
+          <table class="styled-table" id="startups-table">
+            <thead>
+              <tr>
+                <th>Empresa</th>
+                <th>CNPJ</th>
+                <th>Data de cadastro</th>
+                <th>Status</th>
+                <th>Ações</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>TechNova Solutions</td>
+                <td>XX.XXX.XXX/0001-XX</td>
+                <td>05/10/2025</td>
+                <td><span class="tag tag--success">Ativa</span></td>
+                <td>
+                  <button class="btn-details">Ver detalhes</button>
+                  <button class="btn-danger">Desativar</button>
+                </td>
+              </tr>
+
+              <tr>
+                <td>DataDrive</td>
+                <td>XX.XXX.XXX/0001-XX</td>
+                <td>05/10/2025</td>
+                <td><span class="tag tag--success">Ativa</span></td>
+                <td>
+                  <button class="btn-details">Ver detalhes</button>
+                  <button class="btn-danger">Desativar</button>
+                </td>
+              </tr>
+
+              <tr>
+                <td>Agrotec</td>
+                <td>XX.XXX.XXX/0001-XX</td>
+                <td>05/10/2025</td>
+                <td><span class="tag tag--success">Ativa</span></td>
+                <td>
+                  <button class="btn-details">Ver detalhes</button>
+                  <button class="btn-danger">Desativar</button>
+                </td>
+              </tr>
+
+              <tr>
+              <td>EdFuture</td>
+              <td>XX.XXX.XXX/0001-XX</td>
+              <td>05/10/2025</td>
+              <td><span class="tag tag--success">Ativa</span></td>
+              <td>
+                <button class="btn-details">Ver detalhes</button>
+                <button class="btn-danger">Desativar</button>
+              </td>
+            </tr>
+
+            </tbody>
+          </table>
+        </section>
+      </section>
+
+      <!-- 3) USUÁRIOS -->
+      <section id="tela-usuarios" class="page">
+        <h1 class="page-title">Usuários</h1>
+
+        <section class="filters-row">
+          <label>Status</label>
+          <div class="filter-select-box">
+            <select id="usuarios-status">
+              <option>Todos</option>
+              <option>Ativa</option>
+              <option>Inativa</option>
+            </select>
+          </div>
+
+          <label>Período</label>
+          <input type="date" class="date-input" id="usuarios-from">
+          <input type="date" class="date-input" id="usuarios-to">
+
+          <button class="btn-filter" id="usuarios-filter">Filtrar</button>
+        </section>
+
+        <section class="table-wrapper">
+          <table class="styled-table" id="usuarios-table">
+            <thead>
+              <tr>
+                <th>Usuário</th>
+                <th>CPF</th>
+                <th>Data de cadastro</th>
+                <th>Status</th>
+                <th>Ações</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Ana Araújo Santos</td>
+                <td>XXX.XXX.XXX-XX</td>
+                <td>05/10/2025</td>
+                <td><span class="tag tag--success">Ativa</span></td>
+                <td>
+                  <button class="btn-details">Ver detalhes</button>
+                  <button class="btn-danger">Desativar</button>
+                </td>
+              </tr>
+
+              <tr>
+                <td>Ana Araújo Santos</td>
+                <td>XXX.XXX.XXX-XX</td>
+                <td>05/10/2025</td>
+                <td><span class="tag tag--success">Ativa</span></td>
+                <td>
+                  <button class="btn-details">Ver detalhes</button>
+                  <button class="btn-danger">Desativar</button>
+                </td>
+              </tr>
+
+              <tr>
+                <td>Ana Araújo Santos</td>
+                <td>XXX.XXX.XXX-XX</td>
+                <td>05/10/2025</td>
+                <td><span class="tag tag--success">Ativa</span></td>
+                <td>
+                  <button class="btn-details">Ver detalhes</button>
+                  <button class="btn-danger">Desativar</button>
+                </td>
+              </tr>
+
+              <tr>
+                <td>Ana Araújo Santos</td>
+                <td>XXX.XXX.XXX-XX</td>
+                <td>05/10/2025</td>
+                <td><span class="tag tag--success">Ativa</span></td>
+                <td>
+                  <button class="btn-details">Ver detalhes</button>
+                  <button class="btn-danger">Desativar</button>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+        </section>
+      </section>
+
+      <!-- 4) APROVAÇÕES -->
+      <section id="tela-aprovacoes" class="page">
+        <h1 class="page-title">Aprovações de Cadastro</h1>
+
+        <section class="filters-row">
+          <label>Status</label>
+          <div class="filter-select-box">
+            <select id="aprov-status">
+              <option>Todos</option>
+              <option>Pendente</option>
+            </select>
+          </div>
+
+          <label>Período</label>
+          <input type="date" class="date-input" id="aprov-from">
+          <input type="date" class="date-input" id="aprov-to">
+
+          <button class="btn-filter" id="aprov-filter">Filtrar</button>
+        </section>
+
+        <section class="table-wrapper">
+          <table class="styled-table" id="aprov-table">
+            <thead>
+              <tr>
+                <th>Empresa</th>
+                <th>Data de cadastro</th>
+                <th>Data de solicitação</th>
+                <th>Ações</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>TechNova Solutions</td>
+                <td>05/10/2025</td>
+                <td>05/10/2025</td>
+                <td class="actions-cell">
+                  <button class="btn-approve" title="Aprovar">C</button>
+                  <button class="btn-reject" title="Rejeitar">X</button>
+                </td>
+              </tr>
+              <tr>
+                <td>DataDrive</td>
+                <td>05/10/2025</td>
+                <td>05/10/2025</td>
+                <td class="actions-cell">
+                  <button class="btn-approve" title="Aprovar">C</button>
+                  <button class="btn-reject" title="Rejeitar">X</button>
+                </td>
+              </tr>
+            </tbody>
+
+            <tr>
+                <td>Agrotec</td>
+                <td>05/10/2025</td>
+                <td>05/10/2025</td>
+                <td class="actions-cell">
+                  <button class="btn-approve" title="Aprovar">C</button>
+                  <button class="btn-reject" title="Rejeitar">X</button>
+                </td>
+              </tr>
+            </tbody>
+
+            <tr>
+                <td>EdFuture</td>
+                <td>05/10/2025</td>
+                <td>05/10/2025</td>
+                <td class="actions-cell">
+                  <button class="btn-approve" title="Aprovar">C</button>
+                  <button class="btn-reject" title="Rejeitar">X</button>
+                </td>
+              </tr>
+            </tbody>
+
+
+          </table>
+        </section>
+      </section>
+
+       <!-- 4) SOLICITAÇÕES -->
+
+
+      <!-- Footer único -->
+      <footer class="footer global-footer">
+        <div class="footer-container">
+          <div class="footer-col brand">
+            <img src="assets/bbts_logo_longa.svg" alt="Logo BB Tecnologia e Serviços" class="footer-logo">
+          </div>
+
+          <div class="footer-col">
+            <h4>Links úteis</h4>
+            <a href="#">Dashboard</a>
+            <a href="#">Contatos</a>
+          </div>
+
+          <div class="footer-col">
+            <h4>Suporte</h4>
+            <a href="#">Central de Ajuda</a>
+            <a href="#">Perguntas Frequentes</a>
+          </div>
+
+          <div class="footer-col">
+            <h4>Contato</h4>
+            <a href="mailto:contato@bbtecnologia.com.br">contato@bbtecnologia.com.br</a>
+          </div>
+
+          <div class="footer-col">
+            <h4>Redes Sociais</h4>
+            <div class="socials">
+              <a href="#"><img src="assets/uil_facebook.svg" alt="Facebook"></a>
+              <a href="#"><img src="assets/ri_instagram-line.svg" alt="Instagram"></a>
+              <a href="#"><img src="assets/uil_linkendln.svg" alt="LinkedIn"></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>BBTS – BB Tecnologia e Serviços © 2025. Todos os direitos reservados.</p>
+        </div>
+      </footer>
+
+    </main>
+  </div>
+
+  <script src="teste.js"></script>
+</body>
+</html>
