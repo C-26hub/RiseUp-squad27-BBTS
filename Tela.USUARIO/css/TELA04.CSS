@@ -1,0 +1,639 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Calibre";
+}
+
+body {
+  background: white;
+  color: #333;
+  font-family: "Calibre";
+}
+
+/* ===== LAYOUT ===== */
+.layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* ===== BARRA LATERAL ===== */
+.sidebar {
+  background: #465eff;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
+}
+
+.logo {
+  width: 130px;
+  margin-bottom: 3rem;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: white;
+  font-size: 1.2rem;
+  text-decoration: none;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  transition: background 0.3s, filter 0.3s;
+  font-family: "Calibre";
+  white-space: nowrap;  /* Impede que o texto quebre em várias linhas */
+}
+
+
+.menu-item img.menu-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  filter: brightness(1.8) contrast(1.2);
+}
+
+.menu-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.menu-item.active {
+  background: transparent;
+  color: white;
+  font-weight: 600;
+}
+
+/* ===== CONTEÚDO PRINCIPAL ===== */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: white;
+}
+
+.topbar {
+  background: #465eff;
+  color: white;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.username {
+  font-size: 1.2rem;
+}
+
+/* ===== DADOS DE CADASTRO ===== */
+.dados-cadastro-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 60px;
+  margin-left: 40px;
+}
+
+/* ===== DADOS DE CADASTRO ===== */
+
+.dados-cadastro {
+  display: flex;              /* Alinha o conteúdo horizontalmente */
+  align-items: center;        /* Alinha verticalmente o ícone e o texto */
+  gap: 10px;                  /* Espaçamento entre o ícone e o texto */
+}
+
+.dados-cadastro {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: nowrap; /* Impede que o título quebre em várias linhas */
+}
+
+.dados-cadastro h2 {
+  font-size: 1.5rem;
+  color: black;
+  font-weight: 600;
+  font-family: "Calibre";
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; /* Adiciona reticências se o texto for maior que o contêiner */
+  max-width: calc(100% - 50px); /* Garante que o texto não ultrapasse o espaço disponível */
+}
+
+
+
+
+
+/* Linha */
+.linha-dados {
+  width: 100%;
+  border-bottom: 2px solid #ccc;
+}
+
+/* ===== DADOS PESSOAIS / ENDEREÇO ===== */
+
+.dados-pessoais-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 40px;
+  margin-left: 60px;
+}
+
+.dados-pessoais {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 700px;
+}
+
+.titulo-endereco {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.titulo-endereco img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.titulo-endereco span {
+  font-size: 1.2rem;
+  color: black;
+  font-weight: 700;
+  font-family: "Calibre";
+}
+
+/* Botão solicitar edição */
+.solicitar-edicao {
+  font-family: "Calibre";
+  font-weight: 400;
+  font-size: 1rem;
+  color: #007BFF;
+  border: 2px solid #007BFF;
+  padding: 4px 14px;
+  border-radius: 12px;
+  background-color: transparent;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.solicitar-edicao:hover {
+  background-color: rgba(0, 123, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Retângulo cinza */
+.retangulo-cinza-texto {
+  width: 700px;
+  min-height: 350px;
+  background: #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Labels */
+.label {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #000;
+  font-family: "Calibre";
+}
+
+/* Valores */
+.value {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #000;
+  font-family: "Calibre";
+}
+
+/* ===== SUBMENU ===== */
+.submenu {
+    display: none; /* Inicialmente oculto */
+    flex-direction: column;
+    gap: 10px;
+    transition: display 0.3s ease; /* Não pode animar display diretamente, mas vai funcionar junto com a lógica do JS */
+}
+
+/* Ajuste no submenu-item */
+.submenu-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  font-size: 1.05rem;
+  padding: 6px 10px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-family: "Calibre";
+  white-space: nowrap; /* Impede que o texto quebre em várias linhas */
+}
+
+/* Ajuste no ícone do submenu para garantir o tamanho correto */
+.submenu-icon {
+  width: 20px;
+  height: 20px;
+  filter: brightness(1.3);
+  object-fit: contain; /* Garante que a imagem se ajuste dentro do espaço */
+}
+
+.submenu-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.submenu-item.destaque {
+  background: #fcfc30;
+  color: #465eff;
+  font-weight: 600;
+}
+
+/* ===== RODAPÉ ===== */
+.footer {
+    background: #465eff;
+    color: white;
+    margin-top: auto;
+    padding: 1.2rem 2rem;  /* diminuído (antes 2rem) */
+    border-top: 5px solid #fcfc30;
+}
+
+/* ===== MAIS PARA A DIREITA + RODAPÉ MENOR ===== */
+.footer-grid {
+    display: flex;
+    justify-content: flex-start;
+    gap: 7rem;
+    padding-left: 23rem;      /* alinhamento que você pediu */
+    padding-bottom: 1rem;     /* diminuído (antes 2rem) */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.footer h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;    /* diminuído */
+}
+
+.footer ul li {
+    margin-bottom: 0.45rem;   /* espaçamento menor e elegante */
+}
+
+.footer ul li:last-child {
+    margin-bottom: 0;
+}
+
+.footer ul {
+    list-style: none;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;       /* levemente menor */
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.social-icons img {
+    width: 25px;             /* reduzido (era 28px) */
+    margin-right: 7px;
+}
+
+/* Texto final centralizado */
+.copy {
+    text-align: center;
+    font-size: 0.85rem;      /* menor */
+    opacity: 0.9;
+    margin-top: 1rem;        /* menos espaço */
+}
+
+
+
+/* ===== ÍCONE INFERIOR ESQUERDO ===== */
+.bottom-left-icon {
+  position: fixed;
+  bottom: 120px;
+  left: 10px;
+  width: 408px;
+  height: 35px;
+  object-fit: contain;
+  z-index: 100;
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .menu {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .dados-pessoais-container {
+    margin-left: 20px;
+  }
+
+  .retangulo-cinza-texto {
+    width: 90%;
+  }
+}
+
+/* ===== CAMPOS DO RETÂNGULO CINZA ===== */
+.linha-endereco {
+  display: flex;
+  justify-content: flex-start;
+  gap: 80px;
+  margin-bottom: 20px;
+}
+
+.campo label {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #000;
+  display: block;
+  margin-bottom: 3px;
+  font-family: "Calibre";
+}
+
+.campo p {
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: #333;
+  font-family: "Calibre";
+}
+
+/* ===== CLICÁVEL ===== */
+.submenu-toggle {
+    cursor: pointer;
+}
+
+/* seta também vira "mãozinha" */
+.submenu-toggle .arrow-icon {
+    cursor: pointer;
+}
+
+/* ===== HOVER IGUAL AOS OUTROS ITENS DO MENU ===== */
+.submenu-toggle:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+/* Transição suave do submenu */
+.submenu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 1rem;
+    flex-wrap: nowrap;
+    transition: max-height 0.3s ease-out; /* Adiciona transição suave para abrir/fechar */
+    overflow: hidden; /* Esconde o conteúdo quando fechado */
+}
+
+/* O submenu começa fechado, mas com um max-height de 0 */
+.submenu-closed {
+    max-height: 0;
+}
+
+/* Quando o submenu estiver aberto, ele terá max-height suficiente para mostrar o conteúdo */
+.submenu-open {
+    max-height: 500px; /* Ajuste conforme necessário */
+}
+
+/* Animação suave para a seta */
+.arrow-icon {
+    transition: transform 0.3s ease;
+}
+
+/* Quando a seta estiver "aberta" (rotacionada) */
+.arrow-open {
+    transform: rotate(180deg);
+}
+
+/* =================================== */
+/* ===== ESTILOS DO MODAL/POP-UP ===== */
+/* =================================== */
+
+.modal-overlay {
+    /* Fundo escuro que cobre toda a tela */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none; /* Inicia Oculto */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Garante que fique acima de todo o resto */
+}
+
+.modal-content {
+    background-color: white;
+    padding: 30px 40px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 450px; /* Largura conforme a imagem */
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-title {
+    color: #465eff; /* Cor azul forte */
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.modal-description {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.close-button {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 2rem;
+    color: #aaa;
+    cursor: pointer;
+    line-height: 1;
+    transition: color 0.2s;
+}
+
+.close-button:hover {
+    color: #333;
+}
+
+/* Campos do Formulário dentro do Modal */
+.modal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group-modal label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group-modal input,
+.form-group-modal textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    resize: none; /* Desabilita redimensionamento para o textarea */
+}
+
+.form-group-modal input:focus,
+.form-group-modal textarea:focus {
+    border-color: #465eff;
+    outline: none;
+}
+
+/* Botões de Ação */
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.btn-cancelar, .btn-enviar {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-cancelar {
+    background-color: transparent;
+    color: #465eff;
+    border: 2px solid #465eff;
+}
+
+.btn-cancelar:hover {
+    background-color: rgba(70, 94, 255, 0.1);
+}
+
+.btn-enviar {
+    background-color: #465eff;
+    color: white;
+}
+
+.btn-enviar:hover {
+    background-color: #3549c4; /* Um azul um pouco mais escuro */
+}
+/* No seu TELA04.CSS, certifique-se que estas regras existam: */
+
+.submenu {
+    display: none; /* Oculto por padrão, até que o JS adicione a classe 'open' */
+    /* ... outras propriedades de submenu ... */
+}
+
+.submenu.open {
+    display: flex; /* EXIBE os itens quando a classe 'open' está presente */
+}
+
+.arrow-open {
+    transform: rotate(180deg);
+}
+
+.modal-success-content {
+    /* Cor de fundo azul forte */
+    background-color: #465eff; 
+    color: white;
+    text-align: center;
+    padding: 50px 40px; /* Mais preenchimento para centralizar melhor */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 350px; /* Altura fixa para ficar parecido com a imagem */
+    max-width: 480px; /* Ligeiramente maior que o modal de edição */
+}
+
+.modal-title-success {
+    /* Cor amarela vibrante */
+    color: #fcfc30; 
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.modal-description-success {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 40px;
+    line-height: 1.4;
+}
+
+.modal-success-content .close-button {
+    /* Ajuste a cor do X para branco no modal de sucesso */
+    color: white; 
+    opacity: 0.8;
+}
+
+.modal-success-content .close-button:hover {
+    color: #fcfc30; 
+}
+
+.btn-voltar-inicio {
+    padding: 12px 30px;
+    background-color: white;
+    color: #465eff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-voltar-inicio:hover {
+    background-color: #eee;
+    transform: translateY(-2px);
+}

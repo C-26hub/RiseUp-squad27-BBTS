@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alterar Senha - Portal de Startups</title>
+  <link rel="stylesheet" href="/css/TELA07.css" />
+  <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+</head>
+
+<body>
+  <div class="layout">
+
+    <!-- === SIDEBAR === -->
+    <aside class="sidebar">
+      <img src="/img copy/Amarelo sem fundo 2.png" alt="Logo BBTS Start" class="logo">
+
+      <nav class="menu">
+        <div class="menu-top-icon">
+          <img src="/img copy/3 traços.png" alt="Menu opções">
+        </div>
+
+        <a href="index.html" class="menu-item">
+          <img src="/img copy/CasaB.png" class="menu-icon">
+          <span>Início</span>
+        </a>
+
+        <a href="#" class="menu-item">
+          <img src="/img copy/dados.png" class="menu-icon">
+          <span>Dados de Cadastro</span>
+          <img src="/img copy/Seta cima.png" class="arrow-icon">
+        </a>
+
+        <!-- SUBMENU -->
+        <div class="submenu">
+          <a href="TELA03.html" class="submenu-item">
+            <img src="/img copy/perfilDados.png" class="submenu-icon">
+            <span>Dados Pessoais</span>
+          </a>
+
+          <a href="TELA04.html" class="submenu-item">
+            <img src="/img copy/localizacao.png" class="submenu-icon">
+            <span>Endereço</span>
+          </a>
+
+          <a href="TELA05.html" class="submenu-item">
+            <img src="/img copy/Perfil.png" class="submenu-icon">
+            <span>Perfil</span>
+          </a>
+        </div>
+
+        <a href="TELA06.html" class="menu-item">
+          <img src="/img copy/historico.png" class="menu-icon">
+          <span>Histórico de Solicitações</span>
+        </a>
+
+        <a href="TELA07.html" class="menu-item active">
+          <img src="/img copy/Chave Azul.png" class="menu-icon">
+          <span>Alterar Senha</span>
+        </a>
+
+        <a href="#" class="menu-item">
+          <img src="/img copy/sair.png" class="menu-icon">
+          <span>Sair</span>
+        </a>
+      </nav>
+    </aside>
+
+    <!-- === MAIN CONTENT === -->
+    <main class="main-content">
+      <header class="topbar">
+        <div class="user-info">
+          <img src="/img copy/Perfil.png" alt="Usuário" class="avatar">
+          <span class="username">João Silva</span>
+        </div>
+      </header>
+
+      <section class="page-content">
+
+        <div class="content-header">
+          <img src="/img copy/ChavePreta.png" class="header-icon">
+          <h1>Alterar Senha</h1>
+        </div>
+
+        <div class="header-divider"></div>
+
+        <!-- Formulário de alteração de senha -->
+        <form action="#" method="POST" class="form-alterar-senha">
+          <div class="form-group">
+            <label for="senha-atual">Senha atual *</label>
+            <input type="password" id="senha-atual" name="senha-atual" required placeholder="Digite a senha atual">
+          </div>
+          
+          <div class="form-group">
+            <label for="nova-senha">Nova senha *</label>
+            <input type="password" id="nova-senha" name="nova-senha" required placeholder="Digite a nova senha">
+          </div>
+          
+          <div class="form-group">
+            <label for="confirmar-nova-senha">Confirmar senha *</label>
+            <input type="password" id="confirmar-nova-senha" name="confirmar-nova-senha" required placeholder="Confirme a nova senha">
+          </div>
+
+          <button type="submit" class="btn-confirmar">Confirmar</button>
+        </form>
+        
+      </section>
+
+      <footer class="footer">
+        <div class="footer-grid">
+          <div>
+            <h4>Links úteis</h4>
+            <ul>
+              <li><a href="#">Cadastrar</a></li>
+              <li><a href="#">Contato</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Suporte</h4>
+            <ul>
+              <li><a href="#">Central de Ajuda</a></li>
+              <li><a href="#">Perguntas Frequentes</a></li>
+              <li><a href="#">Política de Privacidade</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Contato</h4>
+            <ul>
+              <li><a href="mailto:contato@brtecnologia.com.br">contato@brtecnologia.com.br</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Redes Sociais</h4>
+            <div class="social-icons">
+              <img src="/img copy/uil_facebook.png">
+              <img src="/img copy/ri_instagram-line.png">
+              <img src="/img copy/LINKEDIN.png">
+            </div>
+          </div>
+        </div>
+        <p class="copy">
+          BBTS – BB Tecnologia e Serviços © 2025. Todos os direitos reservados.
+        </p>
+      </footer>
+
+  </main>
+  </div>
+
+  <div id="passwordSuccessModal" class="modal-overlay">
+      <div class="modal-content-success-password">
+          <div class="close-button" id="closePasswordSuccessBtn">
+              &times;
+          </div>
+                    <h2 class="modal-title-success-password">Senha alterada</h2>
+          <p class="modal-description-success-password">
+        Senha alterada, volte para o inicio.
+          </p>
+          <button id="goToHomeBtn" class="btn-voltar-inicio-password">
+              Voltar para o Início
+          </button>
+      </div>
+  </div>
+
+
+  
+  <img src="/img copy/image-logo.png" alt="Ícone inferior esquerdo" class="bottom-left-icon" />
+</body>
+
+<script src="/JS/TELA07.js"></script>
+</html>

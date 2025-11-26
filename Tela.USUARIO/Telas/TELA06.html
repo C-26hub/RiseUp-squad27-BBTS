@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Histórico de Solicitações - Portal de Startups</title>
+  <link rel="stylesheet" href="/css/TELA06.css" />
+  <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+</head>
+
+<body>
+  <div class="layout">
+
+    <!-- === SIDEBAR === -->
+    <aside class="sidebar">
+      <img src="/img copy/Amarelo sem fundo 2.png" alt="Logo BBTS Start" class="logo">
+
+      <nav class="menu">
+
+        <div class="menu-top-icon">
+          <img src="/img copy/3 traços.png" alt="Menu opções">
+        </div>
+
+        <a href="index.html" class="menu-item">
+          <img src="/img copy/CasaB.png" class="menu-icon">
+          <span>Início</span>
+        </a>
+
+        <a href="#" class="menu-item">
+          <img src="/img copy/dados.png" class="menu-icon">
+          <span>Dados de Cadastro</span>
+          <img src="/img copy/Seta cima.png" class="arrow-icon">
+        </a>
+
+        <!-- SUBMENU -->
+        <div class="submenu">
+          <a href="TELA03.html" class="submenu-item">
+            <img src="/img copy/perfilDados.png" class="submenu-icon">
+            <span>Dados Pessoais</span>
+          </a>
+
+          <a href="TELA04.html" class="submenu-item">
+            <img src="/img copy/localizacao.png" class="submenu-icon">
+            <span>Endereço</span>
+          </a>
+
+          <a href="TELA05.html" class="submenu-item">
+            <img src="/img copy/Perfil.png" class="submenu-icon">
+            <span>Perfil</span>
+          </a>
+        </div>
+
+        <a href="TELA06.html" class="menu-item active">
+          <img src="/img copy/HistoricoAzul.png" class="menu-icon">
+          <span>Histórico de Solicitações</span>
+        </a>
+
+        <a href="TELA07.html" class="menu-item">
+          <img src="/img copy/chave.png" class="menu-icon">
+          <span>Alterar Senha</span>
+        </a>
+
+        <a href="" class="menu-item">
+          <img src="/img copy/sair.png" class="menu-icon">
+          <span>Sair</span>
+        </a>
+
+      </nav>
+    </aside>
+
+    <!-- === MAIN CONTENT === -->
+    <main class="main-content">
+
+      <header class="topbar">
+        <div class="user-info">
+          <img src="/img copy/Perfil.png" alt="Usuário" class="avatar">
+          <span class="username">João Silva</span>
+        </div>
+      </header>
+
+      <section class="page-content">
+
+        <div class="content-header">
+          <img src="/img copy/HistoricoPRETO.png" class="header-icon">
+          <h1>Histórico de Solicitações</h1>
+        </div>
+
+        <!-- LINHA CINZA -->
+        <div class="header-divider"></div>
+
+        <p class="subtitle">Suas últimas solicitações de edição</p>
+
+        <div class="retangulo-cinza">
+          <div class="history-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Descrição</th>
+                  <th>Data de Solicitação</th>
+                  <th>Data de Conclusão</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>Atualização no endereço</td>
+                  <td>21/09/2025</td>
+                  <td>-</td>
+                  <td><span class="status pending">Pendente</span></td>
+                </tr>
+
+                <tr>
+                  <td>Email</td>
+                  <td>15/09/2025</td>
+                  <td>16/09/2025</td>
+                  <td><span class="status approved">Aprovada</span></td>
+                </tr>
+
+                <tr>
+                  <td>Mudança de foto</td>
+                  <td>15/09/2025</td>
+                  <td>16/09/2025</td>
+                  <td><span class="status approved">Aprovada</span></td>
+                </tr>
+              </tbody>
+
+            </table>
+
+            <a href="#" class="see-more">Ver mais</a>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- RODAPÉ -->
+      <footer class="footer">
+        <div class="footer-grid">
+
+          <div>
+            <h4>Links úteis</h4>
+            <ul>
+              <li><a href="#">Cadastrar</a></li>
+              <li><a href="#">Contato</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4>Suporte</h4>
+            <ul>
+              <li><a href="#">Central de Ajuda</a></li>
+              <li><a href="#">Perguntas Frequentes</a></li>
+              <li><a href="#">Política de Privacidade</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4>Contato</h4>
+            <ul>
+              <li><a href="mailto:contato@brtecnologia.com.br">contato@brtecnologia.com.br</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4>Redes Sociais</h4>
+            <div class="social-icons">
+              <img src="/img copy/uil_facebook.png">
+              <img src="/img copy/ri_instagram-line.png">
+              <img src="/img copy/LINKEDIN.png">
+            </div>
+          </div>
+
+        </div>
+
+        <p class="copy">
+          BBTS – BB Tecnologia e Serviços © 2025. Todos os direitos reservados.
+        </p>
+
+      </footer>
+
+    </main>
+
+  </div>
+</body>
+</html>
+
+
+  <img src="/img copy/image-logo.png" alt="Ícone inferior esquerdo" class="bottom-left-icon" />
+
+</body>
+  <script src="/JS/TELA06.JS"></script>
+</html>
