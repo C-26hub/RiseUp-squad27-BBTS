@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Portal BBTS — Painel</title>
+  <link rel="icon" type="assets/png" href="assets/BTTS Start site LOGO.svg" />
   <link rel="stylesheet" href="teste.css" />
 </head>
 <body>
@@ -410,8 +411,87 @@
         </section>
       </section>
 
-       <!-- 4) SOLICITAÇÕES -->
+       <!-- 5) SOLICITAÇÕES -->
+      <h1 class="page-title">Solicitações de edição</h1>
 
+      <section class="filters-row">
+
+        <label>Status</label>
+        <div class="filter-select-box">
+          <select>
+            <option>Todos</option>
+            <option>Pendente</option>
+            <option>Aprovado</option>
+            <option>Recusado</option>
+          </select>
+        </div>
+
+        <label>Período</label>
+        <input type="date" class="date-input">
+        <input type="date" class="date-input">
+
+        <button class="btn-filter">Filtrar</button>
+
+      </section>
+
+
+      <!-- TABELA -->
+      <section class="table-wrapper">
+        <table class="styled-table">
+          <thead>
+            <tr>
+              <th>Empresa</th>
+              <th>Campo a alterar</th>
+              <th>Data da solicitação</th>
+              <th>Status</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>TechNova Solutions</td>
+              <td>Endereço</td>
+              <td>05/10/2025</td>
+              <td><span class="badge pending">Pendente</span></td>
+              <td>
+                <button class="btn-details">Detalhes</button>
+              </td>
+            </tr>
+
+            <tr>
+              <td>DataDrive</td>
+              <td>Informações básicas</td>
+              <td>05/10/2025</td>
+              <td><span class="badge approved">Aprovado</span></td>
+              <td>
+                <button class="btn-details">Detalhes</button>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Agrotec</td>
+              <td>Pessoa de contato</td>
+              <td>05/10/2025</td>
+              <td><span class="badge pending">Pendente</span></td>
+              <td>
+                <button class="btn-details">Detalhes</button>
+              </td>
+            </tr>
+
+            <tr>
+              <td>EdFuture</td>
+              <td>Pessoa de contato</td>
+              <td>05/10/2025</td>
+              <td><span class="badge rejected">Recusado</span></td>
+              <td>
+                <button class="btn-details">Detalhes</button>
+              </td>
+            </tr>
+          </tbody>
+
+        </table>
+      </section>
 
       <!-- Footer único -->
       <footer class="footer global-footer">
@@ -458,3 +538,4 @@
   <script src="teste.js"></script>
 </body>
 </html>
+
