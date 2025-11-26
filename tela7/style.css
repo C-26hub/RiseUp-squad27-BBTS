@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    display: flex;
+    background: #f4f4f4;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 260px;
+    background: #2D3DFB;
+    color: white;
+    height: 100vh;
+    padding: 20px;
+    transition: 0.3s;
+}
+
+.sidebar.collapsed {
+    width: 80px;
+}
+
+.sidebar .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sidebar ul {
+    list-style: none;
+    margin-top: 30px;
+}
+
+.section {
+    font-size: 14px;
+    opacity: .8;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.submenu {
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submenu.active {
+    background: #ffdb4d;
+    color: black;
+}
+
+.sair {
+    margin-top: 50px;
+    color: #ffdddd;
+}
+
+/* MAIN CONTENT */
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topbar i {
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* PAGE */
+.page h2 {
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+
+.filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+select, input, button {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* TABLE */
+.custom-table {
+    width: 100%;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    border-collapse: collapse;
+}
+
+.custom-table th {
+    background: #3366FF;
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+
+.custom-table td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+/* BADGES */
+.badge {
+    padding: 5px 10px;
+    border-radius: 8px;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.badge.green { background: #38A169; }
+.badge.red { background: #E53E3E; }
+.badge.yellow { background: #ECC94B; color: black; }
+
+/* BUTTONS */
+.view-btn {
+    background: #2D3DFB;
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.view-btn:hover {
+    background: #1b28a0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .filters {
+        flex-direction: column;
+    }
+}

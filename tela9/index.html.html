@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BBTS Star - Personalização White Label</title>
+    <link rel="stylesheet" href="tela09/styles.css.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo">BBTS Star</div>
+        
+        <div class="menu-item home">Início</div>
+        
+        <div class="menu-item gestao">Gestão de Cadastro</div>
+        <div class="submenu">
+            <div class="submenu-item">Startups</div>
+            <div class="submenu-item">Usuários</div>
+        </div>
+        
+        <div class="menu-item aprovacoes">Gestão de Aprovações</div>
+        <div class="submenu">
+            <div class="submenu-item">Aprovações de cadastro</div>
+            <div class="submenu-item">Solicitações de apoio</div>
+        </div>
+        
+        <div class="menu-item config">Configurações</div>
+        <div class="submenu">
+            <div class="submenu-item active">Personalização White Label</div>
+            <div class="submenu-item">Alterar senha</div>
+        </div>
+        
+        <div class="menu-item sair">Sair</div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Header -->
+        <div class="header">
+            <div class="header-icon">🏠</div>
+            <div class="header-icon">👤</div>
+        </div>
+
+        <!-- Content -->
+        <div class="content">
+            <div class="content-card">
+                <div class="card-title">Personalização White Label</div>
+
+                <div class="form-row">
+                    <!-- Logo Section -->
+                    <div class="form-group">
+                        <label>Logo</label>
+                        <div class="logo-section" id="logoSection">
+                            📷 BB TECNOLOGIA E SERVIÇOS
+                        </div>
+                        <input type="file" id="logoInput" accept="image/*" style="display: none;">
+                    </div>
+
+                    <!-- Colors Section -->
+                    <div class="form-group">
+                        <label>Cores</label>
+                        <div class="color-group">
+                            <div class="color-item">
+                                <label>Cor principal</label>
+                                <div class="color-input-wrapper">
+                                    <div class="color-preview" style="background-color: #4a5ee8;" id="colorPreview1"></div>
+                                    <input type="text" id="colorInput1" value="#4A5EE8">
+                                    <input type="color" id="colorPicker1" value="#4A5EE8">
+                                </div>
+                            </div>
+
+                            <div class="color-item">
+                                <label>Cor secundária</label>
+                                <div class="color-input-wrapper">
+                                    <div class="color-preview" style="background-color: #fcfc30;" id="colorPreview2"></div>
+                                    <input type="text" id="colorInput2" value="#FCFC30">
+                                    <input type="color" id="colorPicker2" value="#FCFC30">
+                                </div>
+                            </div>
+
+                            <div class="color-item">
+                                <label>Cor fundo</label>
+                                <div class="color-input-wrapper">
+                                    <div class="color-preview" style="background-color: #ffffff;" id="colorPreview3"></div>
+                                    <input type="text" id="colorInput3" value="#FFFFFF">
+                                    <input type="color" id="colorPicker3" value="#FFFFFF">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Typography Section -->
+                <div class="form-group">
+                    <label>Tipografia</label>
+                    <select id="fontSelect">
+                        <option value="Poppins">Poppins</option>
+                        <option value="Roboto">Roboto</option>
+                        <option value="Open Sans">Open Sans</option>
+                        <option value="Lato">Lato</option>
+                        <option value="Montserrat">Montserrat</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="action-buttons">
+        <button class="action-btn btn-add">➕</button>
+        <button class="action-btn btn-check">✓</button>
+        <button class="action-btn btn-edit">✏️</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

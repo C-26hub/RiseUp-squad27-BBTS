@@ -1,0 +1,145 @@
+/* FONT */
+body {
+    margin: 0;
+    font-family: 'Poppins', Arial, sans-serif;
+    background: #f2f6ff;
+}
+
+/* TOP BAR */
+.topbar {
+    height: 58px;
+    background: #2939ff;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    width: 34px;
+    height: 34px;
+    background: #ffe500;
+    color: #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    font-weight: 700;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+}
+
+/* LAYOUT */
+.layout {
+    display: flex;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 260px;
+    background: #2939ff;
+    color: white;
+    padding: 20px 16px;
+    min-height: calc(100vh - 58px);
+}
+
+.menu-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.menu-item {
+    display: block;
+    padding: 10px 12px;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    opacity: 0.9;
+    margin-bottom: 8px;
+}
+
+.menu-item:hover {
+    background: rgba(255,255,255,0.15);
+}
+
+.menu-item.active {
+    background: #ffe500;
+    color: #222;
+    font-weight: 600;
+}
+
+/* MAIN PANEL */
+.main {
+    flex: 1;
+    padding: 30px;
+}
+
+.panel {
+    background: white;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 32px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+input {
+    width: 100%;
+    height: 36px;
+    border-radius: 20px;
+    border: 1px solid #dedede;
+    padding: 0 14px;
+    margin-bottom: 16px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #2939ff;
+    box-shadow: 0 0 6px #2939ff50;
+}
+
+.btn-confirm {
+    width: 180px;
+    height: 36px;
+    border: none;
+    background: #ffe500;
+    border-radius: 22px;
+    border: 3px solid #2939ff;
+    font-weight: 700;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+}
+
+/* FLOAT BUTTONS */
+.floating-controls {
+    position: fixed;
+    right: 20px;
+    top: 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.floating-controls button {
+    width: 46px;
+    height: 46px;
+    background: white;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    font-size: 20px;
+    cursor: pointer;
+}

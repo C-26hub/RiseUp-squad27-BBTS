@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solicitação de Edição</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="modal-overlay" id="modal">
+        <div class="modal">
+            <span class="close" onclick="fecharModal()">&times;</span>
+            <h2>Solicitação de edição</h2>
+
+            <p><span class="label">Empresa:</span> Technova Solutions</p>
+            <p><span class="label">Campo a alterar:</span> Endereço</p>
+            <p><span class="label">Data da Solicitação:</span> 05/10/2025</p>
+
+            <p class="label">Justificativa para edição:</p>
+            <p>A empresa mudou de endereço comercial e atualizou seu número de telefone. 
+               Solicitamos aprovação para edição de novos dados.</p>
+
+            <p class="status">Status: Pendente</p>
+
+            <div class="buttons">
+                <button class="btn approve" onclick="aprovar()">Aprovar edição</button>
+                <button class="btn reject" onclick="rejeitar()">Rejeitar edição</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

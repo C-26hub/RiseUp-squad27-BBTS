@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solicitações de Edição – BBTS Start</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+            <span>BBTS Start</span>
+        </div>
+
+        <nav>
+            <ul>
+                <li class="section">Início</li>
+
+                <li class="section">Gestão de Cadastro</li>
+                <li class="submenu">Startups</li>
+                <li class="submenu">Usuários</li>
+
+                <li class="section">Gestão de Aprovações</li>
+                <li class="submenu">Aprovações de cadastro</li>
+                <li class="submenu active">Solicitações de edição</li>
+
+                <li class="section">Configurações</li>
+                <li class="submenu">Personalização White Label</li>
+                <li class="submenu">Alterar senha</li>
+
+                <li class="section sair">Sair</li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="content">
+
+        <div class="topbar">
+            <i id="menuToggle" class="fas fa-bars"></i>
+            <div class="top-icons">
+                <i class="fas fa-bell"></i>
+                <i class="fas fa-user-circle"></i>
+            </div>
+        </div>
+
+        <section class="page">
+            <h2><i class="fas fa-edit"></i> Solicitações de edição</h2>
+
+            <!-- Filters -->
+            <div class="filters">
+                <select id="statusFilter">
+                    <option value="todos">Status: Todos</option>
+                    <option value="aprovado">Aprovado</option>
+                    <option value="pendente">Pendente</option>
+                    <option value="rejeitado">Rejeitado</option>
+                </select>
+
+                <input type="date" id="startDate">
+                <input type="date" id="endDate">
+
+                <button id="applyFilters">Filtrar</button>
+            </div>
+
+            <!-- TABLE -->
+            <table class="custom-table">
+                <thead>
+                    <tr>
+                        <th>Empresa</th>
+                        <th>Campo a alterar</th>
+                        <th>Data da Solicitação</th>
+                        <th>Status</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tableBody">
+                    <tr data-status="pendente">
+                        <td>TechNova Solutions</td>
+                        <td>Endereço</td>
+                        <td>05/10/2025</td>
+                        <td><span class="badge yellow">Pendente</span></td>
+                        <td><button class="view-btn">Ver detalhes</button></td>
+                    </tr>
+
+                    <tr data-status="aprovado">
+                        <td>DataDrive</td>
+                        <td>Informações básicas</td>
+                        <td>05/10/2025</td>
+                        <td><span class="badge green">Aprovado</span></td>
+                        <td><button class="view-btn">Ver detalhes</button></td>
+                    </tr>
+
+                    <tr data-status="rejeitado">
+                        <td>AgroTec</td>
+                        <td>Pessoa de contato</td>
+                        <td>05/10/2025</td>
+                        <td><span class="badge red">Rejeitado</span></td>
+                        <td><button class="view-btn">Ver detalhes</button></td>
+                    </tr>
+
+                    <tr data-status="aprovado">
+                        <td>EdFuture</td>
+                        <td>Pessoa de contato</td>
+                        <td>05/10/2025</td>
+                        <td><span class="badge green">Aprovado</span></td>
+                        <td><button class="view-btn">Ver detalhes</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+</body>
+</html>
