@@ -78,7 +78,7 @@ Como o projeto é construído apenas com **HTML, CSS e JavaScript** (client-side
 │   └── 📄 style.css              → Folha de estilos principal 
 └── 📁 js/                         
 │   └── 📄 script.js              → Lógica JavaScript
-└── ...                    # Outros arquivos HTML (ex: cadastro-pf.html, sucesso.html)
+└── ...                           → Outros arquivos HTML (ex: cadastro-pf.html, sucesso.html)
 ```
 
 ---
@@ -94,4 +94,3 @@ Como o projeto é construído apenas com **HTML, CSS e JavaScript** (client-side
 - **Maria Clara Barbosa** – @gmail.com
 - **Maria Clara Moutinho** – @gmail.com  
 - **Maria Eduarda** – vilarim051@gmail.com
-- **Matheus Alves** – @gmail.com
