@@ -85,12 +85,12 @@ Como o projeto é construído apenas com **HTML, CSS e JavaScript** (client-side
 
 ### 👥 Membros da Equipe
 
-- **Kauã Oliveira** – @gmail.com
-- **Lucas Gabriel** – @gmail.com
-- **Lucas Silva** – @gmail.com
-- **Luis Augusto** – @gmail.com
-- **Marcelly Arcanjo** – @gmail.com
-- **Maria Cecília** – cecilmari33@gmail.com
-- **Maria Clara Barbosa** – @gmail.com
-- **Maria Clara Moutinho** – @gmail.com  
-- **Maria Eduarda** – vilarim051@gmail.com
+- **Kauã Oliveira** – KAUA.BORBA0020016338@edu.pe.senac.br
+- **Lucas Gabriel** – LUCAS.SANTANA0020016371@edu.pe.senac.br
+- **Lucas Silva** – LUCAS.SOUZA0020016324@edu.pe.senac.br
+- **Luis Augusto** – LUIS.SA0020016349@edu.pe.senac.br
+- **Marcelly Arcanjo** – marcelly.silva0020016291@edu.pe.senac.br
+- **Maria Cecília** – maria.silva0020016281@edu.pe.senac.br
+- **Maria Clara Barbosa** – maria.filgueiras0020016287@edu.pe.senac.br
+- **Maria Clara Moutinho** – MARIA.SILVA0020016354@edu.pe.senac.br  
+- **Maria Eduarda** – maria.vilarim0020016273@edu.pe.senac.br
