@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitações de edição</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <div class="logo">BBTS Start</div>
+
+        <nav>
+            <ul>
+                <li class="menu-title">Início</li>
+
+                <li class="menu-title">Gestão de Cadastro</li>
+                <li>Startups</li>
+                <li>Usuários</li>
+
+                <li class="menu-title">Gestão de Aprovações</li>
+                <li class="active-section">Aprovações de cadastro</li>
+                <li class="active">Solicitações de edição</li>
+
+                <li class="menu-title">Configurações</li>
+                <li>Personalização White Label</li>
+                <li>Alterar senha</li>
+
+                <li class="menu-title">Sair</li>
+            </ul>
+        </nav>
+    </aside>
+
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="content">
+
+        <h1 class="page-title">👤 Solicitações de edição</h1>
+
+        <!-- FILTROS -->
+        <div class="filter-box">
+            <label>Status</label>
+            <select id="statusFilter">
+                <option value="todos">Todos</option>
+                <option value="aprovado">Aprovado</option>
+                <option value="rejeitado">Rejeitado</option>
+                <option value="pendente">Pendente</option>
+            </select>
+
+            <label>Período</label>
+            <input type="date" id="dataInicio">
+            <input type="date" id="dataFim">
+
+            <button class="filter-btn" onclick="filtrar()">Filtrar</button>
+        </div>
+
+        <!-- TABELA -->
+        <table class="edit-table">
+            <thead>
+                <tr>
+                    <th>Empresa</th>
+                    <th>Campo a alterar</th>
+                    <th>Data da Solicitação</th>
+                    <th>Status</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+
+            <tbody id="tabelaCorpo">
+                <tr>
+                    <td>TechNova Solutions</td>
+                    <td>Endereço</td>
+                    <td>05/10/2025</td>
+                    <td><span class="badge aprovado">Aprovado</span></td>
+                    <td><button class="view-btn">Ver detalhes</button></td>
+                </tr>
+
+                <tr>
+                    <td>DataDrive</td>
+                    <td>Informações básicas</td>
+                    <td>05/10/2025</td>
+                    <td><span class="badge aprovado">Aprovado</span></td>
+                    <td><button class="view-btn">Ver detalhes</button></td>
+                </tr>
+
+                <tr>
+                    <td>Agrotec</td>
+                    <td>Pessoa de contato</td>
+                    <td>05/10/2025</td>
+                    <td><span class="badge rejeitado">Rejeitado</span></td>
+                    <td><button class="view-btn">Ver detalhes</button></td>
+                </tr>
+
+                <tr>
+                    <td>EdFuture</td>
+                    <td>Pessoa de contato</td>
+                    <td>05/10/2025</td>
+                    <td><span class="badge aprovado">Aprovado</span></td>
+                    <td><button class="view-btn">Ver detalhes</button></td>
+                </tr>
+            </tbody>
+        </table>
+
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

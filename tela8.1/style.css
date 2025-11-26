@@ -1,0 +1,132 @@
+/* --- LAYOUT GERAL --- */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+}
+
+.container {
+    display: flex;
+}
+
+/* --- SIDEBAR --- */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background: #2e45ff;
+    color: white;
+    padding: 20px;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu-title {
+    margin-top: 20px;
+    font-weight: bold;
+    opacity: 0.8;
+}
+
+.sidebar li {
+    margin: 12px 0;
+    cursor: pointer;
+}
+
+.sidebar li.active,
+.sidebar li.active-section {
+    background: #ffd500;
+    color: black;
+    padding: 6px 10px;
+    border-radius: 6px;
+}
+
+/* --- CONTEÚDO --- */
+.content {
+    flex: 1;
+    padding: 40px;
+    background: white;
+}
+
+.page-title {
+    font-size: 22px;
+    margin-bottom: 25px;
+}
+
+/* --- FILTROS --- */
+.filter-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    box-shadow: 0 0 5px #ccc;
+}
+
+.filter-btn {
+    background: #2e45ff;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* --- TABELA --- */
+.edit-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 0 5px #ccc;
+}
+
+.edit-table th {
+    background: #2e45ff;
+    color: white;
+    padding: 10px;
+    text-align: left;
+}
+
+.edit-table td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* --- BADGES (status) --- */
+.badge {
+    padding: 6px 12px;
+    border-radius: 12px;
+    color: white;
+    font-size: 13px;
+}
+
+.aprovado {
+    background: #1a73e8;
+}
+
+.rejeitado {
+    background: #d93025;
+}
+
+.pendente {
+    background: #fbbc04;
+    color: black;
+}
+
+/* --- BOTÃO DE AÇÃO --- */
+.view-btn {
+    padding: 6px 12px;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    cursor: pointer;
+    background: white;
+}
