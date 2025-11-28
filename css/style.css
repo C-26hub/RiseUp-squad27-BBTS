@@ -1,0 +1,180 @@
+/* Reset e fontes */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: #fff;
+  color: #1A1A1A;
+}
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-top: 40px;
+}
+
+h1, h2 {
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+.header {
+  width: 100%;
+  padding: 20px 40px; /* padding opcional */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* garante alinhamento à esquerda */
+}
+
+.header img {
+  width: 120px; /* ajuste conforme o tamanho da sua logo */
+  height: auto;
+}
+
+/* Inputs */
+input, textarea {
+  width: 100%;
+  padding: 15px;
+  border-radius: 21px;
+  border: 1.5px solid #D6D6D6;
+  outline: none;
+  font-size: 15px;
+}
+input:focus, textarea:focus {
+  border-color: #4D6FFF;
+}
+
+#formPessoal input {
+    margin-bottom: 17px; 
+    display: block; 
+    width: 100%; 
+}
+
+#formEndereco input{
+    margin-bottom: 17px; 
+    display: block; 
+    width: 100%; 
+}
+
+#formPerfil input{
+    margin-bottom: 17px; 
+    display: block; 
+    width: 100%; 
+}
+/* Botões */
+button, .btn-primary {
+  width: 473px;
+  margin: 60px auto;
+  display: block;
+  padding: 15px;
+  border-radius: 30px;
+  text-align: center;
+  border: 3px solid #4D6FFF;
+  background: #fff;
+  color: #4D6FFF;
+  font-size: 18px;
+  font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  cursor: pointer;
+  transition: .3s ease;
+  margin-top: 25px;
+}
+button:hover, .btn-primary:hover {
+  background: #3854e6;
+  color: #fff;
+}
+
+/* Barra de progresso */
+.progress-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.back-button {
+  border: none;
+  background: transparent;
+  font-size: 26px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+/* Cards de revisão */
+/* .review-box {
+  border: 1px solid #D6D6D6;
+  padding: 30px;
+  border-radius: 16px;
+  margin-top: 20px;
+} */
+
+.review-box{
+width: 980px;
+height: 806px;
+
+border-radius: 15px;
+border: 1px solid #BFBFBF;
+
+background: #FFF;
+
+margin-left: auto;
+margin-right: auto;
+
+padding:20px;
+margin-top: 17px;
+}
+
+
+.review-box p {
+ 
+  padding: 5px;
+}
+
+.review-box h3 {
+ 
+  padding-top: 15px;
+}
+
+.titlle {
+  padding-left: 380px;
+
+
+}
+
+.alert-box{
+display: flex;
+justify-content: center;
+align-items: center;
+left: 50%;
+width: 980px;
+height: 93px;
+padding: 11px 29px;
+flex-direction: column;
+gap: 20px;
+margin-left: auto;
+margin-right: auto;
+
+border-radius: 15px;
+border: 1px solid #FFC107;
+
+background: rgba(255, 193, 7, 0.20);
+}
+
+ul {
+    padding:8px;
+}
+
+ul li{
+    padding: 2px;
+}
+/* Responsividade */
+@media (max-width: 768px) {
+  .steps {
+    gap: 40px;
+  }
+}
