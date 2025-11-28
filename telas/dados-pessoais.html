@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../javascript/script.js" defer></script>
+</head>
+
+<body>
+    <div class="header">
+         <img src="../imgs/logo-bbts-azul.png" alt="logo-bbts-azul">
+    </div>
+
+<div class="container">
+   
+    <a href="#" onclick="goTo('index.html')">
+        <img src="../imgs/icone-seta.png" alt="seta-voltar" style="width: 40px;">
+    </a>
+ 
+
+  <div class="progress-container">
+    <div class="steps">
+         <img src="../imgs/icone-barra-navegacao2.png" alt="barra-navegacao2">
+    </div>
+  </div>
+
+  <h1>Dados Pessoais</h1>
+  
+  <form id="formPessoal">
+    <input type="text" name="nome" placeholder="Nome completo *" required>
+    <input type="email" name="emailPessoal" placeholder="Email *" required>
+    <input type="text" name="telefone" placeholder="Telefone *" required>
+
+    <button type="button" onclick="saveForm('formPessoal', 'endereco.html')">Continuar</button>
+  </form>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../javascript/script.js" defer></script>
+</head>
+
+<body>
+
+    <div class="header">
+         <img src="../imgs/logo-bbts-azul.png" alt="logo-bbts-azul">
+    </div>
+
+<div class="container">
+
+    <a href="#" onclick="goTo('dados-pessoais.html')">
+        <img src="../imgs/icone-seta.png" alt="seta-voltar" style="width: 40px;">
+    </a>
+
+
+  <div class="progress-container">
+    <div class="steps">
+        <img src="../imgs/icone-barra-navegacao3.png" alt="barra-navegacao3">  
+    </div>
+  </div>
+
+  <h1>Endereço</h1>
+
+  <form id="formEndereco">
+    <input type="text" name="cep" placeholder="CEP *" required>
+    <input type="text" name="rua" placeholder="Rua *" required>
+    <input type="text" name="numero" placeholder="Número *" required>
+    <input type="text" name="complemento" placeholder="Complemento">
+    <input type="text" name="pais" placeholder="País *" required>
+    <input type="text" name="estado" placeholder="Estado/UF *" required>
+
+    <button type="button" onclick="saveForm('formEndereco', 'perfil.html')">Continuar</button>
+  </form>
+
+</div>
+
+</body>
+</html>
