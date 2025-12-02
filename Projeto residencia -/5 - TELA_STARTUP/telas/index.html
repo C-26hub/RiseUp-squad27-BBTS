@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="pt-BR">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <link rel="icon" type="image/png" href="../../5 - TELA_STARTUP/imgs/BTTS Start site LOGO.svg" />
+    <link rel="stylesheet" href="../../A - Acessibilidade/Acessibilidade.css" />
+    <link rel="stylesheet" href="../../D - RODAPE/rodape.css" />
+   
+    <title>BBTStart - Startup</title>
+    <link rel="stylesheet" href="../../5 - TELA_STARTUP/css/styles.css"
+  </head>
+  <body>
+    <div class="estrutura">
+    <!-- Barra Superior -->
+    <header class="top-bar">
+        <div class="logo-section">
+            <img class="profile-icon" src="../../5 - TELA_STARTUP/imgs/profile_icon.svg" width="20" height="20">
+           
+            <!-- Botão que abre o dropdown -->
+            <div class="company-menu" id="headerUserMenu">
+                <span class="company-name">TechNova Solutions</span>
+            </div>
+
+            <!-- Dropdown oculto -->
+            <div class="header-dropdown" id="headerDropdown">
+                <div class="dropdown-item" data-page="ajuda">Ajuda / Suporte</div>
+                <a href="../../2 - LOGIN/Telas_login/cadastrar.html" class="dropdown-item">
+                 Sair
+                </a>
+            </div>
+        </div>
+        
+    </header>
+    <!-- Barra Lateral -->
+    <aside class="sidebar">
+        <div class="sidebar-logo">
+            <a href="../../1 - HOME/Telas_Home/index.html">
+            <img class="sidebar-logo" src="../../5 - TELA_STARTUP/imgs/bbts_start_logo.svg">
+            </a>
+        </div>
+        <nav class="menu">
+          
+            <div class="menu-item active" data-page="inicio">
+                <img class="home-icon" src="../../5 - TELA_STARTUP/imgs/home_white_icon.svg" width="18" height="18">
+                <span>Início</span>
+            </div>
+            
+            <div class="menu-item" data-page="dados-cadastro">
+                <div class="menu-item-header">
+                    <img class="data-icon" src="../../5 - TELA_STARTUP/imgs/document_icon.svg" width="25" height="25">
+                    <span>Dados de Cadastro</span>
+                    <span>
+                    <img src="../../5 - TELA_STARTUP/imgs/icone-seta-baixo.png" alt="seta-baixo" width="20" height="10">
+                    </span>
+                  
+                </div>
+                <div class="submenu" style="display: none;">
+                    <div class="submenu-item" data-page="info-basicas">
+                        <img class="exclamation-icon" src="../../5 - TELA_STARTUP/imgs/exclamation_icon.svg" width="18" height="18">
+                        Informações básicas
+                    </div>
+                    <div class="submenu-item" data-page="descricao-startup">
+                        <img class="edit-icon" src="../../5 - TELA_STARTUP/imgs/edit_document_icon.svg" width="18" height="18">
+                        Descrição da Startup
+                    </div>
+                    <div class="submenu-item" data-page="pessoa-contato">
+                        <img class="person-icon" src="../../5 - TELA_STARTUP/imgs/person_icon.svg" width="18" height="18">
+                        Pessoa de Contato
+                    </div>
+                    <div class="submenu-item" data-page="endereco">
+                        <img class="location-icon" src="../../5 - TELA_STARTUP/imgs/location_icon.svg" width="18" height="18">
+                        Endereço
+                    </div>
+                    <div class="submenu-item" data-page="documentos">
+                        <img class="documents-icon" src="../../5 - TELA_STARTUP/imgs/document2_icon.svg" width="18" height="18"> 
+                    Documentos</div>
+                </div>
+            </div>
+
+            <div class="menu-item" data-page="historico">
+                <img class="history-icon" src="../../5 - TELA_STARTUP/imgs/history_icon.svg"  width="18" height="18">
+                <span>Histórico de Solicitações</span>
+            </div>
+
+            <div class="menu-item" data-page="alterar-senha">
+                <img class="key-icon" src="../../5 - TELA_STARTUP/imgs/key_icon.svg"  width="18" height="18">
+                <span>Alterar senha</span>
+            </div>
+
+            <div class="menu-item" data-page="sair">
+            <a href="../../2 - LOGIN/Telas_login/cadastrar.html" class="menu-item-link" data-page="sair">
+                <img class="logout-icon" 
+                src="../../5 - TELA_STARTUP/imgs/logout_icon.svg" 
+                width="18" height="18">
+                <span>Sair</span>
+            </a>
+            </div>
+        </nav>
+    </aside>
+
+    <!-- Conteúdo Principal -->
+    <main class="content">
+        <!-- Tela 1: Início -->
+       <!-- Tela 1: Início -->
+<div class="page" id="inicio-page" style="display: block;">
+    <div class="profile-section">
+
+        <!-- A LOGO PRIMEIRO -->
+        <div class="card">
+            <img class="technova-icon" src="../../5 - TELA_STARTUP/imgs/TechNova_logo.svg">
+        </div>
+
+        <!-- DEPOIS O BOX AMARELO -->
+        <div class="box">
+            <h2>Cadastro Pendente</h2>
+            <br><p>Seu cadastro está sob análise.<br>
+               Previsão de resposta em até 3 dias úteis via email.</p>
+        </div>
+        
+    </div>
+</div>
+
+        <!-- Tela 2: Dados de Cadastro (expandido) -->
+        <div class="page" id="dados-cadastro-page" style="display: none;">
+            <div class="page-header">
+                <h1>Dados de Cadastro</h1>
+            </div>
+            <div class="page-content-info">
+                <p>Selecione uma opção abaixo para visualizar ou editar seus dados.</p>
+            </div>
+        </div>
+
+        <!-- Tela 3: Informações Básicas -->
+        <div class="page" id="info-basicas-page" style="display: none;">
+            <div class="page-header-info">
+                <h1>Informações básicas</h1>
+                <img class="exclamation-icon" src="../../5 - TELA_STARTUP/imgs/exclamation_icon.svg" width="40" height="40">
+                <div class="botao-solicitar">
+                <button class="btn-solicitar" onclick="openRequestModal()">Solicitar edição</button>
+                </div>
+            </div>
+            
+            <div class="page-content-info">
+                                <div class="info-grid-info">
+                    <div class="info-item1-info">
+                        <label>Razão Social</label>
+                        <p>TecnNova Solutions</p>
+                    </div>
+                    <div class="info-item2-info">
+                        <label>CNPJ</label>
+                        <p>85.326.123/0001-70</p>
+                    </div>
+                    <div class="info-item3-info">
+                        <label>Nome fantasia</label>
+                        <p>TecnNova Solutions</p>
+                    </div>
+                    <div class="info-item4-info">
+                        <label>Data de fundação</label>
+                        <p>17/03/2022</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tela 4: Descrição da Startup -->
+        <div class="page" id="descricao-startup-page" style="display: none;">
+            <div class="page-header-startup">
+                 <img class="exclamation-icon" src="../../5 - TELA_STARTUP/imgs/exclamation_icon.svg" width="40" height="40">
+                <div class="icone">
+                 
+                 </div>
+                 <h1>Descrição da Startup</h1>
+                <div class="botao-solicitar">
+                <button class="btn-solicitar" onclick="openRequestModal()">Solicitar edição</button>
+                </div>
+            </div>
+            <div class="page-content-startup">
+                <div class="info-section1-descricao">
+                    <h3>Pitch</h3>
+                    <p>Plataforma de automação inteligente para pequenas e médias empresa, utilizando IA para otimizar processos operacionais e aumentar a produtividade.</p>
+                </div>
+                <div class="info-section2-descricao">
+                    <h3>Descrição da solução</h3>
+                    <p>A TechNova Solutions desenvolve uma plataforma SaaS que utiliza inteligência artificial para automatizar processos repetitivos em PMEs.</p>
+                </div>
+                <div class="info-grid1-descricao">
+                    <div class="info-item1-descricao">
+                        <label>Tecnologias utilizadas</label>
+                        <p>Cloud Computing</p><br>
+                        <p>Inteligência Artificial (IA)</p><br>
+                        <p>Machine Learning</p>
+                    </div>
+                    <div class="info-item2-descricao">
+                        <label>Modelo de Negócio</label>
+                        <p>SaaS</p>
+                    </div>
+                </div>
+                <!-- <div class="info-grid2-descricao">
+                    <div class="info-item1-descricao">
+                        <label>Website</label>
+                        <p><a href="https://www.technova.com.br" target="_blank">https://www.technova.com.br</a></p>
+                    </div>
+                    <div class="info-item2-descricao">
+                        <label>Linkedin</label>
+                        <p><a href="https://www.linkedin.com/company/technova" target="_blank">https://www.linkedin.com/company/technova</a></p>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+
+        <!-- Tela 5: Pessoa de Contato -->
+        <div class="page" id="pessoa-contato-page" style="display: none;">
+            <div class="page-header-contato">
+                <h1>Pessoa de Contato</h1>
+                <div class="botao-solicitar">
+                <button class="btn-solicitar" onclick="openRequestModal()">Solicitar edição</button>
+                </div>
+            </div>
+            <div class="page-content-contato">
+                <div class="info-grid-contato">
+                    <div class="info-item1-contato">
+                        <label>Nome</label>
+                        <p>Maria da Costa Campos</p>
+                    </div>
+                    <div class="info-item2-contato">
+                        <label>Email</label>
+                        <p>maria.costa@technova.com.br</p>
+                    </div>
+                    <div class="info-item3-contato">
+                        <label>Telefone</label>
+                        <p>+55 081 99999-9999</p>
+                    </div>
+                    <div class="info-item4-contato">
+                        <label>Função</label>
+                        <p>Founder</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tela 6: Endereço -->
+        <div class="page" id="endereco-page" style="display: none;">
+            <div class="page-header-endereco">
+                <h1>Endereço</h1>
+                <div class="botao-solicitar">
+                <button class="btn-solicitar" onclick="openRequestModal()">Solicitar edição</button>
+                </div>
+            </div>
+            <div class="page-content-endereco">
+                <div class="info-grid-endereco">
+                    <div class="info-item1-endereco">
+                        <label>CEP</label>
+                        <p>52020-050</p>
+                    </div>
+                    <div class="info-item2-endereco">
+                        <label>Rua</label>
+                        <p>Rua Juliana RF</p>
+                    </div>
+                    <div class="info-item3-endereco">
+                        <label>Número</label>
+                        <p>456</p>
+                    </div>
+                    <div class="info-item4-endereco">
+                        <label>Complemento</label>
+                        <p>Casa 02</p>
+                    </div>
+                    <div class="info-item5-endereco">
+                        <label>País</label>
+                        <p>Brasil</p>
+                    </div>
+                    <div class="info-item6-endereco">
+                        <label>Estado/UF</label>
+                        <p>PE</p>
+                    </div>
+                    <div class="info-item7-endereco">
+                        <label>Cidade</label>
+                        <p>Recife</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tela 7: Documentos -->
+        <div class="page" id="documentos-page" style="display: none;">
+            <div class="page-header-documento">
+                <h1>Documentos</h1>
+                <div class="botao-solicitar">
+                <button class="btn-solicitar" onclick="openRequestModal()">Solicitar edição</button>
+                </div>
+            </div>
+            <div class="page-content-documento">
+                <div class="documents-list">
+                    <div class="document-item">
+                        <span class="doc-icon">📄</span>
+                        <div class="doc-info">
+                            <p class="doc-name">Logo</p>
+                            <p class="doc-size">PNG 2,0KB</p>
+                        </div>
+                    </div>
+                    <div class="document-item">
+                        <span class="doc-icon">📄</span>
+                        <div class="doc-info">
+                            <p class="doc-name">Cartão CNPJ</p>
+                            <p class="doc-size">PDF 3,9KB</p>
+                        </div>
+                    </div>
+                    <div class="document-item">
+                        <span class="doc-icon">📄</span>
+                        <div class="doc-info">
+                            <p class="doc-name">Pitch Desk</p>
+                            <p class="doc-size">PDF 5,0 KB</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tela 8: Histórico de Solicitações -->
+        <div class="page" id="historico-page" style="display: none;">
+                <div class="page-header-historico">
+                <h1>Histórico de Solicitações</h1>
+                <p>Suas últimas solicitações de edição</p>
+                </div>
+    
+            <div class="page-content-historico">
+                
+                <table class="history-table">
+                    <thead>
+                        <tr>
+                            <th>Descrição</th>
+                            <th>Data de Solicitação</th>
+                            <th>Data de Conclusão</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Atualização no endereço</td>
+                            <td>21/09/2025</td>
+                            <td>-</td>
+                            <td><span class="status pending">Pendente</span></td>
+                        </tr>
+                        <tr>
+                            <td>Email</td>
+                            <td>15/09/2025</td>
+                            <td>16/09/2025</td>
+                            <td><span class="status approved">Aprovada</span></td>
+                        </tr>
+                        <tr>
+                            <td>Mudança de foto</td>
+                            <td>15/09/2025</td>
+                            <td>16/09/2025</td>
+                            <td><span class="status approved">Aprovada</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="botao-ver-mais">
+                <button class="btn-secondary-ver-mais">Ver mais</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tela 9: Alterar Senha -->
+        <div class="page" id="alterar-senha-page" style="display: none;">
+            <div class="page-header-senha">
+                <h1>Alterar senha</h1>
+            </div>
+            <div class="page-content-senha">
+                <form class="form-container">
+                    <div class="form-group">
+                        <label for="current-password">Senha atual*</label>
+                        <input type="password" id="current-password" placeholder="Digite sua senha atual" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="new-password">Nova senha*</label>
+                        <input type="password" id="new-password" placeholder="Digite sua nova senha" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm-password">Confirmar nova senha*</label>
+                        <input type="password" id="confirm-password" placeholder="Confirme sua nova senha" required>
+                    </div>
+                    <div class="botao-senha">
+                    <button type="submit" class="btn-primary-senha">Confirmar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Tela Ajuda -->
+        <div class="page" id="ajuda-page" style="display: none;">
+            <div class="page-header">
+                <h1>Ajuda/Suporte</h1>
+            </div>
+            <div class="page-content">
+                <p>Entre em contato conosco através do email: <strong>contato@brtecnologia.com.br</strong></p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal: Solicitar Edição -->
+    <div class="modal" id="request-modal" style="display: none;">
+        <div class="modal-content-edicao">
+            <div class="modal-header-edicao">
+                <h2>Solicitar Edição de Cadastro</h2>
+                <button class="modal-close-edicao" onclick="closeRequestModal()">&times;</button>
+            </div>
+            <div class="modal-body-edicao">
+                <p>Descreva as alterações que você gostaria de fazer em seu cadastro.</p>
+                <form id="request-form">
+                    <div class="form-group-edicao">
+                        <label for="field-select">Qual o campo que deseja alterar? *</label>
+                        <textarea id="alteracao"  required></textarea>
+                    </div>
+                    <div class="form-group-edicao">
+                        <label for="justificativa">Justificativa *</label>
+                        <textarea id="justificativa" placeholder="Descreva detalhadamente as alterações que você gostaria de fazer." required></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer-edicao">
+                <button class="btn-secondary-edicao" onclick="closeRequestModal()">Cancelar</button>
+                <button class="btn-primary-edicao" onclick="submitRequest()">Enviar Solicitação</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Solicitação Enviada -->
+    <div class="modal" id="success-modal" style="display: none;">
+        <div class="modal-content-enviado modal-success-enviado">
+            <div class="modal-header-enviado">
+                <h2>Solicitação enviada</h2>
+                <div class="close-enviado">
+                <button class="modal-close-enviado" onclick="closeRequestModal()">&times;</button>
+                </div>
+            </div>
+            <div class="modal-body-enviado">
+                <p>Sua solicitação será avaliada pelo moderador.</p>
+                <p>Em breve você receberá um email com a liberação.</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-primary-enviado" onclick="closeSuccessModal()">Voltar para a página</button>
+            </div>
+        </div>
+    </div>
+</div>
+     <!-- SCRIPTS: ordem importante -->
+    <script type="module" src="/src/main.tsx"></script>
+
+    <script
+      defer
+      src="%VITE_ANALYTICS_ENDPOINT%/umami"
+      data-website-id="%VITE_ANALYTICS_WEBSITE_ID%">
+    </script>
+<div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+   </div>
+<div id="acessibilidade">
+    <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+    <style>
+      /* Esconder o botão nativo do VLibras — usamos apenas o botão customizado */
+      [vw-access-button] {
+        display: none !important;
+        width: 0 !important;
+        height: 0 !important;
+        overflow: hidden !important;
+        pointer-events: none !important;
+      }
+    </style>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget("https://vlibras.gov.br/app");
+    </script>
+  </div>
+      <div id="botoes-acessibilidade-extra">
+      <button class="btn-acess">
+        <img src="../../../A - Acessibilidade/img/icone-pessoa.png" alt="Acessibilidade" />
+      </button>
+      <button class="btn-vlibras">
+        <img src="../../../A - Acessibilidade/img/libras.png" alt="VLibras" />
+      </button>
+      <button class="btn-audio">
+        <img src="../../../A - Acessibilidade/img/icone-comando-voz.png" alt="Comando de voz" />
+      </button>
+    </div>
+        </div>
+        <!-- Seus scripts finais -->
+    <script src="../../5 - TELA_STARTUP/javascript/script.js"></script>
+    <script src="../javascript/Acessibilidade.js"></script>
+    <script src="../../D - Rodape/Javascript/rodape.js"></script>
+
+  </body>
+</html>

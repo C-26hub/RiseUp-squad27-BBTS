@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BBTS Start - Informações Básicas</title>
+    <link rel="stylesheet" href="../../3 -TELA_CADASTRO_CNPJ/css/style.css">
+    <link rel="stylesheet" href="../../A - Acessibilidade/Acessibilidade.css">
+    <link rel="shortcut icon" href="../../D - Assets gerais/Favbbts.png" type="image/x-icon">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="logo-container">
+            <img src="../../3 -TELA_CADASTRO_CNPJ/imgs/bbts-logo.png" alt="Logo BBTS Start" class="logo-image">
+            </div>
+            <div id="acessibilidade">
+    <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+    <style>
+      /* Esconder o botão nativo do VLibras — usamos apenas o botão customizado */
+      [vw-access-button] {
+        display: none !important;
+        width: 0 !important;
+        height: 0 !important;
+        overflow: hidden !important;
+        pointer-events: none !important;
+      }
+    </style>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget("https://vlibras.gov.br/app");
+    </script>
+  </div>
+      <div id="botoes-acessibilidade-extra">
+      <button class="btn-acess">
+        <img src="../../../A - Acessibilidade/img/icone-pessoa.png" alt="Acessibilidade" />
+      </button>
+      <button class="btn-vlibras">
+        <img src="../../../A - Acessibilidade/img/libras.png" alt="VLibras" />
+      </button>
+      <button class="btn-audio">
+        <img src="../../../A - Acessibilidade/img/icone-comando-voz.png" alt="Comando de voz" />
+      </button>
+        </div>
+    </header>
+
+    <main class="page-container">
+        
+        <button class="back-button" aria-label="Voltar para a tela anterior">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20.0002 36.6667C29.2049 36.6667 36.6668 29.2048 36.6668 20C36.6668 10.7953 29.2049 3.33337 20.0002 3.33337C10.7954 3.33337 3.3335 10.7953 3.3335 20C3.3335 29.2048 10.7954 36.6667 20.0002 36.6667Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M20.0002 13.3334L13.3335 20L20.0002 26.6667" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M26.6668 20H13.3335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+        
+            <div class="progress-container">
+                <div class="steps">
+                    <img src="../../3 -TELA_CADASTRO_CNPJ/imgs/icone-barra-navegacao-cnpj2.png" alt="barra-navegacao-cnpj">
+                </div>
+            </div>      
+         
+        <h1 class="section-title">Informações Básicas</h1>
+
+        <form class="access-form">
+            
+                <div class="form-grid single-column">
+                    <div class="form-group">
+                     <label for="razao-social">Razão Social*</label>
+                    <input type="text" id="razao-social" name="razao-social" required placeholder="Digite a Razão Social" { font-size: 14px; }>
+                    </div>          
+                </div>    
+                
+                <div class="form-grid single-column">
+                    <div class="form-group">
+                    <label for="nome-fantasia">Nome Fantasia* </label>
+                    <input type="text" id="nome-fantasia" name="nome-fantasia" required placeholder="Digite o Nome Fantasia" >
+                    </div>
+                </div>
+
+                    <div class="form-grid single-column">
+                    <div class="form-group">
+                    <label for="cnpj">CNPJ*</label>
+                    <input type="text" id="cnpj" name="cnpj" required placeholder="00.000.000/0000-00">
+                    </div>
+                </div>
+            
+
+            <button type="submit" class="continue-button">Continuar</button>
+        </form>
+    </main>
+
+    <footer class="main-footer2">
+        <p>2025 BBTS: Todos os direitos reservados. </p>
+        <nav class="footer-nav">
+            <a href="#">Política de Privacidade |</a>
+            <a href="#">Central de Ajuda |</a>
+            <a href="#">Termos de Uso</a>
+        </nav>
+    </footer>
+<script src="../../3 -TELA_CADASTRO_CNPJ/Javascript/scripts.js"></script>
+<script src="../../A - Acessibilidade/Acessibilidade.js"></script>
+</body>
+</html>

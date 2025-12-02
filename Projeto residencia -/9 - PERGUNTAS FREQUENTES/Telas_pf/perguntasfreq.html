@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BBTStart - Perguntas Frequentes</title>
+  <!-- CABEÇALHO GLOBAL-->
+  <link rel="stylesheet" href="/B - CABECALHO/cabecalho.css">
+   <!-- RODAPE GLOBAL-->
+  <link rel="stylesheet" href="../../D - Rodape/rodape.css" />
+  <!-- CSS principal -->
+  <link rel="stylesheet" href="../css/perguntasfreq.css" />
+  <!-- Ícone da aba -->
+  <link rel="shortcut icon" href="../../D - Assets gerais/Favbbts.png" type="image/x-icon">
+</head>
+
+<body>
+
+  <!-- ====================== ACESSIBILIDADE ====================== -->
+   <div id="acessibilidade">
+    <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+    <style>
+      /* Esconder o botão nativo do VLibras — usamos apenas o botão customizado */
+      [vw-access-button] {
+        display: none !important;
+        width: 0 !important;
+        height: 0 !important;
+        overflow: hidden !important;
+        pointer-events: none !important;
+      }
+    </style>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget("https://vlibras.gov.br/app");
+    </script>
+  </div>
+  <!-- ====================== HEADER / TOPO ====================== -->
+  <header>
+      <div id="botoes-acessibilidade-extra">
+      <button class="btn-acess">
+        <img src="../../A - Acessibilidade/img/icone-pessoa.png" alt="Acessibilidade" />
+      </button>
+      <button class="btn-vlibras">
+        <img src="../../A - Acessibilidade/img/libras.png" alt="VLibras" />
+      </button>
+      <button class="btn-audio">
+        <img src="../../A - Acessibilidade/img/icone-comando-voz.png" alt="Comando de voz" />
+      </button>
+    </div>
+  <!-- ====================== CONTEÚDO PRINCIPAL ====================== -->
+  <main class="conteudo-faq">
+
+    <h1 class="titulo-faq">Perguntas frequentes</h1>
+
+    <!-- CAMPO DE PESQUISA -->
+    <div class="caixa-pesquisa">
+      <input type="text" placeholder="Pesquise sobre sua dúvida..." />
+      <span class="icone-pesquisa">🔍</span>
+    </div>
+
+    <!-- LISTA DE FAQ -->
+    <section class="lista-faq">
+
+      <div class="faq-item">
+        <p class="faq-pergunta">• Quem pode cadastrar sua startup no portal?</p>
+        <p class="faq-resposta">
+          Startups de qualquer porte, ligadas a polos tecnológicos e ecossistemas de inovação.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-pergunta">• O cadastro no portal é gratuito?</p>
+        <p class="faq-resposta">Sim, o cadastro é totalmente gratuito.</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-pergunta">• Preciso ter CNPJ para cadastrar minha startup?</p>
+        <p class="faq-resposta">Não. Você pode se cadastrar usando CPF ou CNPJ.</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-pergunta">• Como funciona a validação do meu cadastro?</p>
+        <p class="faq-resposta">
+          Após o envio dos dados, nossa equipe de administradores analisa e aprova em até X dias úteis.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-pergunta">• Empresas que não são startups também podem se cadastrar?</p>
+        <p class="faq-resposta">
+          Sim, desde que estejam relacionadas com tecnologia, polos de inovação ou ecossistemas empreendedores.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-pergunta">• Posso atualizar os dados da minha empresa depois do cadastro?</p>
+        <p class="faq-resposta">
+          Não. Alterações só podem ser feitas mediante solicitação ao administrador do portal.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-pergunta">• Existe limite de startups cadastradas por usuário?</p>
+        <p class="faq-resposta">
+          Não há limite. Um mesmo usuário pode cadastrar mais de uma startup, desde que cada uma tenha dados próprios.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-pergunta">• Minha startup ainda está em fase de ideia, posso me cadastrar?</p>
+        <p class="faq-resposta">
+          Sim, startups em fase de ideação, validação ou operação podem se cadastrar.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-pergunta">• Quais são os benefícios de cadastrar minha startup?</p>
+        <p class="faq-resposta">
+          Mais visibilidade no ecossistema, conexões com investidores e parceiros, além de oportunidades de networking.
+        </p>
+      </div>
+
+    </section>
+  </main>
+  <!-- ====================== SCRIPT MENU RESPONSIVO ====================== -->
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu-navegacao');
+
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('ativo');
+    });
+  </script>
+  <!-- ====================== SCRIPTS GLOBAIS (CABECALHO, RODAPÉ, ACESSIBILIDADE)====================== -->
+  <script src="../../B - CABECALHO/cabecalho.js" defer></script>
+  <script src="../../D - RODAPE/Javascript/rodape.js" defer></script>
+  <script src="../Javascript/Acessibilidade.js"></script>
+</body>
+</html>

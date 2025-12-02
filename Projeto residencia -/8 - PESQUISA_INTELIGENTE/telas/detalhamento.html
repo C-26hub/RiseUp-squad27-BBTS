@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link rel="stylesheet" href="../css/header-footer.css" />
+    <link rel="stylesheet" href="../css/main-pesquisa.css" />
+    <link rel="stylesheet" href="../css/detalhamento.css" />
+    <link rel="stylesheet" href="/B - CABECALHO/cabecalho.css">
+    <link rel="stylesheet" href="../../D - Rodape/rodape.css" />
+    <link rel="shortcut icon" href="../../C - Assets gerais/Favbbts.png" type="image/x-icon">
+    <title>Header e Footer - BBTS</title>
+    <style>
+      /* Esconder o botão nativo do VLibras — usamos apenas o botão customizado */
+      [vw-access-button] {
+        display: none !important;
+        width: 0 !important;
+        height: 0 !important;
+        overflow: hidden !important;
+        pointer-events: none !important;
+      }
+    </style>
+  </head>
+  <body style="margin: 0; font-family: Calibri, san serif">
+    <div id="botoes-acessibilidade-extra">
+      <button class="btn-acess">
+        <img src="../../A - Acessibilidade/img/icone-pessoa.png" alt="Acessibilidade" />
+      </button>
+      <button class="btn-vlibras">
+        <img src="../../A - Acessibilidade/img/libras.png" alt="VLibras" />
+      </button>
+      <button class="btn-audio">
+        <img src="../../A - Acessibilidade/img/icone-comando-voz.png" alt="Comando de voz" />
+      </button>
+    </div>
+
+    
+
+    <main id="conteudo-detalhe">
+      <div class="detalhe-img-descricao">
+        <!-- A imagem e a descrição serão inseridas dinamicamente pelo JS -->
+      </div>
+    </main>
+
+    
+
+    <script src="../../8 - PESQUISA_INTELIGENTE/Javascript/pesquisa-detalhamento.js"></script>
+    <!-- VLibras (plugin gov.br) -->
+    <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+
+    <script>
+      (function initVlibras() {
+        if (window.VLibras) {
+          try {
+            new window.VLibras.Widget('https://vlibras.gov.br/app');
+          } catch (e) {
+            console.warn('Erro ao inicializar VLibras', e);
+          }
+        } else {
+          setTimeout(initVlibras, 100);
+        }
+      })();
+    </script>
+
+    <script>
+      (function () {
+        const hamburger = document.querySelector('.hamburger');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        function toggleMenu() {
+          const isOpen = mobileMenu.classList.toggle('open');
+          hamburger.setAttribute('aria-expanded', String(isOpen));
+          mobileMenu.setAttribute('aria-hidden', String(!isOpen));
+        }
+        hamburger.addEventListener('click', function (e) {
+          e.stopPropagation();
+          toggleMenu();
+        });
+        // fechar ao clicar fora
+        document.addEventListener('click', function (e) {
+          if (!mobileMenu.classList.contains('open')) return;
+          if (!mobileMenu.contains(e.target) && !hamburger.contains(e.target)) {
+            mobileMenu.classList.remove('open');
+            hamburger.setAttribute('aria-expanded', 'false');
+            mobileMenu.setAttribute('aria-hidden', 'true');
+          }
+        });
+        // fechar com ESC
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
+            mobileMenu.classList.remove('open');
+            hamburger.setAttribute('aria-expanded', 'false');
+            mobileMenu.setAttribute('aria-hidden', 'true');
+            hamburger.focus();
+          }
+        });
+      })();
+    </script>
+    <script src="../../B - CABECALHO/cabecalho.js" defer></script>
+    <script src="../../D - Rodape/Javascript/rodape.js"></script>
+    <script src="../Javascript/pesquisa-detalhamento.js"></script>
+    <script src="../Javascript/Acessibilidade.js"></script>
+  </body>
+</html>

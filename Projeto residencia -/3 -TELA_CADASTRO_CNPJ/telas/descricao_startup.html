@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BBTS Start - Descrição da Startup</title>
+    <link rel="stylesheet" href="../../3 -TELA_CADASTRO_CNPJ/css/style.css">
+    <link rel="shortcut icon" href="../../D - Assets gerais/Favbbts.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../A - Acessibilidade/Acessibilidade.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="logo-container">
+            <img src="../../3 -TELA_CADASTRO_CNPJ/imgs/bbts-logo.png" alt="Logo BBTS Start" class="logo-image">
+        </div>
+        <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+    <style>
+      /* Esconder o botão nativo do VLibras — usamos apenas o botão customizado */
+      [vw-access-button] {
+        display: none !important;
+        width: 0 !important;
+        height: 0 !important;
+        overflow: hidden !important;
+        pointer-events: none !important;
+      }
+    </style>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget("https://vlibras.gov.br/app");
+    </script>
+  </div>
+      <div id="botoes-acessibilidade-extra">
+      <button class="btn-acess">
+        <img src="../../../A - Acessibilidade/img/icone-pessoa.png" alt="Acessibilidade" />
+      </button>
+      <button class="btn-vlibras">
+        <img src="../../../A - Acessibilidade/img/libras.png" alt="VLibras" />
+      </button>
+      <button class="btn-audio">
+        <img src="../../../A - Acessibilidade/img/icone-comando-voz.png" alt="Comando de voz" />
+      </button>
+        </div>
+    </header>
+
+    <main class="page-container">
+        
+        <button class="back-button" aria-label="Voltar para a tela anterior">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20.0002 36.6667C29.2049 36.6667 36.6668 29.2048 36.6668 20C36.6668 10.7953 29.2049 3.33337 20.0002 3.33337C10.7954 3.33337 3.3335 10.7953 3.3335 20C3.3335 29.2048 10.7954 36.6667 20.0002 36.6667Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M20.0002 13.3334L13.3335 20L20.0002 26.6667" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M26.6668 20H13.3335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+
+        <div class="progress-container">
+                <div class="steps">
+                    <img src="../../3 -TELA_CADASTRO_CNPJ/imgs/icone-barra-navegacao-cnpj3.png" alt="barra-navegacao-cnpj">
+                </div>
+            </div>
+
+        
+
+        <h1 class="section-title">Descrição da Startup</h1>
+
+        <form class="access-form">
+            
+            <div class="form-grid single-column">
+                <div class="form-group">
+                <label for="modelo-negocio">Modelo de Negócio (selecione 1 opção) *</label>
+                <select id="modelo-negocio" name="modelo-negocio" required>
+                    <option value="" disabled selected>Selecione</option>
+                    <option value="b2b">Business-to-Business (B2B)</option>
+                    <option value="b2c">Business-to-Consumer (B2C)</option>
+                    <option value="saas">Software as a Service (SaaS)</option>
+                    <option value="marketplace">Marketplace</option>
+                    <option value="subscription">Assinatura / Recorrência</option>
+                    <option value="freemium">Freemium</option>
+                    <option value="adtech">AdTech</option>
+                    <option value="on_demand">On-Demand / Shared Economy</option>
+                    <option value="e_commerce">E-commerce</option>
+                    <option value="paas">PaaS</option>
+                    <option value="iaas">IaaS</option>
+                </select>
+                
+                </div>
+            </div>
+            
+            <div class="form-grid single-column">
+                <div class="form-group">
+                <label for="tecnologias-select">Tecnologias utilizadas (marque as opções correspondentes) *</label>
+                <select id="tecnologias" required>
+                        <option value="" disabled selected>Selecione</option>
+                        <option value="ia">IA (Inteligência Artificial)</option>
+                        <option value="blockchain">Blockchain / DLT</option>
+                        <option value="cloud">Cloud Computing</option>
+                        <option value="iot">Internet das Coisas (IoT)</option>
+                        <option value="vr_ar">Realidade Virtual/Aumentada</option>
+                        <option value="bi_analytics">BI / Analytics</option>
+                        <option value="fintech">Fintech</option>
+                        <option value="cybersecurity">Cibersegurança</option>
+                </select>
+                </div>
+            </div>
+
+                <div class="form-grid single-column">
+                <div class="form-group">
+                <label for="solucao">Descreva a solução que sua startup oferece * (de 800 a 2000 caracteres)</label>
+                <textarea id="solucao" name="solucao" rows="8" required placeholder="Descreva aqui sua solução..."></textarea>
+                </div>
+            </div>
+
+            <div class="form-grid single-column">
+                <div class="form-group">
+                <label for="pitch">Pitch * (de 200 a 500 caracteres)</label>
+                <textarea id="pitch" name="pitch" rows="8" required placeholder="Escreva seu pitch aqui..."></textarea>
+                </div>
+            </div>
+            
+                <div class="form-grid single-column">
+                <div class="form-group full-width">
+                <label for="mvv">Missão, visão e valores da Startup (opcional) (máximo de 250 caracteres)</label>
+                <textarea id="mvv" name="mvv" rows="4" placeholder="Descreva a Missão, Visão e Valores..."></textarea>
+                </div>
+            </div>
+
+      
+
+            <button type="submit" class="continue-button">Continuar</button>
+        </form>
+    </main>
+
+    <footer class="main-footer">
+        <p>2025 BBTS: Todos os direitos reservados. </p>
+        <nav class="footer-nav">
+            <a href="#">Política de Privacidade |</a>
+            <a href="#">Central de Ajuda |</a>
+            <a href="#">Termos de Uso</a>
+        </nav>
+    </footer>
+   <script src="../../3 -TELA_CADASTRO_CNPJ/Javascript/scripts.js"></script>
+   <script src="../../A - Acessibilidade/Acessibilidade.js"></script>
+</body>
+</html>

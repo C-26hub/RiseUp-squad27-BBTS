@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BBTS - Portal de Startups</title>
+
+    <!-- CSS principal da página -->
+    <link rel="stylesheet" href="../css/TELA04.CSS" />
+
+    <!-- CSS do rodapé -->
+    <link rel="stylesheet" href="../../D - Rodape/rodape.css" />
+
+    <!-- CSS de acessibilidade -->
+    <link rel="stylesheet" href="../../A - Acessibilidade/acessibilidade.css" />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../../C - Assets gerais/Favbbts.png" />
+</head>
+
+<body>
+
+<div class="layout">
+
+    <!-- ====================================================== -->
+    <!-- BARRA LATERAL                                          -->
+    <!-- ====================================================== -->
+    <aside class="sidebar">
+
+        <!-- Logo principal -->
+       <a href="/1 - HOME/Telas_Home/index.html" class="botao-logo">
+  <img src="../imgs/Amarelo sem fundo 2.png" alt="Logo" class="logo" />
+</a>
+
+        <nav class="menu">
+
+            <!-- Ícone do topo -->
+            <div class="menu-top-icon">
+                <img src="../imgs/3 traços.png" alt="Ícone superior" />
+            </div>
+
+            <!-- Início -->
+            <a href="index.html" class="menu-item">
+                <img src="../imgs/CasaB.png" alt="Início" class="menu-icon" />
+                <span>Início</span>
+            </a>
+
+            <!-- Item do submenu -->
+            <div class="menu-item submenu-toggle">
+                <img src="../imgs/dados.png" alt="Dados de Cadastro" class="menu-icon" />
+                <span>Dados de Cadastro</span>
+                <img src="../imgs/Seta cima.png" alt="Seta para cima" class="arrow-icon" />
+            </div>
+
+            <!-- SUBMENU -->
+            <div class="submenu">
+
+                <a href="TELA03.html" class="submenu-item">
+                    <img src="../imgs/dados.png" alt="Dados Pessoais" class="submenu-icon" />
+                    <span>Dados Pessoais</span>
+                </a>
+
+                <a href="TELA04.html" class="submenu-item destaque">
+                    <img src="../imgs/EndereçoAzul.png" alt="Endereço" class="submenu-icon" />
+                    <span>Endereço</span>
+                </a>
+
+                <a href="TELA05.html" class="submenu-item">
+                    <img src="../imgs/perfilPequeno.png" alt="Perfil" class="submenu-icon" />
+                    <span>Perfil</span>
+                </a>
+
+            </div>
+
+            <!-- Histórico -->
+            <a href="TELA06.html" class="menu-item">
+                <img src="../imgs/historico.png" alt="Histórico de Solicitações" class="menu-icon" />
+                <span>Histórico de Solicitações</span>
+            </a>
+
+            <!-- Alterar senha -->
+            <a href="TELA07.html" class="menu-item">
+                <img src="../imgs/chave.png" alt="Alterar Senha" class="menu-icon" />
+                <span>Alterar Senha</span>
+            </a>
+
+            <!-- Sair -->
+           <a href="/1 - HOME/Telas_Home/index.html" class="menu-item">
+          <img src="../imgs/sair.png" class="menu-icon" />
+          <span>Sair</span>
+        </a>
+
+        </nav>
+    </aside>
+
+    <!-- ====================================================== -->
+    <!-- CONTEÚDO PRINCIPAL                                     -->
+    <!-- ====================================================== -->
+    <main class="main-content">
+
+        <!-- Topbar com nome do usuário -->
+        <header class="topbar">
+            <div class="user-info">
+                <img src="../imgs/perfilPequeno.png" alt="Foto do usuário" class="user-photo" />
+                <span class="username">João Silva</span>
+            </div>
+        </header>
+
+        <!-- Container principal -->
+        <div class="dados-cadastro-container">
+
+            <!-- Título -->
+            <div class="dados-cadastro">
+                <img src="../imgs/DadosPreto.png" alt="Ícone Dados de Cadastro" />
+                <h2>Dados de Cadastro</h2>
+            </div>
+
+            <div class="linha-dados"></div>
+
+            <!-- Bloco de endereço -->
+            <div class="dados-pessoais-container">
+
+                <!-- Cabeçalho da seção -->
+                <div class="dados-pessoais">
+
+                    <div class="titulo-endereco">
+                        <img src="../imgs/endereçoPreto.png" alt="Ícone Endereço" />
+                        <span>Endereço</span>
+                    </div>
+
+                    <!-- Botão solicitar edição -->
+                    <button class="solicitar-edicao">Solicitar Edição</button>
+
+                </div>
+
+                <!-- Card de informações -->
+                <div class="retangulo-cinza-texto">
+
+                    <div class="linha-endereco">
+                        <div class="campo">
+                            <label>CEP</label>
+                            <p>52020-050</p>
+                        </div>
+                    </div>
+
+                    <div class="linha-endereco">
+                        <div class="campo">
+                            <label>Rua</label>
+                            <p>Rua nascimento Silva</p>
+                        </div>
+
+                        <div class="campo">
+                            <label>Número</label>
+                            <p>107</p>
+                        </div>
+
+                        <div class="campo">
+                            <label>Complemento</label>
+                            <p>Casa 02</p>
+                        </div>
+                    </div>
+
+                    <div class="linha-endereco">
+                        <div class="campo">
+                            <label>País</label>
+                            <p>Brasil</p>
+                        </div>
+
+                        <div class="campo">
+                            <label>Estado/UF</label>
+                            <p>PE</p>
+                        </div>
+
+                        <div class="campo">
+                            <label>Cidade</label>
+                            <p>Recife</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+<!-- ====================================================== -->
+<!-- MODAL - SOLICITAR EDIÇÃO                               -->
+<!-- ====================================================== -->
+<div class="modal-overlay" id="editModalOverlay">
+    <div class="modal-content">
+
+        <!-- Botão fechar -->
+        <span class="close-button" id="closeModalButton">&times;</span>
+
+        <h3 class="modal-title">Solicitar Edição de Cadastro</h3>
+        <p class="modal-description">
+            Descreva as alterações que você gostaria de fazer em seu cadastro.
+        </p>
+
+        <form class="modal-form">
+
+            <div class="form-group-modal">
+                <label for="campo-alterar">Campo que deseja alterar *</label>
+                <input type="text" id="campo-alterar" required />
+            </div>
+
+            <div class="form-group-modal">
+                <label for="justificativa">Justificativa *</label>
+                <textarea id="justificativa" rows="4" required placeholder="Descreva detalhadamente as alterações que você gostaria de fazer."></textarea>
+            </div>
+
+            <div class="modal-actions">
+                <button type="button" class="btn-cancelar" id="cancelModalButton">Cancelar</button>
+                <button type="submit" class="btn-enviar">Enviar Solicitação</button>
+            </div>
+
+        </form>
+
+    </div>
+</div>
+
+<!-- ====================================================== -->
+<!-- MODAL DE SUCESSO                                       -->
+<!-- ====================================================== -->
+<div class="modal-overlay" id="successModalOverlay">
+    <div class="modal-content modal-success-content">
+
+        <span class="close-button" id="closeSuccessModalButton">&times;</span>
+
+        <h3 class="modal-title-success">Solicitação enviada</h3>
+        <p class="modal-description-success">
+            Sua solicitação será avaliada pelo moderador.<br>
+            Em breve você receberá um email com a liberação.
+        </p>
+
+        <button class="btn-voltar-inicio" onclick="window.location.href='index.html'">
+            Voltar para o Início
+        </button>
+
+    </div>
+</div>
+
+<!-- ====================================================== -->
+<!-- ACESSIBILIDADE                                         -->
+<!-- ====================================================== -->
+<div id="acessibilidade">
+
+    <!-- VLibras -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
+    <style>
+        /* Oculta o botão padrão do VLibras */
+        [vw-access-button] {
+            display: none !important;
+        }
+    </style>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget("https://vlibras.gov.br/app");
+    </script>
+
+</div>
+
+<!-- Botões extra -->
+<div id="botoes-acessibilidade-extra">
+    <button class="btn-acess">
+        <img src="../../../A - Acessibilidade/img/icone-pessoa.png" alt="Acessibilidade" />
+    </button>
+
+    <button class="btn-vlibras">
+        <img src="../../../A - Acessibilidade/img/libras.png" alt="VLibras" />
+    </button>
+
+    <button class="btn-audio">
+        <img src="../../../A - Acessibilidade/img/icone-comando-voz.png" alt="Comando de voz" />
+    </button>
+</div>
+
+<!-- ====================================================== -->
+<!-- SCRIPTS                                                -->
+<!-- ====================================================== -->
+
+<script src="../Javascript/TELA04.JS"></script>
+<script src="../../D - Rodape/Javascript/rodape.js"></script>
+<script src="../../A - Acessibilidade/Acessibilidade.js"></script>
+
+</body>
+</html>

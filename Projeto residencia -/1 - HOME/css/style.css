@@ -1,0 +1,907 @@
+/* ========================================================
+   GERAIS E RESET
+======================================================== */
+html,
+body {
+  overflow-x: hidden;
+  font-family: "Calibri", sans-serif;
+}
+#container-header {
+  color:#465eff;
+  position: relative;
+  left: 60px;
+  font-size: 40px;
+  margin-top:30px;
+  
+}
+#subtitulo-header {
+  color:#535353;
+  font-family: 'Calibri', sans-serif;
+  font-size: 24px;
+  position: relative;
+  left: 60px;
+  margin-top: 20px;
+  font-style: normal;
+font-weight: 300;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#texto-cadastrar {
+  color:#465eff;
+  font-family: 'Calibri', sans-serif;
+  font-size: 1.6rem;
+  justify-content: center;
+}
+#texto-cadastrar h3{
+margin-top: -300px;
+}
+
+#botoes-acessibilidade-extra {
+  position: fixed;
+  top: 180px;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 9999;
+}
+
+#botoes-acessibilidade-extra button {
+  width: 48px;
+  height: 48px;
+  border: none;
+  outline: none;
+  border-radius: 10px 0 0 10px;
+  background-color: #465eff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+#botoes-acessibilidade-extra button img {
+  width: 26px;
+  height: 26px;
+  filter: brightness(200%);
+}
+
+#startup {
+  max-width: 100%;
+  width: 65%;
+  height: auto;
+  position: relative;
+  left: 35%;
+  top: -330px;
+}
+
+
+#apontar img {
+  max-width: 100%;
+  height: auto;
+}
+/* Container principal */
+#texto-cadastrar {
+  display: flex;
+  align-items: center;        /* centraliza verticalmente */
+  justify-content: center;    /* centraliza horizontalmente */
+  gap: 60px;                   /* espaço entre imagem e elipses */
+  margin-top: 20px;
+  flex-wrap: nowrap;
+  font-size: 3.0rem;
+}
+
+/* Imagem da pessoa apontando */
+#apontar {
+  width: 330px;
+  height: auto;
+  left:0;
+  margin-left:-220px;
+
+}
+
+/* Container que controla a área do triângulo */
+#elipses-beneficios {
+  position: relative;
+  width: 520px;   /* controla a largura total */
+  height: 380px;  /* controla a altura do triângulo */
+  margin-left: 40px; /* ajuste fino para aproximar da imagem, se quiser */
+}
+
+/* Estilo das elipses */
+.elipse {
+  width: 240px;
+  height: 240px;
+  background: #fbff33;
+  border-radius: 50%;
+
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  padding: 20px;
+}
+
+.icone-elipse {
+  width: 45px;
+  height: 45px;
+  margin-bottom: 10px;
+}
+
+/* -------------------------------
+   POSICIONAMENTO EM TRIÂNGULO
+--------------------------------*/
+
+/* Topo esquerda */
+.elipse.visibilidade {
+  top: 0;
+  left: 0;
+}
+
+/* Topo direita */
+.elipse.conexoes {
+  top: 0;
+  right: 0;
+}
+
+/* Centro embaixo */
+.elipse.oportunidades {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+
+/* ========================================================
+   BOTÃO DE CADASTRO (TOPO)
+======================================================== */
+#botao-topo {
+  /* right: 50px; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#botao-topo {
+  background-color: #fcfc30;
+  color: #465eff;
+  font-size: 24px;
+  font-weight: bold;
+  border: none;
+  border-radius: 20px;
+  padding: 15px 60px;
+  padding-left: 95px;
+  padding-right: 95px;
+  margin-top: 50px; 
+  
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: relative;
+  left: 19%;
+}
+
+#botao-topo:hover {
+  background-color: #465eff;
+  color: #fcfc30;
+}
+
+/* ========================================================
+   CAMPO DE BUSCA (INPUT + LUPA)
+======================================================== */
+.campo-busca {
+  display: flex;
+  align-items: center;
+  border: 1px solid #bfbfbf;
+  border-radius: 10px;
+  padding: 8px 12px;
+  width: 360px;
+  margin: 30px 40px 0 auto;
+  background-color: white;
+  margin-right: 60px;
+  
+  
+}
+
+.campo-busca input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  background: transparent;
+  color: #333;
+}
+
+.campo-busca input::placeholder {
+  color: #bfbfbf;
+}
+
+.botao-lupa {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #bfbfbf;
+  padding: 4px;
+}
+
+/* ========================================================
+   CONTEÚDO PRINCIPAL
+======================================================== */
+main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+main h1 {
+  font-size: 1.1rem;
+  text-align: left;
+  width: 100%;
+  margin-top: 20px;
+}
+
+#apontar{
+  height: auto;
+  max-width: 100%;
+  width: 60%;
+  position: relative;
+  right: 26%;
+  padding: 0%;
+}
+#texto-cadastrar h1{
+  font-family: "Calibri", sans-serif;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ========================================================
+   ELÍPSES
+======================================================== */
+
+/* Botão das elipses */
+#botao-cadastrar-triangulo {
+  background-color: #fcfc30;
+  color: #465eff;
+  font-size: 1.4rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  padding: 15px 60px;
+  margin-top: 35px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#botao-cadastrar-triangulo:hover {
+  background-color: #f0f000;
+}
+
+/* ========================================================
+   SEÇÃO PORQUE CADASTRAR
+======================================================== */
+.container {
+    width: 100%;
+    text-align: center;
+    padding: 40px 0;
+    margin-bottom: 80px;
+}
+
+.titulo {
+    font-size: 42px;
+    color: #3c46ff;
+    font-weight: 700;
+    margin-bottom: 60px;
+}
+
+.conteudo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 40px;
+    padding: 0 40px;
+    margin-top: -200px;
+}
+
+.imagem-lateral {
+    width: 350px;
+}
+
+.circulos {
+    display: grid;
+    grid-template-columns: repeat(2, 220px);
+    gap: 20px 50px;
+    justify-items: center;
+    align-items: center;
+    margin-left: -350px;
+    margin-bottom: 100px;
+      
+}
+
+.circulo {
+    width: 220px;
+    height: 220px;
+    background: #FFF92C;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+
+.circulo h3 {
+    font-size: 24px;
+    margin: 5px;
+    color: #3c46ff;
+}
+
+.circulo p {
+    font-size: 14px;
+    margin: 0;
+    line-height: 18px;
+    text-align: center;
+}
+
+.icone {
+    width: 35px;
+    margin-bottom: 10px;
+}
+
+.circulo-bottom {
+    grid-column: span 2;
+}
+
+.btn{
+  margin-left: -120px;
+}
+
+#btn-startup {
+display: flex;
+width: 530px;
+height: 64px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+
+color: #465EFF;
+
+text-align: center;
+font-size: 24px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+
+}
+
+#btn-startup {
+  background-color: #fcfc30;
+  color: #465eff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  padding: 15px 60px;
+  width: 530px;
+  height: 64px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#btn-startup:hover {
+  background-color:#465eff;
+  color: #fcfc30 ;
+}
+
+#btn-startup{
+  margin-bottom: 20px;
+  display:flex;
+  margin-left: -400px;
+}
+
+
+/* ========================================================
+   SEÇÃO COMO CADASTRAR
+======================================================== */
+#como-cadastrar {
+  background-color: #465eff;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  padding: 100px 40px;
+  text-align: center;
+  color: #fcfc30;
+  box-sizing: border-box;
+
+}
+
+#como-cadastrar h2 {
+  color: #fcfc30;
+  font-size: 60px;
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+/* Texto explicativo */
+.texto-processo {
+  font-size: 24px;
+  margin-bottom: 80px;
+  color: #ffffff;
+}
+
+/* Container dos cards */
+.cards-passos {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* Cada grupo (elipse + card) */
+.card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+/* Elipse sobre o card */
+.etapa-elipse {
+  width: 80px;
+  height: 80px;
+  background-color: #fcfc30;
+  color: #465eff;
+  font-size: 2rem;
+  font-weight: bold;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: -40px;
+  z-index: 2;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+/* Card em amarelo */
+.card-passo {
+  background-color: #fcfc30;
+  color: #465eff;
+  width: 250px;
+  min-height: 320px;
+  padding: 60px 25px 40px;
+  border-radius: 30px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-passo:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.card-passo h3 {
+  margin-bottom: 15px;
+  font-size: 24px;
+  color: #465eff;
+  text-align: center;
+}
+
+.card-passo p {
+  color: #333;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* Versão duplicada do card — mantida sem alteração */
+.card-passo {
+  background-color: #fcfc30;
+  color: #465eff;
+  flex: 1 1 220px;
+  max-width: 280px;
+  min-height: 320px;
+}
+
+/* ========================================================
+   BOTÃO ABAIXO DOS CARDS
+======================================================== */
+.botao-comecar-container {
+  margin-top: 60px;
+  text-align: center;
+}
+
+#botao-comecar {
+  background-color: #fcfc30;
+  color: #465eff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  padding: 15px 60px;
+  width: 530px;
+height: 64px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#botao-comecar:hover {
+  background-color: #ffffff;
+  color: #465eff ;
+}
+
+/* ========================================================
+   SEÇÃO BENEFÍCIOS
+======================================================== */
+#beneficios {
+  width: 100vw;
+  padding: 80px;
+  margin-left: calc(-50vw + 50%);
+  justify-content: center;
+  text-align: center;
+  padding: 60px 0 120px 0;
+  overflow: hidden
+}
+
+#beneficios h2 {
+  color: #465eff;
+  font-size: 60px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+
+#beneficios .subtitulo {
+  color: #535353;
+  font-size: 24px;
+  margin-bottom: 60px;
+  font-weight: bold;
+}
+
+/* ========================================================
+   CARDS (BENEFÍCIOS)
+======================================================== */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  justify-items: center;
+  margin-bottom: 60px;
+  max-width: 1100px; 
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card {
+  background-color: #465eff;
+  color: white;
+  width: 100%;
+  max-width: 330px;
+  border-radius: 20px;
+  padding: 40px 0px;
+  text-align: left;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: left;
+  gap: 5px;
+  flex-direction: row;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+.card i {
+  width: 36px;
+  height: 36px;
+  color: #fcfc30;
+  flex-shrink: 0;
+}
+
+.card h3 {
+  color: #fcfc30;
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+}
+
+.card p {
+  color: white;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* ========================================================
+   BOTÃO SEÇÃO BENEFÍCIOS
+======================================================== */
+.botao-container {
+  padding-top: 10px;
+  padding-bottom: 80px;
+}
+
+#botao-cadastro {
+  background-color: #fcfc30;
+  color: #465eff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  padding: 15px 60px;
+  width: 530px;
+height: 64px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#botao-cadastro:hover {
+  background-color:#465eff;
+  color: #fcfc30 ;
+}
+
+/* ========================================================
+   DEPOIMENTOS
+======================================================== */
+#depoimentos {
+  background-color: #465eff;
+  padding: 90px 30px 80px;
+  text-align: center;
+  color: white;
+  margin-top:-140px;
+  margin-bottom: -40px;
+}
+
+#depoimentos h2 {
+  color: #fcfc30;
+  font-size: 4rem;
+  margin-bottom: 10px;
+}
+
+.subtitulo-depoimentos {
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 50px;
+}
+
+.cards-depoimentos {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.card-depoimento {
+  background-color: white;
+  border-radius: 15px;
+  padding: 30px;
+  width: 30%;
+  min-width: 280px;
+  color: #535353;
+  text-align: left;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.card-depoimento:hover {
+  transform: translateY(-5px);
+}
+
+.foto-texto {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.foto-pessoa {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 15px;
+  object-fit: cover;
+}
+
+.nome-startup {
+  color: #465eff;
+  font-size: 1.1rem;
+  margin-bottom: 3px;
+}
+
+.cargo {
+  color: #535353;
+  font-size: 0.9rem;
+}
+
+.citacao {
+  font-style: italic;
+  color: #535353;
+  margin: 15px 0;
+  line-height: 1.5;
+}
+
+.habilidades {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.habilidades span {
+  border: 1.5px solid #465eff;
+  color: #465eff;
+  padding: 5px 7px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+}
+
+.botao-depoimentos {
+  margin-top: 60px;
+  text-align: center;
+}
+
+#botao-depoimentos {
+  background-color: #fcfc30;
+  width: 530px;
+height: 64px;
+  color: #465eff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  padding: 15px 60px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#botao-depoimentos:hover {
+  background-color: #ffffff;
+  color: #465eff ;
+}
+/* ========================================================
+   RODAPÉ
+======================================================== */
+#rodape {
+  width: 100%;
+  background-color: #465eff;
+  color: white;
+  margin-top: 40px;
+}
+
+.linha-amarela {
+  width: 100%;
+  height: 4px;
+  background-color: #fcfc30;
+}
+
+.rodape-conteudo {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  padding: 40px 20px;
+  flex-wrap: wrap;
+}
+
+.logo-coluna {
+  display: flex;
+  align-items: flex-start;
+  justify-content: left;
+}
+
+.logo-rodape {
+  width: 50%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.coluna h3 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: white;
+}
+
+.coluna a {
+  display: block;
+  color: white;
+  font-size: 1rem;
+  text-decoration: none;
+  margin-bottom: 8px;
+}
+
+.coluna a:hover {
+  text-decoration: underline;
+}
+
+.redes-sociais a {
+  font-size: 1.7rem;
+  margin-right: 12px;
+  text-decoration: none;
+}
+
+.direitos {
+  text-align: center;
+  font-size: 0.9rem;
+  padding: 15px 0;
+  background-color: #465eff;
+}
+
+.social-icons img:nth-child(1),
+.social-icons img:nth-child(2),
+.social-icons img:nth-child(3) {
+  width: 40px;
+  height: 40px;
+}
+
+.social-icons img:nth-child(3) {
+  object-fit: contain;
+  align-self: center;
+  display: inline-block;
+}
+
+/* ========================================================
+   RESPONSIVIDADE (TELAS PEQUENAS)
+======================================================== */
+@media (max-width: 600px) {
+  #logo-topo {
+    position: relative;
+    z-index: 1000;
+    width: 12px;
+    height: 20px;
+    margin-top: 10px;
+  }
+
+  .botao-com-imagem {
+    flex-direction: column;
+  }
+
+  #startup {
+    width: 120px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    padding: 70px;
+    margin: auto;
+    width: auto;
+    height: auto;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  nav a {
+    font-size: 15px;
+    color: #465eff;
+  }
+
+  main {
+    flex-direction: column;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  header h4 {
+    font-size: 1rem;
+  }
+
+  .elipse {
+    width: 80px;
+    height: 85px;
+  }
+}
