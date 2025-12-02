@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BBTS Start - Como Deseja se Cadastrar?</title>
+    <link rel="stylesheet" href="../css/style.css"> 
+    <link rel="stylesheet" href="../../A - Acessibilidade/Acessibilidade.css"> 
+</head>
+<body class="bg-bbts-blue">
+    <header class="main-header">
+        <a href="/1 - HOME/Telas_Home/index.html">
+            <img class="sidebar-logo" src="../../5 - TELA_STARTUP/imgs/bbts_start_logo.svg">
+        </a>
+        <div id="acessibilidade">
+    <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+    <style>
+      /* Esconder o botão nativo do VLibras — usamos apenas o botão customizado */
+      [vw-access-button] {
+        display: none !important;
+        width: 0 !important;
+        height: 0 !important;
+        overflow: hidden !important;
+        pointer-events: none !important;
+      }
+    </style>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget("https://vlibras.gov.br/app");
+    </script>
+  </div>
+      <div id="botoes-acessibilidade-extra">
+      <button class="btn-acess">
+        <img src="../../../A - Acessibilidade/img/icone-pessoa.png" alt="Acessibilidade" />
+      </button>
+      <button class="btn-vlibras">
+        <img src="../../../A - Acessibilidade/img/libras.png" alt="VLibras" />
+      </button>
+      <button class="btn-audio">
+        <img src="../../../A - Acessibilidade/img/icone-comando-voz.png" alt="Comando de voz" />
+      </button>
+        </div>
+    </header>
+
+    <main class="opcoes-cadastro-main">
+        
+        <div class="opcoes-cadastro-container">
+            <h1 class="cadastro-opcoes-title">Como deseja se cadastrar?</h1>
+
+            <div class="cards-container-opcoes">
+                
+                <div class="card-opcao">
+                    <div class="card-icon">
+                        <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="#465EFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="10" width="18" height="12" rx="2" ry="2"></rect>
+                            <path d="M12 2v8"></path>
+                            <path d="M7 16h10"></path>
+                        </svg>
+                    </div>
+                    
+                    <h2>Cadastrar com CNPJ</h2>
+                    
+                    <p class="card-description">
+                        Cadastre sua startup para fazer parte do nosso ecossistema de inovação. Conecte-se com parceiros, investidores e clientes.
+                    </p>
+                    
+                    <ul class="card-benefits">
+                        <li>Informações completas da empresa</li>
+                        <li>Tecnologias e segmentos de atuação</li>
+                        <li>Upload de logo e documentos</li>
+                        <li>Dados de contato e endereço</li>
+                    </ul>
+                    
+                    <a href="dados_acesso.html" class="card-btn-link">Cadastrar com CNPJ</a>
+                </div>
+
+                <div class="card-opcao">
+                    <div class="card-icon">
+                        <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="#465EFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                    </div>
+                    
+                    <h2>Cadastrar com CPF</h2>
+                    
+                    <p class="card-description">
+                        Cadastre como pessoa física para buscar empresas e startups para parcerias, investimentos ou colaborações.
+                    </p>
+                    
+                    <ul class="card-benefits">
+                        <li>Cadastro rápido e simples</li>
+                        <li>Acesso ao diretório de empresas</li>
+                        <li>Busca por segmento e tecnologia</li>
+                        <li>Contato direto com empresas</li>
+                    </ul>
+                    
+                    <a href="../../4 - TELA_CADASTRO_CPF/telas/dados_acesso.html" class="card-btn-link">Cadastrar com CPF</a>
+                </div>
+
+            </div>
+
+            <p class="login-prompt">
+                Já possui uma conta? <a href="../../2 - LOGIN/Telas_login/cadastrar.html" class="login-link-opcoes">Faça o login aqui</a>
+            </p>
+        </div>
+
+    </main>
+
+    <footer class="main-footer transparent-on-blue">
+        <p>2025 BBTS: Todos os direitos reservados. </p>
+        <nav class="footer-nav">
+            <a href="#">Política de Privacidade |</a>
+            <a href="#">Central de Ajuda |</a>
+            <a href="#">Termos de Uso</a>
+        </nav>
+    </footer>
+<script src="../Javascript/scripts.js"></script>
+<script src="../Javascript/Acessibilidade.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alterar Senha - Portal de Startups</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/TELA07.css" />
+  <link rel="stylesheet" href="../../D - Rodape/rodape.css" />
+  <link rel="stylesheet" href="../../A - Acessibilidade/acessibilidade.css" />
+  <link rel="shortcut icon" href="../../C - Assets gerais/Favbbts.png" />
+</head>
+
+<body>
+
+  <!-- ACESSIBILIDADE -->
+  <div id="acessibilidade">
+    <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+
+    <style>
+      /* Esconder o botão nativo do VLibras — usamos apenas o botão customizado */
+      [vw-access-button] {
+        display: none !important;
+        width: 0 !important;
+        height: 0 !important;
+        overflow: hidden !important;
+        pointer-events: none !important;
+      }
+    </style>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget("https://vlibras.gov.br/app");
+    </script>
+  </div>
+
+  <div id="botoes-acessibilidade-extra">
+    <button class="btn-acess">
+      <img src="../../../A - Acessibilidade/img/icone-pessoa.png" alt="Acessibilidade" />
+    </button>
+    <button class="btn-vlibras">
+      <img src="../../../A - Acessibilidade/img/libras.png" alt="VLibras" />
+    </button>
+    <button class="btn-audio">
+      <img src="../../../A - Acessibilidade/img/icone-comando-voz.png" alt="Comando de voz" />
+    </button>
+  </div>
+
+  <div class="layout">
+
+    <!-- === SIDEBAR === -->
+    <aside class="sidebar">
+      <a href="/1 - HOME/Telas_Home/index.html" class="botao-logo">
+  <img src="../imgs/Amarelo sem fundo 2.png" alt="Logo" class="logo" />
+</a>
+
+      <nav class="menu">
+        <div class="menu-top-icon">
+          <img src="../imgs/3 traços.png" alt="Menu opções" />
+        </div>
+
+        <a href="index.html" class="menu-item">
+          <img src="../imgs/CasaB.png" class="menu-icon" />
+          <span>Início</span>
+        </a>
+
+        <a href="#" class="menu-item">
+          <img src="../imgs/dados.png" class="menu-icon" />
+          <span>Dados de Cadastro</span>
+          <img src="../imgs/Seta cima.png" class="arrow-icon" />
+        </a>
+
+        <!-- SUBMENU -->
+        <div class="submenu">
+          <a href="TELA03.html" class="submenu-item">
+            <img src="../imgs/perfilDados.png" class="submenu-icon" />
+            <span>Dados Pessoais</span>
+          </a>
+
+          <a href="TELA04.html" class="submenu-item">
+            <img src="../imgs/localizacao.png" class="submenu-icon" />
+            <span>Endereço</span>
+          </a>
+
+          <a href="TELA05.html" class="submenu-item">
+            <img src="../imgs/Perfil.png" class="submenu-icon" />
+            <span>Perfil</span>
+          </a>
+        </div>
+
+        <a href="TELA06.html" class="menu-item">
+          <img src="../imgs/historico.png" class="menu-icon" />
+          <span>Histórico de Solicitações</span>
+        </a>
+
+        <a href="TELA07.html" class="menu-item active">
+          <img src="../imgs/Chave Azul.png" class="menu-icon" />
+          <span>Alterar Senha</span>
+        </a>
+
+        <a href="/1 - HOME/Telas_Home/index.html" class="menu-item">
+          <img src="../imgs/sair.png" class="menu-icon" />
+          <span>Sair</span>
+        </a>
+      </nav>
+    </aside>
+
+    <!-- === MAIN CONTENT === -->
+    <main class="main-content">
+
+      <header class="topbar">
+        <div class="user-info">
+          <img src="../imgs/Perfil.png" alt="Usuário" class="avatar" />
+          <span class="username">João Silva</span>
+        </div>
+      </header>
+
+      <section class="page-content">
+
+        <div class="content-header">
+          <img src="../imgs/ChavePreta.png" class="header-icon" />
+          <h1>Alterar Senha</h1>
+        </div>
+
+        <div class="header-divider"></div>
+
+        <!-- Formulário de alteração de senha -->
+        <form action="#" method="POST" class="form-alterar-senha">
+          <div class="form-group">
+            <label for="senha-atual">Senha atual *</label>
+            <input type="password" id="senha-atual" name="senha-atual" required placeholder="Digite a senha atual" />
+          </div>
+
+          <div class="form-group">
+            <label for="nova-senha">Nova senha *</label>
+            <input type="password" id="nova-senha" name="nova-senha" required placeholder="Digite a nova senha" />
+          </div>
+
+          <div class="form-group">
+            <label for="confirmar-nova-senha">Confirmar senha *</label>
+            <input type="password" id="confirmar-nova-senha" name="confirmar-nova-senha" required placeholder="Confirme a nova senha" />
+          </div>
+
+          <button type="submit" class="btn-confirmar">Confirmar</button>
+        </form>
+
+      </section>
+
+      <!-- RODAPÉ -->
+      <footer class="footer">
+
+        <div class="footer-grid">
+
+          <div>
+            <h4>Links úteis</h4>
+            <ul>
+              <li><a href="#">Cadastrar</a></li>
+              <li><a href="#">Contato</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4>Suporte</h4>
+            <ul>
+              <li><a href="#">Central de Ajuda</a></li>
+              <li><a href="#">Perguntas Frequentes</a></li>
+              <li><a href="#">Política de Privacidade</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4>Contato</h4>
+            <ul>
+              <li><a href="mailto:contato@brtecnologia.com.br">contato@brtecnologia.com.br</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4>Redes Sociais</h4>
+            <div class="social-icons">
+              <img src="../imgs/uil_facebook.png" alt="Facebook" />
+              <img src="../imgs/ri_instagram-line.png" alt="Instagram" />
+              <img src="../imgs/LINKEDIN.png" alt="LinkedIn" />
+            </div>
+          </div>
+
+        </div>
+
+        <p class="copy">
+          BBTS – BB Tecnologia e Serviços © 2025. Todos os direitos reservados.
+        </p>
+
+        <img src="../imgs/image-logo.png" alt="Ícone inferior esquerdo" class="bottom-left-icon" />
+
+      </footer>
+
+    </main>
+  </div>
+
+  <!-- MODAL -->
+  <div id="passwordSuccessModal" class="modal-overlay">
+    <div class="modal-content-success-password">
+      <div class="close-button" id="closePasswordSuccessBtn">&times;</div>
+
+      <h2 class="modal-title-success-password">Senha alterada</h2>
+      <p class="modal-description-success-password">Senha alterada, volte para o início.</p>
+
+      <button id="goToHomeBtn" class="btn-voltar-inicio-password">
+        Voltar para o Início
+      </button>
+    </div>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="../../D - Rodape/Javascript/rodape.js"></script>
+  <script src="../Javascript/TELA07.js"></script>
+  <script src="../../A - Acessibilidade/Acessibilidade.js"></script>
+
+</body>
+</html>

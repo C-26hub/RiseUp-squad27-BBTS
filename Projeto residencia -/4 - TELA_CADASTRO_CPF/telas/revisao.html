@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BBTS Start - Revisão de Dados</title>
+    <link rel="stylesheet" href="../../4 - TELA_CADASTRO_CPF/css/style.css">
+    <link rel="shortcut icon" href="../../C - Assets gerais/Favbbts.png" type="image/x-icon">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="logo-container">
+            <a href="../../1 - HOME/Telas_Home/index.html">
+            <img src="../../4 - TELA_CADASTRO_CPF/imgs/bbts-logo.png" alt="Logo BBTS Start" class="logo-image">
+            </a>
+            <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+   </div>
+<div id="acessibilidade">
+    <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+    <style>
+      /* Esconder o botão nativo do VLibras — usamos apenas o botão customizado */
+      [vw-access-button] {
+        display: none !important;
+        width: 0 !important;
+        height: 0 !important;
+        overflow: hidden !important;
+        pointer-events: none !important;
+      }
+    </style>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget("https://vlibras.gov.br/app");
+    </script>
+  </div>
+      <div id="botoes-acessibilidade-extra">
+      <button class="btn-acess">
+        <img src="../../../A - Acessibilidade/img/icone-pessoa.png" alt="Acessibilidade" />
+      </button>
+      <button class="btn-vlibras">
+        <img src="../../../A - Acessibilidade/img/libras.png" alt="VLibras" />
+      </button>
+      <button class="btn-audio">
+        <img src="../../../A - Acessibilidade/img/icone-comando-voz.png" alt="Comando de voz" />
+      </button>
+    </div>
+        </div>
+    </header>
+
+    <main class="page-container">
+        
+        <button class="back-button" aria-label="Voltar para a tela anterior">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20.0002 36.6667C29.2049 36.6667 36.6668 29.2048 36.6668 20C36.6668 10.7953 29.2049 3.33337 20.0002 3.33337C10.7954 3.33337 3.3335 10.7953 3.3335 20C3.3335 29.2048 10.7954 36.6667 20.0002 36.6667Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M20.0002 13.3334L13.3335 20L20.0002 26.6667" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M26.6668 20H13.3335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+
+        <div class="progress-container">
+                <div class="steps">
+                    <img src="../../4 - TELA_CADASTRO_CPF/imgs/icone-barra-navegacao-cpf5.png" alt="barra-navegacao-cnpj">
+                </div>
+            </div>
+
+        <h1 class="section-title">Revisão de dados do cadastro</h1>
+
+        <div class="review-alert attention">
+            <span class="icon-alert">⚠️</span>
+            <div class="alert-content">
+                <p><strong>Atenção:</strong> Revise atentamente todas as informações antes de confirmar o cadastro. Após finalizado, não será possível editar os dados diretamente. Qualquer alteração só poderá ser realizada mediante solicitação ao moderador do portal.</p>
+            </div>
+        </div>
+
+        <div class="review-data-container">
+            
+            <section class="review-section">
+                <h2>Dados de acesso</h2>
+                 <p>Login: juliana.rodrigues21 
+                <p>Senha: JlR0d#2025@
+            </section>
+
+            <section class="review-section">
+                <h2>Dados Pessoais</h2>
+                <p>Nome: Juliana Rodrigues Ferreira
+                <p>Email: juliana.rf.parcerias@gmail.com
+                <p>Telefone: +55 (81) 98876-2541
+            </section>
+            
+            <section class="review-section">
+                <h2>Endereço</h2>
+                <p>Rua: Rua do Futuro, 456
+                <p>CEP: 52020-050
+                <p>Complemento: Casa 02
+                <p>País: Brasil
+                <p>Estado/UF: Pernambuco (PE)
+                <p>Cidade: Recife
+            </section>
+
+            <section class="review-section">
+                <h2>Endereço</h2>
+                <p>CEP: <span class="data-value">52020-050</span></p>
+                <p>Rua: <span class="data-value">Rua do Futuro, 456</span></p>
+                <p>Complemento: <span class="data-value">: Casa 02</span></p>
+                <p>Estado/UF: <span class="data-value">Pernambuco (PE)</span>, País: <span class="data-value">Brasil</span></p>
+            </section>
+
+             <section class="review-section">
+                <h2>Perfil</h2>
+                <p>Área: Consultoria em Sustentabilidade e Logística Verde
+                <p>Formação: Pós-graduação em Gestão Ambiental 
+                <p>Interesses em startup: Economia circular, gestão de resíduos sólidos, logística reversa
+                <p>LinkedIn: linkedin.com/in/juliana-rodrigues-ferreira 
+                <p>Descrição: Sou consultora em sustentabilidade e especialista em logística verde. Procuro startups e empresas interessadas em parcerias para desenvolver projetos que envolvam economia circular, reciclagem e soluções digitais para redução de impactos ambientais. Acredito na colaboração entre setores como forma de acelerar mudanças positivas e gerar valor econômico aliado à responsabilidade socioambiental.
+
+        </div> 
+        <div class="review-terms">
+            <div class="term-group">
+                <input type="checkbox" id="term-privacidade" required>
+                <label for="term-privacidade">Li e aceito a Política de Privacidade do portal, estando ciente sobre o uso e tratamento dos meus dados.</label>
+            </div>
+            <div class="term-group">
+                <input type="checkbox" id="term-autorizacao" required>
+                <label for="term-autorizacao">Declaro que li e autorizo a Banco do Brasil Tecnologia e Serviços a coletar, armazenar e tratar meus dados conforme descrito na Política de Privacidade.</label>
+            </div>
+        </div>
+
+       </main>
+    <div class="review-buttons-full-width"> 
+    <div class="review-buttons">
+        <button class="continue-button secondary-button">Voltar e editar</button>
+        <button class="continue-button primary-button">Confirmar cadastro</button>
+    </div>
+</div>
+
+    <footer class="main-footer">
+        <p>2025 BBTS: Todos os direitos reservados. </p>
+        <nav class="footer-nav">
+            <a href="#">Política de Privacidade |</a>
+            <a href="#">Central de Ajuda |</a>
+            <a href="#">Termos de Uso</a>
+        </nav>
+    </footer>
+  </script>
+<script src="../Javascript/scripts.js"></script>
+<script src="../Javascript/Acessibilidade.js"></script>
+</body>
+</html>

@@ -1,0 +1,333 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Calibre !important;
+}
+
+body {
+  background: white;
+  color: #333;
+  overflow: hidden;
+  font-family: Calibre !important;
+}
+
+/* ===== LAYOUT ===== */
+.layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+  background: #465eff;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
+}
+
+.logo {
+  width: 130px;
+  margin-bottom: 3rem;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: white;
+  font-size: 1.2rem;
+  text-decoration: none;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  transition: background 0.3s, filter 0.3s;
+  font-family: "Calibre";
+  white-space: nowrap;  /* Impede que o texto quebre em várias linhas */
+  overflow: hidden;     /* Garante que o texto não ultrapasse o limite do item */
+  text-overflow: ellipsis;  /* Adiciona reticências (...) se o texto for maior que o contêiner */
+}
+
+
+.menu-item img.menu-icon {
+  width: 24px;
+  height: 24px;
+  filter: brightness(1.8) contrast(1.2);
+}
+
+.menu-item:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+.menu-item.active {
+  background: #fcfc30;
+  color: #465eff !important;
+  font-weight: 600;
+}
+
+/* ===== SUBMENU ===== */
+.submenu {
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.submenu-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  font-size: 1.05rem;
+  padding: 6px 10px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.submenu-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.submenu-item.destaque {
+  background: #fcfc30;
+  color: #465eff;
+  font-weight: 600;
+}
+
+.submenu-item img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  filter: brightness(1.3);
+}
+
+/* ===== TOPBAR ===== */
+.topbar {
+  background: #465eff;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.topbar .user-info {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.topbar .username {
+  font-size: 1.2rem;
+  font-weight: 600;        
+}
+
+.topbar .user-photo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+/* ===== CONTENT AREA ===== */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.page-content {
+  padding: 2rem 3rem;
+  padding-top: 60px !important;
+  overflow: hidden;
+}
+
+/* ===== HEADER ===== */
+.content-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 20px !important;
+}
+
+.header-icon {
+  width: 40px;
+  height: auto;
+}
+
+.content-header h1 {
+  font-size: 1.5rem !important;
+  font-weight: 600;
+  color: black;
+}
+
+/* ===== LINHA CINZA ===== */
+.header-divider {
+  width: 100%;
+  height: 1px;
+  background: #d6d6d6;
+  margin: 10px 0 15px 0;
+}
+
+.subtitle {
+  color: #666;
+  margin-left: 42px;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+/* ===== RETÂNGULO CINZA ===== */
+.retangulo-cinza {
+  width: 100%;
+  background: #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  max-height: calc(100vh - 260px);
+  overflow-y: auto;
+  border: 1px solid #d6d6d6;
+}
+
+/* ===== TABELA ===== */
+.history-table table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.history-table th {
+  font-size: 0.9rem;
+  padding: 1rem 0;
+  color: #555;
+  border-bottom: 2px solid #cccccc;
+  text-align: center;
+}
+
+.history-table td {
+  padding: 1rem 0;
+  border-bottom: 1px solid #d2d2d2;
+  text-align: center;
+}
+
+.history-table td:first-child,
+.history-table th:first-child {
+  text-align: left;
+  padding-left: 10px;
+}
+
+/* ===== STATUS ===== */
+.status {
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.status.pending {
+  background: #fcfc30;
+  color: #333;
+}
+
+.status.approved {
+  background: #465eff;
+  color: white;
+}
+
+/* Ver mais */
+.see-more {
+  display: block;
+  text-align: right;
+  margin-top: 1rem;
+  color: #465eff;
+  font-weight: bold;
+}
+
+/* ========================================================================= */
+/* ======================   R O D A P É   A J U S T A D O   ================= */
+/* ========================================================================= */
+
+.footer {
+  background: #465eff;
+  color: white;
+  margin-top: auto;
+  padding: 1.2rem 2rem;        /* menor */
+  border-top: 5px solid #fcfc30;
+}
+
+/* Rodapé igual ao modelo solicitado */
+.footer-grid {
+  display: flex;
+  justify-content: flex-start;
+  gap: 7rem;
+  padding-left: 23rem;         /* MAIS PARA A DIREITA */
+  padding-bottom: 1rem;        /* menor */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.footer h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;       /* menor */
+}
+
+.footer ul {
+  list-style: none;
+}
+
+.footer ul li {
+  margin-bottom: 0.45rem;      /* espaçamento refinado */
+}
+
+.footer ul li:last-child {
+  margin-bottom: 0;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;           /* menor */
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.social-icons img {
+  width: 25px;                 /* menor */
+  margin-right: 7px;
+}
+
+/* Texto final */
+.copy {
+  text-align: center;
+  font-size: 0.85rem;          /* menor */
+  opacity: 0.9;
+  margin-top: 1rem;            /* menor */
+}
+
+/* ===== ÍCONE INFERIOR ESQUERDO ===== */
+.bottom-left-icon {
+  position: fixed;
+  bottom: 120px;
+  left: 10px;
+  width: 408px;
+  height: 35px;
+  object-fit: contain;
+  z-index: 100;
+}
+

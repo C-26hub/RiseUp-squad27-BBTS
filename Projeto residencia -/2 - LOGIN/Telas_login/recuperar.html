@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recuperar Senha - BBTS</title>
+  <link rel="shortcut icon" href="../../D - Assets gerais/Favbbts.png" type="image/x-icon">
+  <link rel="stylesheet" href="/2 - LOGIN/css/recuperar.css">
+  <link rel="stylesheet" href="../../A - Acessibilidade/Acessibilidade.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <img src="../../C - Assets gerais/BBTStart logo.png" alt="BB Tecnologia e Serviços">
+    <div id="botoes-acessibilidade-extra"></div>
+    <div id="botoes-acessibilidade-extra">
+      <button class="btn-acess">
+        <img src="../../A - Acessibilidade/img/icone-pessoa.png" alt="Acessibilidade" />
+      </button>
+
+      <button class="btn-vlibras">
+        <img src="../../A - Acessibilidade/img/libras.png" alt="VLibras" />
+      </button>
+
+      <button class="btn-audio">
+        <img src="../../A - Acessibilidade/img/icone-comando-voz.png" alt="Comando de voz" />
+      </button>
+
+      <div id="acessibilidade">
+        <div vw class="enabled">
+          <div vw-access-button class="active"></div>
+          <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+          </div>
+        </div>
+      </div>
+
+      <style>
+        [vw-access-button] {
+          display: none !important;
+        }
+      </style>
+
+      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+      <script>
+        new window.VLibras.Widget("https://vlibras.gov.br/app");
+      </script>
+    </div>
+  </header>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main class="main-content">
+    <div class="recuperar-container">
+
+      <h1>Recuperar senha</h1>
+      <p class="descricao">Informe um email e enviaremos um link para redefinição de senha</p>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder=" " required>
+      </div>
+
+      <!-- BOTÃO COM HREF -->
+      <a href="novasenha.html" class="recuperar-btn">Enviar link de recuperação</a>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <span>2025 BBTS. Todos os direitos reservados.</span>
+    <a href="#">Política de Privacidade</a> |
+    <a href="#">Central de Ajuda</a> |
+    <a href="#">Termos de Uso</a>
+  </footer>
+
+  <script src="/8 - PESQUISA_INTELIGENTE/Javascript/Acessibilidade.js"></script>
+</body>
+</html>

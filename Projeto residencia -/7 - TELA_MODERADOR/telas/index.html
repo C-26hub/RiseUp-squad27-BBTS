@@ -1,0 +1,723 @@
+<!doctype html>
+<html lang="pt-BR">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <link rel="icon" type="image/png" href="../../5 - TELA_STARTUP/imgs/BTTS Start site LOGO.svg" />
+    <link rel="stylesheet" href="../../A - Acessibilidade/Acessibilidade.css" />
+    <link rel="stylesheet" href="../../D - RODAPE/rodape.css" />
+    <title>BBTStart - Moderador</title>
+    <link rel="stylesheet" href="../css/styles.css"
+  </head>
+<div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+   </div>
+<div id="acessibilidade">
+    <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+    <style>
+      /* Esconder o botão nativo do VLibras — usamos apenas o botão customizado */
+      [vw-access-button] {
+        display: none !important;
+        width: 0 !important;
+        height: 0 !important;
+        overflow: hidden !important;
+        pointer-events: none !important;
+      }
+    </style>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget("https://vlibras.gov.br/app");
+    </script>
+  </div>
+      <div id="botoes-acessibilidade-extra">
+      <button class="btn-acess">
+        <img src="../../../A - Acessibilidade/img/icone-pessoa.png" alt="Acessibilidade" />
+      </button>
+      <button class="btn-vlibras">
+        <img src="../../../A - Acessibilidade/img/libras.png" alt="VLibras" />
+      </button>
+      <button class="btn-audio">
+        <img src="../../../A - Acessibilidade/img/icone-comando-voz.png" alt="Comando de voz" />
+      </button>
+    </div>
+<body>
+    <div class="estrutura">
+    <!-- Barra Superior -->
+    <header class="top-bar">
+        <div class="logo-section">
+            <img class="profile-icon" src="../../5 - TELA_STARTUP/imgs/profile_icon.svg" width="40" height="40">
+           
+            <!-- Botão que abre o dropdown -->
+            <div class="company-menu" id="headerUserMenu">
+            </div>
+
+            <!-- Dropdown oculto -->
+             <div class="header-dropdown" id="headerDropdown">
+      
+            </div> 
+
+        </div>
+      </header>
+
+<!-- Barra Lateral -->
+    <aside class="sidebar">
+    <div class="sidebar-logo">
+        <a href="/1 - HOME/Telas_Home/index.html">
+            <img class="sidebar-logo" src="../../5 - TELA_STARTUP/imgs/bbts_start_logo.svg">
+        </a>
+    </div>
+        <nav class="menu">
+          
+            <div class="menu-item active" id = "btnInicio" data-page="inicio">
+                <img class="home-icon" src="../../5 - TELA_STARTUP/imgs/home_white_icon.svg" width="18" height="18">
+                <span>Início</span>
+            </div>
+            
+            <div class="menu-item">
+                <div class="menu-item-header">
+                    <img class="data-icon" src="../../5 - TELA_STARTUP/imgs/document_icon.svg" width="25" height="25">
+                    <span>Gestão de Cadastros</span>
+                    <span>
+                    <img src="../../5 - TELA_STARTUP/imgs/icone-seta-baixo.png" alt="seta-baixo" width="16" height="10">
+                    </span>
+                  
+                </div>
+                <div class="submenu" style="display: none;">
+                    <div class="submenu-item" data-page="startups">
+                        <img class="exclamation-icon" src="../../5 - TELA_STARTUP/imgs/exclamation_icon.svg" width="18" height="18">
+                        Startups
+                    </div>
+                    <div class="submenu-item" data-page="usuarios">
+                        <img class="edit-icon" src="../../5 - TELA_STARTUP/imgs/edit_document_icon.svg" width="18" height="18">
+                        Usuários
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-header">
+                    <img class="data-icon" src="../../5 - TELA_STARTUP/imgs/document_icon.svg" width="25" height="25">
+                    <span>Gestão de Aprovações</span>
+                    <span>
+                    <img src="../../5 - TELA_STARTUP/imgs/icone-seta-baixo.png" alt="seta-baixo" width="16" height="10">
+                    </span>
+                  
+                </div>
+                <div class="submenu" style="display: none;">
+                    <div class="submenu-item" data-page="aprovacoes-cadastro">
+                        <img class="exclamation-icon" src="../../5 - TELA_STARTUP/imgs/exclamation_icon.svg" width="18" height="18">
+                        Aprovações de Cadastro
+                    </div>
+                    <div class="submenu-item" data-page="solicitacoes-edicao">
+                        <img class="edit-icon" src="../../5 - TELA_STARTUP/imgs/edit_document_icon.svg" width="18" height="18">
+                        Solicitações de Edição
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <div class="menu-item-header">
+                    <img class="data-icon" src="../../5 - TELA_STARTUP/imgs/document_icon.svg" width="25" height="25">
+                    <span>Configurações</span>
+                    <span>
+                    <img src="../../5 - TELA_STARTUP/imgs/icone-seta-baixo.png" alt="seta-baixo" width="17" height="10">
+                    </span>
+                  
+                </div>
+                <div class="submenu" style="display: none;">
+                    <div class="submenu-item" data-page="personalizacao">
+                        <img class="exclamation-icon" src="../../5 - TELA_STARTUP/imgs/exclamation_icon.svg" width="18" height="18">
+                        Personalização White Label
+                    </div>
+                    <div class="submenu-item" data-page="alterar-senha">
+                        <img class="edit-icon" src="../../5 - TELA_STARTUP/imgs/edit_document_icon.svg" width="18" height="18">
+                        Alterar senha 
+                    </div>
+                    
+                </div>
+            </div>
+          <a href="/1 - HOME/Telas_Home/index.html" class="menu-item" id="btnSair" data-page="sair">
+    <img class="logout-icon" src="../../5 - TELA_STARTUP/imgs/logout_icon.svg" width="18" height="18">
+    <span>Sair</span>
+</a>
+
+        </nav>
+    </aside>
+
+   <!-- ========== Tela 1: Início ========== -->
+<main class="main-content">
+    <div class="page" id="inicio-page" style="display:block";>
+    
+
+      <h1 class="page-title">Painel</h1>
+
+      <!-- CARDS -->
+      <section class="dashboard-cards">
+
+        <div class="card-moderador">
+          <pre>Solicitações de 
+Cadastro</pre>
+          <h3 class="card-number">8</h3>
+        </div>
+
+        <div class="card-moderador">
+          <pre>Startups 
+Aprovadas</pre>
+          <h3 class="card-number">48</h3>
+        </div>
+
+        <div class="card-moderador">
+          <pre>Startups 
+Rejeitadas</pre>
+          <h3 class="card-number">7</h3>
+        </div>
+
+      </section>
+
+      <!-- TABELA -->
+      <section class="moderador-table-section-inicio ">
+       
+        <div class="filters-row-inicio ">
+           <h2>Solicitações recentes</h2>
+
+          <div class="filter-select-box-inicio ">
+            <select id="sortType">
+              <option value="empresa">Ordenar por: Empresa</option>
+              <option value="data">Data</option>
+              <option value="status">Status</option>
+            </select>
+          </div>
+
+          <div class="filter-select-box-inicio ">
+            <select id="sortOrder">
+              <option value="asc">Mais antigas</option>
+              <option value="desc">Mais recentes</option>
+            </select>
+          </div>
+
+          <div class="search-box-inicio ">
+            <input type="text" id="searchInput" placeholder="Pesquisar..." />
+            <img src="../imgs/cil_lupa_busca.svg" alt="Buscar" width="15" height="15"/>
+          </div>
+
+        </div>
+
+        <div class="table-wrapper-inicio">
+          <table class="styled-table-inicio">
+            <thead>
+              <tr>
+                <th>Empresa</th>
+                <th>Data de Cadastro</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+
+                <tr>
+                <td>TechNova Solutions</td>
+                <td data-date="2025-10-05">05/10/2025</td>
+                <td><span class="status approved-inicio">Aprovado</span></td>
+              </tr>
+
+              <tr>
+                <td>DataDrive</td>
+                <td data-date="2025-10-05">05/10/2025</td>
+                <td><span class="status approved-inicio">Aprovado</span></td>
+              </tr>
+
+              <tr>
+                <td>Agrotec</td>
+                <td data-date="2025-10-05">05/10/2025</td>
+                <td><span class="status pending-inicio">Recusado</span></td>
+              </tr>
+
+              <tr>
+                <td>EdFuture</td>
+                <td data-date="2025-10-05">05/10/2025</td>
+                <td><span class="status approved-inicio">Aprovado</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        </section>
+    </div>
+
+<!-- ============== Tela 2: Startups ================= -->
+
+<div class="page" id="startups-page" style="display: none;">
+  <h1 class="page-title">Startups</h1>  
+  
+  <section class="filters-row">      
+        <label>Status</label>
+        <div class="filter-select-box">
+          <select>
+            <option>Todos</option>
+            <option>Ativa</option>
+            <option>Inativa</option>
+          </select>
+        </div>
+
+        <label>Período</label>
+        <input type="date" class="date-input">
+        <input type="date" class="date-input">
+
+        <button class="btn-filter">Filtrar</button>
+        
+      </section>
+  
+
+      
+      <!-- TABELA -->
+      <section class="table-wrapper">
+        <table class="styled-table">
+          <thead>
+            <tr>
+              <th>Empresa</th>
+              <th>CNPJ</th>
+              <th>Data de cadastro</th>
+              <th>Status</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>TechNova Solutions</td>
+              <td>XX.XXX.XXX/0001-XX</td>
+              <td>05/10/2025</td>
+              <td><span class="tag green">Ativa</span></td>
+              <td>
+                <button class="btn-details">Ver detalhes</button>
+                <button class="btn-danger">Desativar</button>
+              </td>
+            </tr>
+
+            <tr>
+              <td>DataDrive</td>
+              <td>XX.XXX.XXX/0001-XX</td>
+              <td>05/10/2025</td>
+              <td><span class="tag green">Ativa</span></td>
+              <td>
+                <button class="btn-details">Ver detalhes</button>
+                <button class="btn-danger">Desativar</button>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Agrotec</td>
+              <td>XX.XXX.XXX/0001-XX</td>
+              <td>05/10/2025</td>
+              <td><span class="tag green">Ativa</span></td>
+              <td>
+                <button class="btn-details">Ver detalhes</button>
+                <button class="btn-danger">Desativar</button>
+              </td>
+            </tr>
+
+            <tr>
+              <td>EdFuture</td>
+              <td>XX.XXX.XXX/0001-XX</td>
+              <td>05/10/2025</td>
+              <td><span class="tag green">Ativa</span></td>
+              <td>
+                <button class="btn-details">Ver detalhes</button>
+                <button class="btn-danger">Desativar</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+    </section>
+    </div>  
+
+    <!-- Tela 3: Usuários -->  
+<div class="page" id="usuarios-page" style="display: none;">
+  <h1 class="page-title">Usuários</h1>
+  <section class="filters-row">
+        <label>Status</label>
+        <div class="filter-select-box">
+          <select>
+            <option>Todos</option>
+            <option>Ativa</option>
+            <option>Inativa</option>
+          </select>
+        </div>
+
+        <label>Período</label>
+        <input type="date" class="date-input">
+        <input type="date" class="date-input">
+
+        <button class="btn-filter">Filtrar</button>
+
+      </section>
+
+    <!-- TABELA -->
+    <div class="table-wrapper">
+      <table class="styled-table">
+        <thead>
+          <tr>
+            <th>Usuário</th>
+            <th>CPF</th>
+            <th>Data de cadastro</th>
+            <th>Status</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Ana Araújo Santos</td>
+            <td>XXX.XXX.XXX-XX</td>
+            <td>05/10/2025</td>
+            <td><span class="tag green">Ativa</span></td>
+            <td>
+              <button class="btn-details">Ver detalhes</button>
+              <button class="btn-danger">Desativar</button>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Ana Araújo Santos</td>
+            <td>XXX.XXX.XXX-XX</td>
+            <td>05/10/2025</td>
+            <td><span class="tag green">Ativa</span></td>
+            <td>
+              <button class="btn-details">Ver detalhes</button>
+              <button class="btn-danger">Desativar</button>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Ana Araújo Santos</td>
+            <td>XXX.XXX.XXX-XX</td>
+            <td>05/10/2025</td>
+            <td><span class="tag green">Ativa</span></td>
+            <td>
+              <button class="btn-details">Ver detalhes</button>
+              <button class="btn-danger">Desativar</button>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Ana Araújo Santos</td>
+            <td>XXX.XXX.XXX-XX</td>
+            <td>05/10/2025</td>
+            <td><span class="tag green">Ativa</span></td>
+            <td>
+              <button class="btn-details">Ver detalhes</button>
+              <button class="btn-danger">Desativar</button>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+      
+    </div>       
+</div>
+
+    <!-- Tela 4: Aprovações de cadastro -->
+<div class="page" id="aprovacoes-page" style="display: none;">
+      <h1 class="page-title">Aprovações de Cadastro</h1>
+
+
+      <!-- FILTROS -->
+      <section class="filters-row">
+
+        <label>Status</label>
+        <div class="filter-select-box">
+          <select>
+            <option>Todos</option>
+            <option>Ativa</option>
+            <option>Inativa</option>
+            <option>Pendente</option>
+          </select>
+        </div>
+
+        <label>Período</label>
+        <input type="date" class="date-input">
+        <input type="date" class="date-input">
+
+        <button class="btn-filter">Filtrar</button>
+
+      </section>
+
+
+      <!-- TABELA -->
+<section class="table-wrapper">
+  <table class="styled-table">
+    <thead>
+      <tr>
+        <th>Empresa</th>
+        <th>Data de cadastro</th>
+        <th>Data de solicitação</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>TechNova Solutions</td>
+        <td>18/08/2025</td>
+        <td>05/10/2025</td>
+        <td class="actions-cell">
+          <button class="btn-approve">C</button>
+          <button class="btn-reject">X</button>
+        </td>
+      </tr>
+
+      <tr>
+        <td>DataDrive</td>
+        <td>12/04/2025</td>
+        <td>05/09/2025</td>
+        <td class="actions-cell">
+          <button class="btn-approve">C</button>
+          <button class="btn-reject">X</button>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Agrotec</td>
+        <td>12/03/2025</td>
+        <td>05/10/2025</td>
+        <td class="actions-cell">
+          <button class="btn-approve">C</button>
+          <button class="btn-reject">X</button>
+        </td>
+      </tr>
+
+      <tr>
+        <td>EdFuture</td>
+        <td>12/04/2025</td>
+        <td>05/11/2025</td>
+        <td class="actions-cell">
+          <button class="btn-approve">C</button>
+          <button class="btn-reject">X</button>
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+  </section>
+</div>
+
+    <!-- Tela 5: Solicitações de edição-->
+<div class="page" id="solicitacoes-page" style="display: none;">
+      <h1 class="page-title">Solicitações de edição</h1>
+
+
+      <!-- FILTROS -->
+      <section class="filters-row">
+
+        <label>Status</label>
+        <div class="filter-select-box">
+          <select>
+            <option>Todos</option>
+            <option>Pendente</option>
+            <option>Aprovado</option>
+            <option>Recusado</option>
+          </select>
+        </div>
+
+        <label>Período</label>
+        <input type="date" class="date-input">
+        <input type="date" class="date-input">
+
+        <button class="btn-filter">Filtrar</button>
+
+      </section>
+
+
+      <!-- TABELA -->
+      <section class="table-wrapper">
+        <table class="styled-table">
+          <thead>
+            <tr>
+              <th>Empresa</th>
+              <th>Campo a alterar</th>
+              <th>Data da solicitação</th>
+              <th>Status</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>TechNova Solutions</td>
+              <td>Endereço</td>
+              <td>05/10/2025</td>
+              <td><span class="status pending">Pendente</span></td>
+              <td>
+                <button class="btn-details">Detalhes</button>
+              </td>
+            </tr>
+
+            <tr>
+              <td>DataDrive</td>
+              <td>Informações básicas</td>
+              <td>05/10/2025</td>
+              <td><span class="status approved">Aprovado</span></td>
+              <td>
+                <button class="btn-details">Detalhes</button>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Agrotec</td>
+              <td>Pessoa de contato</td>
+              <td>05/10/2025</td>
+              <td><span class="status pending">Pendente</span></td>
+              <td>
+                <button class="btn-details">Detalhes</button>
+              </td>
+            </tr>
+
+            <tr>
+              <td>EdFuture</td>
+              <td>Pessoa de contato</td>
+              <td>05/10/2025</td>
+              <td><span class="status rejected">Recusado</span></td>
+              <td>
+                <button class="btn-details">Detalhes</button>
+              </td>
+            </tr>
+          </tbody>
+
+        </table>
+      </section>
+</div>
+
+<!-- Tela 6: Personalização White Label -->
+<div class="page" id="personalizacao-page" style="display: none;">
+      <h1 class="page-title">Personalização White Label</Label></h1>
+
+    <!-- Content -->
+        <div class="content">
+            <div class="content-card">
+                
+
+                <div class="form-row">
+                    <!-- Logo Section -->
+                    <div class="form-group1">
+                      <div class="box-logo">
+                        <label>Logo</label>
+                        <div class="logo-section1" id="logoSection">
+                        <img src="../imgs/bbts-logo.png" class="menu-icon" width="200" height="200"/>
+
+                        </div>
+                        <input type="file" id="logoInput" accept="image/*" style="display: none;">
+                    </div>
+                    </div>
+
+                    <!-- Colors Section -->
+                    <div class="form-group2">
+                      <div class="box-cores">
+                        <label>Cores</label>
+                        
+                        <div class="color-group">
+                            <div class="color-item">
+                                <label>Cor principal</label>
+                                <div class="color-input-wrapper">
+                                    <div class="color-preview" style="background-color: #4a5ee8;" id="colorPreview1"></div>
+                                    <input type="text" id="colorInput1" value="#4A5EE8">
+                                    <input type="color" id="colorPicker1" value="#4A5EE8">
+                                </div>
+                            </div>
+
+                            <div class="color-item">
+                                <label>Cor secundária</label>
+                                <div class="color-input-wrapper">
+                                    <div class="color-preview" style="background-color: #fcfc30;" id="colorPreview2"></div>
+                                    <input type="text" id="colorInput2" value="#FCFC30">
+                                    <input type="color" id="colorPicker2" value="#FCFC30">
+                                </div>
+                            </div>
+
+                            <div class="color-item">
+                                <label>Cor fundo</label>
+                                <div class="color-input-wrapper">
+                                    <div class="color-preview" style="background-color: #ffffff;" id="colorPreview3"></div>
+                                    <input type="text" id="colorInput3" value="#FFFFFF">
+                                    <input type="color" id="colorPicker3" value="#FFFFFF">
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+
+                <!-- Typography Section -->
+                <div class="form-group3">
+                  <div class="box-tipografia">
+                    <label>Tipografia</label>
+                  
+                    <select id="fontSelect">
+                        <option value="Calibri">Calibri</option>
+                        <option value="Poppins">Poppins</option>
+                        <option value="Roboto">Roboto</option>
+                        <option value="Open Sans">Open Sans</option>
+                        <option value="Lato">Lato</option>
+                        <option value="Montserrat">Montserrat</option>
+                    </select>
+                    </div>
+               
+                  </div>
+            </div>
+        </div>
+    
+
+    <!-- Action Buttons -->
+    <div class="action-buttons">
+        <button class="action-btn btn-add">➕</button>
+        <button class="action-btn btn-check">✓</button>
+        <button class="action-btn btn-edit">✏️</button>
+    </div>
+</div>
+
+    <!-- Tela 7: Alterar senha -->
+<div class="page" id="alterar-senha-page" style="display: none;">
+            <h1 class="page-title">Alterar Senha</Label></h1>
+                        <div class="page-content-senha">
+                <form class="form-container-senha">
+                    <div class="form-group-senha">
+                        <label for="current-password">Senha atual*</label>
+                        <input type="password" id="current-password" placeholder="Digite sua senha atual" required>
+                    </div>
+                    <div class="form-group-senha">
+                        <label for="new-password">Nova senha*</label>
+                        <input type="password" id="new-password" placeholder="Digite sua nova senha" required>
+                    </div>
+                    <div class="form-group-senha">
+                        <label for="confirm-password">Confirmar nova senha*</label>
+                        <input type="password" id="confirm-password" placeholder="Confirme sua nova senha" required>
+                    </div>
+                    <div class="botao-senha">
+                    <button type="submit" class="btn-primary-senha">Confirmar</button>
+                    </div>
+                </form>
+            </div>
+        
+        
+          </div>
+
+   <!-- Tela 8: Sair -->
+<div class="page" id="sair-page" style="display: none;">
+
+</div>
+
+</div>
+<script src="../../7 - TELA_MODERADOR/javascript/scripts.js"></script>
+<script src="../../A - Acessibilidade/Acessibilidade.js"></script>
+<script src="../../D - Rodape/Javascript/rodape.js"></script>
+
+</body>
+</html>   
