@@ -1,0 +1,69 @@
+/* Fundo escurecido por trás do popup */
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Janela do popup azul */
+.modal {
+    position: relative;
+    background: #3E5AFF; /* azul igual ao da imagem */
+    text-align: center;
+    padding: 60px 40px;
+    width: 450px;
+    border-radius: 25px;
+    font-family: "Calibri", sans-serif;
+    color: white;
+}
+
+/* Botão X para fechar */
+.close-btn {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    font-size: 32px;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+/* Círculo com check */
+.check-icon {
+    width: 80px;
+    height: 80px;
+    border: 3px solid white;
+    border-radius: 50%;
+    margin: 0 auto 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+}
+
+/* Título amarelo */
+h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #fffd57; /* amarelo igual ao da imagem */
+    margin-bottom: 40px;
+}
+
+/* Botão branco */
+.btn {
+    background: white;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 40px;
+    font-size: 18px;
+    color: #3E5AFF;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.25s;
+}
+
+.btn:hover {
+    opacity: 0.85;
+}

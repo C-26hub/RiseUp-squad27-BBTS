@@ -1,0 +1,1117 @@
+:root {
+    --color-bbts-blue: #465EFF; /* Azul do layout */
+    --color-bbts-yellow: #FCFC30; /* Amarelo/Destaque */
+    --color-text-dark: #535353;
+    --color-background: #ffffff;
+    /* --font-primary: 'Poppins', sans-serif; */
+}
+@font-face {
+    font-family: "Calibri", sans-serif;
+    src: url("assets/fonts/calibri.woff2") format("woff2"),
+         url("assets/fonts/calibri.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Reset Básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Calibri", sans-serif;
+    background-color: var(--color-background);
+    color: black;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+
+}
+
+.logo-image {
+    width: auto;
+    height: 100px;
+    display: block;
+}
+
+.logo-image-amarelo {
+    height: 63px; 
+    width: auto;
+    display: block;
+    padding-top: 20px;
+}
+
+.page-container {
+    width: 80%;
+    max-width: 1400px; 
+    padding: 0;
+    flex-grow: 1;
+    margin-top: 50px; 
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- Botão Voltar e Título--- */
+
+.back-button {
+    background: none;
+    border: none; 
+    border-radius: 0; 
+    width: 40px; 
+    height: 40px; 
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-text-dark); 
+    margin-top: -20px;
+    margin-bottom: 20px;
+}
+
+.back-button svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+
+.section-title h1{
+    font-size: 32px;
+    font-weight: 600;
+    color: black;
+    margin-bottom: 40px;
+    padding-left: 100px;
+}
+
+h1{
+    padding-left: 100px;
+}
+
+/* --- Indicador de Progresso (Wizard) --- */
+.progress-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  margin-top: -50px;
+  width: auto;
+  height: auto;
+
+  /* margin-top: -200px; */
+ 
+}
+
+.step-line.active {
+    background-color: var(--color-bbts-blue); /* Linhas ativas COMPLETAS */
+} 
+
+.access-form {
+    display:block;
+    flex-direction: column;
+    /* align-items: center; */
+    /* margin-left: 120px; */
+    margin-top: 10px;
+}
+
+.form-group{
+    display: flex;
+    margin-top: -10px;
+    /* padding-left:-120px; */
+}
+.form-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 17px 40px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.form-grid.single-column {
+    grid-template-columns: 1fr;
+    max-width: 800px;
+    width: 100%;
+}
+
+/* --- Requisitos de Senha --- */
+
+.password-requirements {
+    grid-column: 1 / 2;
+    /* padding: 5px 0; */
+    align-self: flex-start; 
+  }
+
+@media (max-width: 1000px) {
+    .password-requirements {
+        grid-column: 1 / -1; 
+    }
+}
+
+.form-group.password-container {
+    position: relative;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 20px; 
+    top: 50%; 
+    transform: translateY(10px); 
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 5; 
+    color: var(--color-text-dark);
+}
+
+.toggle-password svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* --- ESTILOS PARA VISIBILIDADE DE SENHA (TOGGLE) --- */
+
+/* Contêiner da Senha: Necessário para posicionamento do botão */
+.form-group.password-container {
+    position: relative;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 20px;
+    top: 70%; 
+    transform: translateY(-50%); 
+    
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 10; /* Garante que o botão fique acima do input */
+    color: var(--color-text-dark); 
+    display: block; /* Garante visibilidade contínua */
+    
+    fill: currentColor; 
+}
+
+/* Oculta o Olho Riscado por padrão */
+.toggle-password .icon-hidden {
+    display: none;
+}
+
+/* Exibe o Olho Riscado e Oculta o Olho Visível quando a senha é mostrada (JS adicionará a classe 'show') */
+.toggle-password.show .icon-visible {
+    display: none;
+}
+
+.toggle-password.show .icon-hidden {
+    display: block;
+}
+
+
+/* ----forms---- */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.form-group label {
+    color: var(--color-text-dark);
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 5px;
+
+
+}
+
+.form-group input {
+    width: 100%;
+    padding: 15px;
+    border-radius: 21px;
+    border: 1.5px solid #D6D6D6;
+    font-size: 18px;
+    outline: none;
+    transition: border-color 0.2s;
+   
+  
+/* width: 100%;
+height: 61px;
+  padding: 15px;
+  border-radius: 21px;
+  border: 1.5px solid #D6D6D6;
+  outline: none;
+  font-size: 15px; */
+
+}
+
+
+/* -- INFORMAÇÕES BÁSICAS -- */
+
+h1{
+font-size: 26px;
+  margin-bottom: 30px;
+  padding-right: 500px;
+}
+.main-footer2 {
+    width: 100%;
+    padding: 20px 45px;
+    background-color: var(--color-background);
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 12px;
+    color: var(--color-text-dark);
+    /* flex-wrap: wrap; */
+    gap: 10px;
+    margin-top: -5px;
+}
+
+.continue-button2{ 
+width: 473px;
+  margin: 60px auto;
+  display: block;
+  padding: 15px;
+  border-radius: 30px;
+  text-align: center;
+  border: 3px solid #4D6FFF;
+  background: #fff;
+  color: #4D6FFF;
+  font-size: 18px;
+  font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  cursor: pointer;
+  transition: .3s ease;
+  margin-bottom: 20px;
+
+
+    display:block;
+    flex-direction: column;
+    /* align-items: center; */
+    /* margin-left: 120px; */
+    margin-top: 20px;
+}
+
+ .access-form1{
+   display:block;
+    flex-direction: column;
+  
+  
+ }
+
+.continue-button2:hover {
+    background-color: var(--color-bbts-blue);
+    color: white;
+}
+
+/* ------------------------------------------ */
+
+/* ---- Descrição Startup --------- */
+select {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #535353;
+    border-radius: 21px;
+    background: #FFF;
+    font-size: 16px;
+    color: #333;
+    outline: none;
+    cursor: pointer;
+}
+
+/* quando clicar no select */
+select:focus {
+    border-color: #333;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+}
+
+
+/* ------------------------------------- */
+.form-group input:focus {
+    border-color: var(--color-bbts-blue);
+    box-shadow: 0 0 5px rgba(70, 94, 255, 0.3);
+}
+
+/* --- ESTILO DE ERRO (FEEDBACK VISUAL) --- */
+.form-group.error input,
+.form-group.error textarea,
+.form-group.error select {
+    border-color: red !important; 
+}
+
+.form-group.error label {
+    color: red !important; 
+}
+
+.password-requirements .invalid {
+    color: red; 
+}
+
+/* --- Ajustes para Endereço: Input com Ícone (LUPA) --- */
+
+.form-group.input-with-icon {
+    position: relative;
+}
+
+.form-group.input-with-icon input {
+    /* Adiciona espaço à direita para a lupa */
+    padding-right: 50px; 
+}
+
+.form-group .input-icon {
+    position: absolute;
+    right: 20px; /* Alinha o ícone à direita do input */
+    
+    /* Centraliza verticalmente o ícone no input */
+    top: 46px; /* Altura da label (aprox 20px) + metade da altura do input (30px) */
+    transform: none; 
+
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    color: var(--color-text-dark); 
+}
+
+/* Garante que o input RUA ocupe a maior parte e o NÚMERO seja fixo no grid */
+.form-grid > .form-group[style*="width: 150px"] {
+    width: 150px; 
+    flex-grow: 0; 
+}
+
+.continue-button{ 
+width: 473px;
+  margin: 60px auto;
+  display: block;
+  padding: 15px;
+  border-radius: 30px;
+  text-align: center;
+  border: 3px solid #4D6FFF;
+  background: #fff;
+  color: #4D6FFF;
+  font-size: 18px;
+  font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  cursor: pointer;
+  transition: .3s ease;
+  margin-top: 15px;
+}
+
+.continue-button:hover {
+    background-color: var(--color-bbts-blue);
+    color: white;
+}
+
+.main-footer {
+    width: 100%;
+    padding: 20px 45px;
+    background-color: var(--color-background);
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 12px;
+    color: var(--color-text-dark);
+    /* flex-wrap: wrap; */
+    margin-top: -50px;
+    gap: 10px;
+}
+
+.footer-nav a {
+    color: var(--color-text-dark);
+    text-decoration: none;
+    margin-right: 5px;
+}
+
+.right-sidebar {
+    position: fixed;
+    right: 0;
+    top: 25%;
+    z-index: 100;
+}
+
+@media (max-width: 1000px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .page-container {
+        width: 90%;
+    }
+}
+
+/* --- Estilos Adicionais para Select e Textarea --- */
+input {
+    width: 300px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+input::placeholder {
+    color: #666;
+    font-size: 14px;
+    font-family: "Calibri", sans-serif;
+}
+
+
+.form-group textarea, 
+.form-group select {
+    padding: 12px 20px;
+    border-radius: 21px;
+    border: 1px solid #cecdcd;
+    font-size: 16px;
+    color: #707070;
+    outline: none;
+    transition: border-color 0.2s;
+    width: 100%; 
+    font-family: "Calibri", sans-serif;
+    min-height: 60px; 
+    resize: vertical;
+    margin-top: -5px;
+    height: 61px;
+}
+
+/* O select precisa ter a mesma altura do input */
+.form-group select {
+    height: 60px;
+    
+    appearance: none; /* Remove a seta padrão do navegador */
+    background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M6 8L10 12L14 8" stroke="%23535353" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 20px center;
+    padding-right: 40px; /* Adiciona padding para a seta não sobrepor o texto */
+}
+
+.form-group textarea:focus, 
+.form-group select:focus {
+    border-color: var(--color-bbts-blue);
+    box-shadow: 0 0 5px rgba(70, 94, 255, 0.3);
+}
+
+
+.form-group.full-width {
+    grid-column: 1 / -1; 
+}
+
+/* --- Estilos do Multi-Select Customizado (NOVO) --- */
+
+.custom-select {
+    position: relative;
+    width: 100%;
+    height: 60px; /* Mesma altura dos inputs */
+    border-radius: 30px;
+    border: 1px solid var(--color-text-dark);
+    font-size: 18px;
+    background-color: white;
+    cursor: pointer;
+    outline: none;
+    transition: border-color 0.2s;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.custom-select:focus, 
+.custom-select:hover {
+    border-color: var(--color-bbts-blue);
+    box-shadow: 0 0 5px rgba(70, 94, 255, 0.3);
+}
+
+.select-display {
+    width: 100%;
+    overflow: hidden; /* Esconde texto longo */
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    /* Ícone de seta para simular um dropdown */
+    background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M6 8L10 12L14 8" stroke="%23535353" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 0 center;
+    padding-right: 30px; /* Espaço para o ícone */
+}
+
+/* Container das opções: Escondido por padrão */
+.select-options {
+    position: absolute;
+    top: 100%; /* Abaixo do select-display */
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    max-height: 200px; /* Altura máxima com scroll */
+    overflow-y: auto;
+    background: white;
+    border: 1px solid var(--color-bbts-blue);
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: none; /* ESCONDIDO POR PADRÃO - SÓ APARECE COM JS */
+    padding: 10px 0;
+}
+
+/* Estilo para as opções (labels com checkbox) */
+.select-options label {
+    display: flex;
+    align-items: center;
+    padding: 8px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    color: var(--color-text-dark);
+    transition: background-color 0.1s;
+}
+
+.select-options label:hover {
+    background-color: #f0f0f0;
+}
+
+.select-options input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* Estado Ativo (controlado pelo JS) */
+.custom-select.active .select-options {
+    display: block; /* O JS adicionará a classe 'active' para mostrar */
+}
+
+/* --- ESTILOS PARA TELA DE UPLOAD (6ª Subetapa) --- */
+
+.form-grid.upload-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.upload-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.upload-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+    width: 100%;
+    min-height: 280px;
+    background: #F5F5F5;
+    border-radius: 20px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: border-color 0.2s;
+    padding: 20px;
+    position: relative;
+}
+
+.upload-box:hover {
+    border-color: var(--color-bbts-blue);
+}
+
+.upload-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--color-text-dark);
+    margin-top: 15px;
+}
+
+.upload-subtitle {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--color-text-dark);
+    margin-bottom: 20px;
+}
+
+.upload-icon {
+    margin-top: 20px;
+    width: 46px;
+    height: 46px;
+    color: #ABABAB; 
+}
+
+.upload-box input[type="file"] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* --- ESTILOS PARA TELA DE REVISÃO (Passo 2) --- */
+
+.review-data-container {
+    width: 100%;
+    max-width: 980px; /* Largura do container no Figma */
+    background: white;
+    border: 1px solid #BFBFBF;
+    border-radius: 15px;
+    padding: 30px 40px;
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+}
+
+.review-section {
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee; /* Separador sutil */
+}
+
+.review-section h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--color-text-dark);
+    margin-bottom: 10px;
+}
+
+.review-section p {
+    font-size: 16px;
+    color: #535353;
+    line-height: 1.6;
+}
+
+.review-section .data-value {
+    font-weight: 500;
+}
+
+.review-section .data-value.link {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* Alerta de Atenção */
+.review-alert {
+    width: 100%;
+    max-width: 980px;
+    padding: 15px 20px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.review-alert.attention {
+    background: rgba(255, 193, 7, 0.20);
+    border: 1px solid #FFC107;
+}
+
+.review-alert .icon-alert {
+    font-size: 24px;
+    flex-shrink: 0;
+}
+
+.review-alert p {
+    font-size: 14px;
+    line-height: 1.4;
+    color: black;
+}
+
+/* Termos de Aceite (Checkboxes) */
+.review-terms {
+    width: 100%;
+    max-width: 980px;
+     margin-bottom: 50px; 
+    /* margin-left: -100px;  */
+}  
+
+
+.term-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 15px;
+    margin-left: -100px;
+}
+
+.term-group input[type="checkbox"] {
+    margin-top: 5px;
+    flex-shrink: 0;
+}
+
+.term-group label {
+    font-size: 16px;
+    color: #535353;
+    cursor: pointer;
+    margin-left: -100px;
+}
+
+/* Botões de Ação na Revisão */
+.review-buttons{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    margin-top: -40px;
+    
+
+}
+
+/* Estilo para Botão Secundário (Voltar e editar) */
+.continue-button.secondary-button {
+    background: white;
+    border: 3px solid var(--color-bbts-blue);
+    color: var(--color-bbts-blue);
+    width: 366px;
+    gap:20px;
+    
+     /* Ajuste o tamanho do botão para o design */
+}
+
+.continue-button.secondary-button:hover {
+    background-color: var(--color-bbts-blue);
+    color: white;
+}
+
+
+
+/* Estilo para Botão Primário (Confirmar cadastro) */
+.continue-button.primary-button {
+    background: var(--color-bbts-blue);
+    border: 3px solid var(--color-bbts-blue);
+    color: var(--color-bbts-yellow); /* Texto amarelo para contraste */
+    width: 366px; /* Ajuste o tamanho do botão para o design */
+}
+
+.continue-button.primary-button:hover {
+    background-color: #384FD9; /* Azul um pouco mais escuro no hover */
+}
+
+
+/* --- CORES INVERTIDAS PARA TELA DE CONFIRMAÇÃO --- */
+
+/* Fundo da Página Azul */
+body.bg-bbts-blue {
+    background-color: var(--color-bbts-blue);
+    color: white; 
+    align-items: flex-start;
+    position: relative; 
+}
+
+/* --- AJUSTE DO BOTÃO VOLTAR NA TELA DE CONFIRMAÇÃO (FUNDO AZUL) --- */
+    body.bg-bbts-blue .back-button {
+    color: white; 
+    /* Remove a borda se houver algum vestígio de cor escura */
+    border: none;
+}
+
+
+/* Stepper Invertido (white-on-blue)
+.progress-bar.white-on-blue .step-label {
+    color: white;
+}
+
+.progress-bar.white-on-blue .step-line,
+.progress-bar.white-on-blue .icon-circle {
+    color: var(--color-bbts-blue); 
+}
+
+.progress-bar.white-on-blue .step-line.active,
+.progress-bar.white-on-blue .icon-circle.active {
+    background-color: var(--color-bbts-yellow); 
+    color: var(--color-bbts-blue); 
+} */
+
+/* --- RODAPÉ TRANSPARENTE E BRANCO (Fundo Azul) --- */
+
+.main-footer.transparent-on-blue {
+    width: 100%;
+    
+    /* Posição Absoluta para o Rodapé */
+    position: absolute; 
+    bottom: 20px; /* Distância da parte inferior da tela */
+    left: 0;
+    
+    justify-content: flex-end; 
+    padding: 0 10%; /* Corrigido o padding para aplicar apenas nas laterais */
+    
+    background-color: transparent;
+    border-top: none;
+    color: white;
+    font-size: 12px;
+    z-index: 99; /* Garante que fique sobre qualquer outro conteúdo */
+    
+}
+
+.main-footer.transparent-on-blue .footer-nav a {
+    color: white;
+}
+
+/* --- LAYOUT DA TELA DE CONFIRMAÇÃO (CONTENT GRID) --- */
+
+.confirmation-container {
+    width: 500%;
+    max-width: 1400px;
+    padding: 0;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+.confirmation-content-grid {
+    display: grid;
+    grid-template-columns: 55% 45%; /* Divisão Imagem | Conteúdo */
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto; 
+    padding: 0 10%; 
+    min-height: 70vh;
+}
+
+.confirmation-container .back-button {
+    align-self: flex-start; 
+    margin-left: 10%; 
+    margin-bottom: 20px; 
+}
+.confirmation-image-area {
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;
+    left:0;
+    padding-right: 50px; 
+    margin-top: -150px;
+}
+
+.confirmation-main-image {
+    /* width: 100%;
+    height: auto;
+    max-width: 100%; 
+    object-fit: cover;
+    opacity: 0.9;
+    border-radius: 20px;
+} */
+ /* position:fixed; */
+    left: 0;
+  
+    width: 100%;
+    max-width: 100%; 
+    object-fit: cover;
+    opacity: 0.9;
+    border-radius: 20px;
+
+   }
+
+/* .confirmation-text-area { */
+    /* padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; */
+    
+.confirmation-text-area {
+    padding: 50px 0;
+    /* Remover Flexbox se houver apenas um elemento dentro */
+    text-align: center; 
+    /* Centraliza o texto se for um elemento de bloco */
+    
+   
+}
+.confirmation-text-area h1 {
+    /* Garante que o texto não quebre em várias linhas (a menos que a largura seja muito pequena) */
+    white-space: nowrap; 
+    padding-right: -50px;
+}
+
+
+.confirmation-title {
+    /* font-size: 40px;
+    font-weight: 700; */
+    align-items: center;
+    color: white;
+    margin-bottom: 20px;
+    text-align: center;
+    
+}
+
+.confirmation-title h1{
+    text-align: center; 
+    line-height: 1.5;
+    display: inline-block;
+    font-size: 40px;
+    margin-left: -100px; 
+
+}
+
+.confirmation-message {
+    margin-bottom: 20px;
+    padding-top: -30px;
+}
+
+.confirmation-message p {
+    font-size: 24px;
+    line-height: 1.5;
+}
+
+.confirmation-message .message-highlight {
+    font-weight: 700;
+    margin-top: 15px;
+}
+
+.continue-button.confirmation-button {
+    background: var(--color-bbts-yellow);
+    border: none; 
+    color: var(--color-bbts-blue);
+    width: 473px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/* --- ESTILOS PARA TELA DE OPÇÕES DE CADASTRO --- */
+
+.opcoes-cadastro-main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    width: 100%;
+    padding: 50px 20px;
+}
+
+.opcoes-cadastro-container {
+    text-align: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.cadastro-opcoes-title {
+    color: white;
+    font-size: 48px;
+    font-weight: 600;
+    margin-bottom: 40px;
+    position: relative;
+    left:  190px;
+}
+
+.cards-container-opcoes {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.card-opcao {
+    background: #F8F8F8;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    width: 480px; /* Largura base do card no Figma */
+    padding: 40px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.card-icon {
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.card-opcao h2 {
+    color: var(--color-bbts-blue);
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.card-description {
+    color: #535353;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.card-benefits {
+    list-style: none;
+    padding: 0;
+    color: #535353;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 40px;
+    line-height: 1.8;
+}
+
+.card-benefits li {
+    text-align: center;
+}
+
+.card-btn-link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--color-bbts-yellow);
+    border-radius: 21px;
+    border: 1px solid var(--color-bbts-blue);
+    color: var(--color-bbts-blue);
+    font-size: 20px;
+    font-weight: 500;
+    padding: 15px 50px;
+    text-decoration: none;
+    width: 80%;
+    max-width: 300px;
+    transition: background-color 0.3s;
+}
+
+.card-btn-link:hover {
+    background-color: #f0f000;
+}
+
+.login-prompt {
+    color: white;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.login-link-opcoes {
+    color: white;
+    font-weight: 600;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* RESPONSIVIDADE para que os cards quebrem */
+@media (max-width: 1000px) {
+    .cards-container-opcoes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-opcao {
+        width: 90%;
+        max-width: 480px;
+    }
+}

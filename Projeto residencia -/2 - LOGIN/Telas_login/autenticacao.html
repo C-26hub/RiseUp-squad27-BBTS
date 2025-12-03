@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BBTS -Autenticação de Login</title>
+  <link rel="shortcut icon" href="../../C - Assets gerais/Favbbts.png" type="image/x-icon">
+  <link rel="stylesheet" href="../css/autenticacao.css">
+</head>
+<body>
+  <!-- ====================== ACESSIBILIDADE ====================== -->
+  <div id="acessibilidade">
+    <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+    <style>
+      /* Esconder o botão nativo do VLibras — usamos apenas o botão customizado */
+      [vw-access-button] {
+        display: none !important;
+        width: 0 !important;
+        height: 0 !important;
+        overflow: hidden !important;
+        pointer-events: none !important;
+      }
+    </style>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget("https://vlibras.gov.br/app");
+    </script>
+  </div>
+  <!-- ====================== HEADER / TOPO ====================== -->
+  <header>
+      <div id="botoes-acessibilidade-extra">
+      <button class="btn-acess">
+        <img src="../../A - Acessibilidade/img/icone-pessoa.png" alt="Acessibilidade" />
+      </button>
+      <button class="btn-vlibras">
+        <img src="../../A - Acessibilidade/img/libras.png" alt="VLibras" />
+      </button>
+      <button class="btn-audio">
+        <img src="../../A - Acessibilidade/img/icone-comando-voz.png" alt="Comando de voz" />
+      </button>
+    </div>
+
+  <div class="header">
+    <img src="../../C - Assets gerais/BBTStart logo.png" alt="BB Tecnologia e Serviços">
+  </div>
+  </header>
+  <main class="main-content">
+    <div class="auth-card">
+      <h1>Autenticação de login</h1>
+      <p>Enviamos um código de 6 dígitos para o seu e-mail:</p>
+
+      <div class="code-inputs">
+        <input type="text" maxlength="1">
+        <input type="text" maxlength="1">
+        <input type="text" maxlength="1">
+        <input type="text" maxlength="1">
+        <input type="text" maxlength="1">
+        <input type="text" maxlength="1">
+      </div>
+
+      <div class="links">
+        Não recebeu o código?
+        <a href="#">Reenviar</a>
+      </div>
+
+      <a class="change-method" href="#">Trocar método de autenticação</a>
+
+      <button class="confirm-btn">Confirmar código</button>
+    </div>
+  </main>
+
+  <div class="footer">
+    <span>2023 BBTS. Todos os direitos reservados.</span>
+    <a href="#">Política de Privacidade</a> |
+    <a href="#">Central de Ajuda</a> |
+    <a href="#">Termos de Uso</a>
+  </div>
+</body>
+<script src="../Javascript/Acessibilidade.js"></script>
+</html>
