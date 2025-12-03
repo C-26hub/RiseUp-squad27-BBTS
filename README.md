@@ -61,7 +61,7 @@ Como o projeto é construído apenas com **HTML, CSS e JavaScript** (client-side
 
 2. **Abra o Arquivo:**
 
-- Localize o arquivo principal index.html (ou o nome do seu arquivo de entrada) na pasta do projeto.
+- Localize o arquivo principal index.html. Ele está dentro da pasta "Telas_Home" na pasta "1 - HOME" do projeto.
 - Clique duas vezes no arquivo index.html para que ele seja aberto automaticamente no seu navegador web padrão.
 
 ---
@@ -70,15 +70,76 @@ Como o projeto é construído apenas com **HTML, CSS e JavaScript** (client-side
 
 ```
 📁 RiseUp-squad27-BBTS/
-├── 📄 README.md                  → Documentação geral do projeto
-├── 📄 index.html                 → Página principal da plataforma
-├── 📁 assets/                    → Pasta para imagens, ícones, etc.
-│   ├── ...
-├── 📁 css/
-│   └── 📄 style.css              → Folha de estilos principal 
-└── 📁 js/                         
-│   └── 📄 script.js              → Lógica JavaScript
-└── ...                           → Outros arquivos HTML (ex: cadastro-pf.html, sucesso.html)
+├── 📄 README.md                  
+└── 📁 Projeto residencia -/                    
+    └── 📁 .vscode
+    │    └── 📄 settings.json               
+    └── 📁 1 - HOME
+    │    └── 📁 Assets
+    │    └── 📁 Javascript
+    │    └── 📁 Telas_Home
+    │    └── 📁 css
+    └── 📁 2 - LOGIN
+    │    └── 📁 Assets
+    │    └── 📁 Javascript
+    │    └── 📁 Telas_Login
+    │    └── 📁 css
+    └── 📁 3 - TELA_CADASTRO_CNPJ
+    │    └── 📁 Javascript
+    │    └── 📁 css
+    │    └── 📁 imgs
+    │    └── 📁 telas
+    └── 📁 4 - TELA_CADASTRO_CPF
+    │    └── 📁 Javascript
+    │    └── 📁 css
+    │    └── 📁 imgs
+    │    └── 📁 telas
+    └── 📁 5 - TELA_STARTUP
+    │    └── 📁 css
+    │    └── 📁 imgs
+    │    └── 📁 javascript
+    │    └── 📁 telas
+    │    └── 📄 .vscode.code-workspace
+    └── 📁 6 - TELA_USUARIO
+    │    └── 📁 Javascript
+    │    └── 📁 Telas
+    │    └── 📁 css
+    │    └── 📁 imgs
+    └── 📁 7 - TELA_MODERADOR
+    │    └── 📁 css
+    │    └── 📁 fonts
+    │    └── 📁 imgs
+    │    └── 📁 javascript
+    │    └── 📁 telas
+    └── 📁 8 - PESQUISA_INTELIGENTE
+    │    └── 📁 Javascript
+    │    └── 📁 css
+    │    └── 📁 imgs
+    │    └── 📁 telas
+    └── 📁 9 - PERGUNTAS_FREQUENTES
+    │    └── 📁 Javascript
+    │    └── 📁 Telas_pf
+    │    └── 📁 css
+    └── 📁 A - Acessibilidade
+    │    └── 📁 img
+    │    └── 📄 Acessibilidade.css
+    │    └── 📄 Acessibilidade.html
+    │    └── 📄 Acessibilidade.js
+    └── 📁 B - Cabecalho
+    │    └── 📁 imgs
+    │    └── 📄 cabecalho.css
+    │    └── 📄 cabecalho.html
+    │    └── 📄 cabecalho.js
+    └── 📁 C - Assets gerais
+    │    └── 📄 BBStart logo.png
+    │    └── 📄 Favbbts.png
+    │    └── 📄 bbtsazul.png
+    │    └── 📄 bbtslogo.png
+    └── 📁 D - Rodape
+         └── 📁 Javascript
+         └── 📁 imgs
+         └── 📄 rodape.css
+         └── 📄 rodape.html             
 ```
 
 ---
