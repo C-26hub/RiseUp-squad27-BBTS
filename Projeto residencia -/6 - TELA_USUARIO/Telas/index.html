@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portal de Startups</title>
+
+    <!-- CSS PRINCIPAL -->
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <!-- CSS DO RODAPÉ -->
+    <link rel="stylesheet" href="../../D - Rodape/rodape.css" />
+
+    <!-- CSS DE ACESSIBILIDADE -->
+    <link rel="stylesheet" href="../../A - Acessibilidade/acessibilidade.css" />
+
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="../../C - Assets gerais/Favbbts.png" />
+</head>
+
+<body>
+
+    <div class="layout">
+
+        <!-- =========================== -->
+        <!-- BARRA LATERAL (SIDEBAR)     -->
+        <!-- =========================== -->
+        <aside class="sidebar">
+
+   <a href="/1 - HOME/Telas_Home/index.html" class="botao-logo">
+  <img src="../imgs/Amarelo sem fundo 2.png" alt="Logo" class="logo" />
+</a>
+
+
+            <!-- MENU PRINCIPAL -->
+            <nav class="menu">
+
+                <!-- Botão de menu (3 traços) -->
+                <div class="menu-dots">
+                    <img src="../imgs/3 traços.png" alt="Menu opções" class="dots-icon" />
+                </div>
+
+                <!-- Item ativo -->
+                <a href="#" class="menu-item active">
+                    <img src="../imgs/Caas.png" alt="Início" class="menu-icon" />
+                    <span>Início</span>
+                </a>
+
+                <!-- Botão para abrir submenu -->
+                <div class="menu-item submenu-toggle" style="cursor: pointer;">
+                    <img src="../imgs/dados.png" alt="Dados de Cadastro" class="menu-icon" />
+                    <span class="menu-text">Dados de Cadastro</span>
+                    <img src="../imgs/seta baixo.png" alt="Seta para baixo" class="arrow-icon" />
+                </div>
+
+                <!-- SUBMENU -->
+                <div class="submenu">
+                    <a href="TELA03.html" class="submenu-item">
+                        <img src="../imgs/Perfil.png" class="submenu-icon" />
+                        Dados Pessoais
+                    </a>
+
+                    <a href="TELA04.html" class="submenu-item">
+                        <img src="../imgs/localizacao.png" class="submenu-icon" />
+                        Endereço
+                    </a>
+
+                    <a href="TELA05.html" class="submenu-item">
+                        <img src="../imgs/perfilDados.png" class="submenu-icon" />
+                        Perfil
+                    </a>
+                </div>
+
+                <!-- Demais opções da sidebar -->
+                <a href="TELA06.html" class="menu-item">
+                    <img src="../imgs/historico.png" class="menu-icon" />
+                    <span>Histórico de Solicitações</span>
+                </a>
+
+                <a href="TELA07.html" class="menu-item">
+                    <img src="../imgs/chave.png" class="menu-icon" />
+                    <span>Alterar Senha</span>
+                </a>
+
+            <a href="/1 - HOME/Telas_Home/index.html" class="menu-item">
+          <img src="../imgs/sair.png" class="menu-icon" />
+          <span>Sair</span>
+        </a>
+
+            </nav>
+        </aside>
+
+        <!-- =========================== -->
+        <!-- CONTEÚDO PRINCIPAL          -->
+        <!-- =========================== -->
+        <main class="main-content">
+
+            <!-- Topo com usuário -->
+            <header class="topbar">
+                <div class="user-info">
+                    <img src="../imgs/perfilPequeno.png" alt="Foto do usuário" class="user-photo" />
+                    <span class="username">João Silva</span>
+                </div>
+            </header>
+
+            <!-- Mensagem de boas-vindas -->
+            <section class="welcome">
+                <h1>Olá, João Silva.</h1>
+                <h2>Bem-vindo ao Portal de Startups!</h2>
+            </section>
+
+            <!-- Cartão de status -->
+            <section class="card">
+                <h3>Cadastro Pendente</h3>
+                <p>
+                    Seu cadastro está sob análise.<br />
+                    Previsão de resposta em até 3 dias úteis via e-mail.
+                </p>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- =========================== -->
+    <!-- ACESSIBILIDADE - VLibras    -->
+    <!-- =========================== -->
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
+    <div id="acessibilidade">
+
+        <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+                <div class="vw-plugin-top-wrapper"></div>
+            </div>
+        </div>
+
+        <style>
+            /* Esconde o botão original do VLibras */
+            [vw-access-button] {
+                display: none !important;
+                width: 0 !important;
+                height: 0 !important;
+                overflow: hidden !important;
+                pointer-events: none !important;
+            }
+        </style>
+
+        <!-- Script oficial VLibras -->
+        <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+        <script>
+            new window.VLibras.Widget("https://vlibras.gov.br/app");
+        </script>
+
+    </div>
+
+    <!-- Botões extras de acessibilidade -->
+    <div id="botoes-acessibilidade-extra">
+        <button class="btn-acess">
+            <img src="../../../A - Acessibilidade/img/icone-pessoa.png" alt="Acessibilidade" />
+        </button>
+
+        <button class="btn-vlibras">
+            <img src="../../../A - Acessibilidade/img/libras.png" alt="VLibras" />
+        </button>
+
+        <button class="btn-audio">
+            <img src="../../../A - Acessibilidade/img/icone-comando-voz.png" alt="Comando de voz" />
+        </button>
+    </div>
+
+    <!-- =========================== -->
+    <!-- SCRIPTS DO SISTEMA          -->
+    <!-- =========================== -->
+
+    <script src="../Javascript/index.JS"></script>
+    <script src="../../D - Rodape/Javascript/rodape.js"></script>
+    <script src="../../A - Acessibilidade/Acessibilidade.js"></script>
+
+</body>
+</html>

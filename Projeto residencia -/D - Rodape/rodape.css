@@ -1,0 +1,61 @@
+.site-footer {
+  background: #465eff;
+  color: #fff;
+  width: 100%;
+  border-top: 4px solid #ffea00;
+}
+.site-footer .footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 40px 60px;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.logo-bb-tecnologia-servicos {
+  height: 35.5px;
+  object-fit: contain;
+  display: block;
+}
+
+.site-footer h5 {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+}
+.site-footer a {
+  display: block;
+  color: #cbd5e1;
+  text-decoration: none;
+  margin-bottom: 4px;
+  font-size: 14px;
+}
+.site-footer .contact {
+  color: #cbd5e1;
+  font-size: 14px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 21px;
+  align-items: center;
+}
+.social-icons img.facebook {
+  width: 40px;
+  height: 40px;
+}
+.social-icons img.instagram {
+  width: 45px;
+  height: 45px;
+}
+.social-icons img.linkedin {
+  width: 40px;
+  height: 37px;
+}
+
+.footer-copy {
+  display: block;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 14px;
+  opacity: 0.9;
+}

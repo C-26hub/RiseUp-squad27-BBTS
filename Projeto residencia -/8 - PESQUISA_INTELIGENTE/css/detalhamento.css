@@ -1,0 +1,250 @@
+*{
+  font-family: "Calibri", sans-serif;
+}
+
+
+.detalhe-voltar {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #465eff;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-decoration: none;
+  margin-bottom: 12px;
+  transition: color 0.2s;
+}
+.detalhe-voltar:hover {
+  color: #222;
+}
+.detalhe-sobre-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+.detalhe-sobre-esquerda {
+  display: flex;
+  flex-direction: column;
+}
+.detalhe-sobre-direita {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+/* Margem entre os itens da grid de informações básicas */
+.detalhe-info-grid > div {
+  margin-bottom: 15px;
+}
+/* Título customizado para seções */
+.detalhe-titulo {
+  color: black;
+  font-size: 32px;
+  font-family: 'Poppins', Arial, sans-serif;
+  font-weight: 600;
+  word-wrap: break-word;
+}
+.detalhe-main {
+  max-width: 1100px;
+  margin: 40px auto;
+  border-radius: 20px;
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.detalhe-nome {
+  color: #465eff;
+  font-size: 2.5rem;
+  font-weight: 700;
+  font-family: 'Poppins', Arial, sans-serif;
+  margin-bottom: 8px;
+}
+
+.detalhe-links {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  margin-bottom: 0;
+  align-items: flex-end;
+}
+.detalhe-link {
+  background: #fff;
+  border-radius: 10px;
+  outline: 2px solid #465eff;
+  padding: 8px 24px;
+  color: #465eff;
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.detalhe-link:hover {
+  background: #e6eaff;
+}
+
+.detalhe-img-descricao {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-left: 24px;
+}
+.detalhe-img-links {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 24px;
+  justify-content: space-between;
+  width: 100%;
+}
+.detalhe-links {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  margin-bottom: 0;
+}
+.detalhe-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 16px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+.detalhe-descricao {
+  color: #222;
+  font-size: 1.2rem;
+  margin-bottom: 24px;
+}
+.detalhe-info-basica {
+  background: #eef1f7;
+  border-radius: 10px;
+  padding: 24px;
+}
+.detalhe-info-basica h3 {
+  font-size: 1.4rem;
+  margin-bottom: 16px;
+}
+.detalhe-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+.detalhe-info-grid strong {
+  color: #222;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 15px;
+}
+.detalhe-info-grid span {
+  color: #444;
+  font-weight: 400;
+}
+.detalhe-sobre {
+  background: #eef1f7;
+  border-radius: 10px;
+  padding: 24px;
+}
+.detalhe-sobre h3 {
+  font-size: 1.4rem;
+  margin-bottom: 16px;
+}
+.detalhe-sobre strong {
+  color: #222;
+  font-weight: 600;
+}
+.detalhe-sobre p {
+  color: #444;
+  font-size: 1.1rem;
+  margin: 8px 0 16px 0;
+}
+.detalhe-tecnologias {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+}
+.detalhe-tec {
+  border-radius: 8px;
+  outline: 1px solid #000000;
+  padding: 6px 18px;
+  color: #000000;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Responsividade para mobile */
+@media (max-width: 768px) {
+  .detalhe-main {
+    margin: 20px 16px;
+    padding: 24px 16px;
+  }
+
+  .detalhe-nome {
+    font-size: 2rem;
+  }
+
+  .detalhe-titulo {
+    font-size: 28px;
+  }
+
+  .detalhe-img-descricao {
+    padding-left: 0;
+    gap: 10px;
+  }
+
+  .detalhe-img-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .detalhe-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .detalhe-img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .detalhe-descricao {
+    font-size: 1rem;
+  }
+
+  .detalhe-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .detalhe-sobre-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .detalhe-main {
+    margin: 12px 12px;
+    padding: 16px 12px;
+    border-radius: 12px;
+  }
+
+  .detalhe-nome {
+    font-size: 1.6rem;
+  }
+
+  .detalhe-link {
+    padding: 6px 12px;
+    font-size: 0.95rem;
+  }
+
+  .detalhe-img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .detalhe-tec {
+    padding: 6px 12px;
+    font-size: 0.95rem;
+  }
+}
