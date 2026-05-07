@@ -434,8 +434,8 @@ body.bg-bbts-blue { background-color: var(--color-bbts-blue);
     max-width: 980px;
     margin-bottom: 50px; }
 
-:root { --color-bbts-blue: #465EFF; 
-    --color-bbts-yellow: #FCFC30; 
+:root { --color-bbts-blue: #465EFF; /* Azul do layout */
+    --color-bbts-yellow: #FCFC30; /* Amarelo/Destaque */
     --color-text-dark: #535353;
     --color-background: #ffffff;
     --font-primary: 'Poppins', sans-serif; }
